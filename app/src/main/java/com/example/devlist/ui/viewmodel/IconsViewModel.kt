@@ -9,18 +9,17 @@ import com.example.devlist.data.api.ApiInterface
 import com.example.devlist.data.model.DevResource
 import kotlinx.coroutines.launch
 
-class UiViewModel(): ViewModel() {
-    // TODO: Implement the ViewModel
+class IconsViewModel : ViewModel() {
 
-    private val _uiLivedata = MutableLiveData<DevResource>()
-    val uiLiveData : LiveData<DevResource> = _uiLivedata
+    private val _iconMutableLivedata = MutableLiveData<DevResource>()
+    val iconLiveData : LiveData<DevResource> = _iconMutableLivedata
 
     // coroutines
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("ui-design/inspiration").body()
-            _uiLivedata.value = ui!!
+            val ui = api.getDevList("assets/icons").body()
+            _iconMutableLivedata.value = ui!!
         }
     }
 }

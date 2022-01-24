@@ -58,28 +58,7 @@ class UiFragment : Fragment() {
         return binding.root
     }
 
-    /**
-     *  Without using coroutines and view model
-     */
-//    @DelicateCoroutinesApi
-//    private fun getUiList() {
-//        val api = ApiHelper.getInstance().create(ApiInterface::class.java).getUiList("ui-design/inspiration")
-//        api.enqueue(object : Callback<DevResource> {
-//            override fun onFailure(call: Call<DevResource>, t: Throwable) {
-//                Log.d("DEV", "Error in Fetching list", t)
-//            }
-//            override fun onResponse(call: Call<DevResource>, response: Response<DevResource>) {
-//                val list = response.body()
-//                if (list != null) {
-//                    uiArticles.addAll(list.resources)
-//                    adapter.notifyDataSetChanged()
-//                    Log.d("kalp","${list.count}")
-//                } else {
-//                    Toast.makeText(activity, "The Response is empty", Toast.LENGTH_LONG).show()
-//                }
-//            }
-//        })
-//     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

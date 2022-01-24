@@ -1,21 +1,18 @@
 package com.example.devlist.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.devlist.R
-import com.example.devlist.databinding.HomeFragmentBinding
-import com.example.devlist.databinding.HomeFragmentBinding.*
-import kotlinx.android.synthetic.main.home_fragment.*
+import com.example.devlist.databinding.AssetsFragmentBinding
+import kotlinx.android.synthetic.main.assets_fragment.*
 
+class AssetsFragment : Fragment() {
 
-class HomeFragment : Fragment() {
-
-    // binding HomeFragment
-    private var _binding: HomeFragmentBinding? = null
+    private var _binding: AssetsFragmentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,10 +20,9 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = inflate(inflater, container, false)
-        return binding.root
+        _binding = AssetsFragmentBinding.inflate(inflater, container, false)
+        return binding?.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,14 +30,8 @@ class HomeFragment : Fragment() {
         // navController object
         val navController = Navigation.findNavController(view)
 
-        apiBtn.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_publicApiFragment)
-        }
-        uiBtn.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_uiFragment)
-        }
-        assetBtn.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_assetsFragment)
+        iconBtn.setOnClickListener {
+            navController.navigate(R.id.action_assetsFragment_to_iconsFragment2)
         }
 
     }
@@ -50,5 +40,6 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }
