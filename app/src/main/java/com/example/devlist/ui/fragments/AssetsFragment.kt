@@ -30,8 +30,12 @@ class AssetsFragment : Fragment() {
         // navController object
         val navController = Navigation.findNavController(view)
 
+
         iconBtn.setOnClickListener {
             navController.navigate(R.id.action_assetsFragment_to_iconsFragment2)
+        }
+        fontBtn.setOnClickListener {
+            navController.navigate(R.id.action_assetsFragment_to_fontFragment)
         }
 
     }

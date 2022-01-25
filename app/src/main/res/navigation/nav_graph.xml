@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_assetsFragment_to_iconsFragment2"
             app:destination="@id/iconsFragment" />
+        <action
+            android:id="@+id/action_assetsFragment_to_fontFragment"
+            app:destination="@id/fontFragment" />
     </fragment>
     <fragment
         android:id="@+id/iconsFragment"
@@ -56,6 +59,14 @@
         android:label="IconsFragment" >
         <action
             android:id="@+id/action_iconsFragment_to_assetsFragment"
+            app:destination="@id/assetsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fontFragment"
+        android:name="com.example.devlist.ui.fragments.FontFragment"
+        android:label="FontFragment" >
+        <action
+            android:id="@+id/action_fontFragment_to_assetsFragment"
             app:destination="@id/assetsFragment" />
     </fragment>
 </navigation>

@@ -7,15 +7,8 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/api_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/asset_fragment.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/assets_fragment.xml" value="0.1" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/fragment_icons.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/home_fragment.xml" value="0.11820652173913043" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icon_fragment.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icon_layout.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_fragment.xml" value="0.1" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_layout.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_web_view_activity.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_activity.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.1" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.1" />
@@ -23,6 +16,19 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_web_fragment.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_web_view_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/asset_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/assets_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/font_fragment.xml" value="0.13858695652173914" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/font_layout.xml" value="0.13858695652173914" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/font_web_view_activity.xml" value="0.11956521739130435" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/home_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_layout.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_web_view_activity.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/ui_fragment.xml" value="0.13858695652173914" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/ui_layout.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/ui_web_view_activity.xml" value="0.11956521739130435" />
       </map>
     </option>
   </component>

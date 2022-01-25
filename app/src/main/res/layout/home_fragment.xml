@@ -37,12 +37,13 @@
             android:text="Ui-Design" />
 
         <Button
-            android:id="@+id/assetBtn"
+            android:id="@+id/assetsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
             android:layout_margin="150dp"
             android:text="Assets" />
+
 
 
     </FrameLayout>

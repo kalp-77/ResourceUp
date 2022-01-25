@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
         uiBtn.setOnClickListener {
             navController.navigate(R.id.action_homeFragment_to_uiFragment)
         }
-        assetBtn.setOnClickListener {
+        assetsBtn.setOnClickListener {
             navController.navigate(R.id.action_homeFragment_to_assetsFragment)
         }
 

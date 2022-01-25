@@ -1,6 +1,13 @@
 package com.example.devlist.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import com.example.devlist.R
+import com.example.devlist.data.api.ApiHelper
+import com.example.devlist.data.api.ApiInterface
+import com.example.devlist.data.model.DevResource
+import kotlinx.coroutines.DelicateCoroutinesApi
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +30,8 @@ class PublicApiFragment : Fragment() {
 
     lateinit var adapter : ApiAdapter
     private var publicApiArticles = mutableListOf<Resource>()
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,5 +64,8 @@ class PublicApiFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
+
 
 }
