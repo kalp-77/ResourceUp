@@ -2,10 +2,9 @@ package com.example.devlist.ui.webview
 
 import android.os.Build
 import android.os.Bundle
-<<<<<<< HEAD
+
 import android.view.KeyEvent
-=======
->>>>>>> 3def0dc (.)
+
 import android.view.View
 import android.view.WindowManager
 import android.webkit.WebSettings
@@ -13,10 +12,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.devlist.R
-<<<<<<< HEAD
-import kotlinx.android.synthetic.main.icons_web_view_activity.*
-=======
->>>>>>> 3def0dc (.)
+
 import kotlinx.android.synthetic.main.ui_web_view_activity.*
 
 class UiWebViewActivityActivity : AppCompatActivity() {
@@ -55,9 +51,9 @@ class UiWebViewActivityActivity : AppCompatActivity() {
 
     }
 
-<<<<<<< HEAD
+
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        if (event.getAction() === KeyEvent.ACTION_DOWN) {
+        if (event.action == KeyEvent.ACTION_DOWN) {
             when (keyCode) {
                 KeyEvent.KEYCODE_BACK -> {
                     if (uiWebView.canGoBack()) {
@@ -73,6 +69,4 @@ class UiWebViewActivityActivity : AppCompatActivity() {
     }
 
 
-=======
->>>>>>> 3def0dc (.)
 }

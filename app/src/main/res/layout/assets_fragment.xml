@@ -26,6 +26,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Icons" />
+        <Button
+            android:id="@+id/fontBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="Icons" />
 
     </FrameLayout>
 </layout>

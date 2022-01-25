@@ -58,9 +58,7 @@ class UiFragment : Fragment() {
         return binding.root
     }
 
-<<<<<<< HEAD
 
-=======
     /**
      *  Without using coroutines and view model
      */
@@ -83,7 +81,7 @@ class UiFragment : Fragment() {
 //            }
 //        })
 //     }
->>>>>>> 3def0dc (.)
+
 
     override fun onDestroyView() {
         super.onDestroyView()

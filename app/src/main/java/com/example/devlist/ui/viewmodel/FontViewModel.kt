@@ -19,7 +19,7 @@ class FontViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getUiList("assets/fonts").body()
+            val ui = api.getDevList("assets/fonts").body()
             _fontLivedata.value = ui!!
         }
     }

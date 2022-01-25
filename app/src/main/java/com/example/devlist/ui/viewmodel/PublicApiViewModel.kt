@@ -1,6 +1,5 @@
 package com.example.devlist.ui.viewmodel
 
-<<<<<<< HEAD
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,7 +12,7 @@ import kotlinx.coroutines.launch
 class PublicApiViewModel : ViewModel() {
     // TODO: Implement the ViewModel
     private val _apiMutableLivedata = MutableLiveData<DevResource>()
-    val apiLiveData : LiveData<DevResource> = _apiMutableLivedata
+    val apiLiveData: LiveData<DevResource> = _apiMutableLivedata
 
     // coroutines
     init {
@@ -23,10 +22,7 @@ class PublicApiViewModel : ViewModel() {
             _apiMutableLivedata.value = ui!!
         }
     }
-=======
-import androidx.lifecycle.ViewModel
-
-class PublicApiViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
->>>>>>> 3def0dc (.)
 }
+
+
+

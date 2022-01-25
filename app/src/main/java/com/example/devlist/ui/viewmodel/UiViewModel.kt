@@ -19,11 +19,7 @@ class UiViewModel(): ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-<<<<<<< HEAD
             val ui = api.getDevList("ui-design/inspiration").body()
-=======
-            val ui = api.getUiList("ui-design/inspiration").body()
->>>>>>> 3def0dc (.)
             _uiLivedata.value = ui!!
         }
     }

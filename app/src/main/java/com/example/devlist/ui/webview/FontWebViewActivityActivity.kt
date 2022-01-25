@@ -1,6 +1,7 @@
 package com.example.devlist.ui.webview
 
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager
 import android.webkit.WebSettings
@@ -9,6 +10,7 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.devlist.R
 import kotlinx.android.synthetic.main.font_web_view_activity.*
+import kotlinx.android.synthetic.main.ui_web_view_activity.*
 
 
 class FontWebViewActivityActivity: AppCompatActivity() {
@@ -43,6 +45,22 @@ class FontWebViewActivityActivity: AppCompatActivity() {
 
         }
 
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+        if (event.action == KeyEvent.ACTION_DOWN) {
+            when (keyCode) {
+                KeyEvent.KEYCODE_BACK -> {
+                    if (uiWebView.canGoBack()) {
+                        uiWebView.goBack()
+                    } else {
+                        finish()
+                    }
+                    return true
+                }
+            }
+        }
+        return super.onKeyDown(keyCode, event)
     }
 
 }
