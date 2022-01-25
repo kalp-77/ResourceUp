@@ -40,10 +40,17 @@
             android:id="@+id/assetBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_gravity="bottom|right"
             android:layout_margin="150dp"
             android:text="Assets" />
 
 
+=======
+            android:layout_gravity="bottom|center"
+            android:layout_margin="150dp"
+            android:text="Assets" />
+
+>>>>>>> 3def0dc (.)
     </FrameLayout>
 </layout>

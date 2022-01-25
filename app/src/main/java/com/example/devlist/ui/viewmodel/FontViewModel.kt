@@ -9,22 +9,18 @@ import com.example.devlist.data.api.ApiInterface
 import com.example.devlist.data.model.DevResource
 import kotlinx.coroutines.launch
 
-class UiViewModel(): ViewModel() {
+class FontViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 
-    private val _uiLivedata = MutableLiveData<DevResource>()
-    val uiLiveData : LiveData<DevResource> = _uiLivedata
+    private val _fontLivedata = MutableLiveData<DevResource>()
+    val fontLiveData : LiveData<DevResource> = _fontLivedata
 
     // coroutines
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-<<<<<<< HEAD
-            val ui = api.getDevList("ui-design/inspiration").body()
-=======
-            val ui = api.getUiList("ui-design/inspiration").body()
->>>>>>> 3def0dc (.)
-            _uiLivedata.value = ui!!
+            val ui = api.getUiList("assets/fonts").body()
+            _fontLivedata.value = ui!!
         }
     }
 }

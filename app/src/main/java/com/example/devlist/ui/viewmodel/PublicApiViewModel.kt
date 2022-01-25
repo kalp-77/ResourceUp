@@ -1,5 +1,6 @@
 package com.example.devlist.ui.viewmodel
 
+<<<<<<< HEAD
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,4 +23,10 @@ class PublicApiViewModel : ViewModel() {
             _apiMutableLivedata.value = ui!!
         }
     }
+=======
+import androidx.lifecycle.ViewModel
+
+class PublicApiViewModel : ViewModel() {
+    // TODO: Implement the ViewModel
+>>>>>>> 3def0dc (.)
 }

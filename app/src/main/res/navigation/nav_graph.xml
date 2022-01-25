@@ -17,11 +17,16 @@
             android:id="@+id/action_homeFragment_to_uiFragment"
             app:destination="@id/uiFragment" />
         <action
+<<<<<<< HEAD
             android:id="@+id/action_homeFragment_self"
             app:destination="@id/homeFragment" />
         <action
             android:id="@+id/action_homeFragment_to_assetsFragment"
             app:destination="@id/assetsFragment" />
+=======
+            android:id="@+id/action_homeFragment_to_assetFragment"
+            app:destination="@id/assetFragment" />
+>>>>>>> 3def0dc (.)
     </fragment>
     <fragment
         android:id="@+id/publicApiFragment"
@@ -42,6 +47,7 @@
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
+<<<<<<< HEAD
         android:id="@+id/assetsFragment"
         android:name="com.example.devlist.ui.fragments.AssetsFragment"
         android:label="assets_fragment"
@@ -57,5 +63,22 @@
         <action
             android:id="@+id/action_iconsFragment_to_assetsFragment"
             app:destination="@id/assetsFragment" />
+=======
+        android:id="@+id/assetFragment"
+        android:name="com.example.devlist.ui.fragments.AssetFragment"
+        android:label="asset_fragment"
+        tools:layout="@layout/asset_fragment" >
+        <action
+            android:id="@+id/action_assetFragment_to_fontFragment"
+            app:destination="@id/fontFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fontFragment"
+        android:name="com.example.devlist.ui.fragments.FontFragment"
+        android:label="FontFragment" >
+        <action
+            android:id="@+id/action_fontFragment_to_assetFragment"
+            app:destination="@id/assetFragment" />
+>>>>>>> 3def0dc (.)
     </fragment>
 </navigation>
