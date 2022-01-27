@@ -3,19 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1075" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/effect.xml" value="0.1515" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/icons.xml" value="0.1075" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout-v31/public_api_fragment.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/api_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/asset_fragment.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/home_fragment.xml" value="0.11820652173913043" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_fragment.xml" value="0.12092391304347826" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_activity.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.1" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.1" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.36054421768707484" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_fragment.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_layout.xml" value="0.17552083333333332" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_layout.xml" value="0.16666666666666666" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_web_fragment.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_web_view_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/asset_fragment.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/assets_fragment.xml" value="0.1" />

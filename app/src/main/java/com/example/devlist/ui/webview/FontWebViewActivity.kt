@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.font_web_view_activity.*
 import kotlinx.android.synthetic.main.ui_web_view_activity.*
 
 
-class FontWebViewActivityActivity: AppCompatActivity() {
+class FontWebViewActivity: AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,19 +40,16 @@ class FontWebViewActivityActivity: AppCompatActivity() {
                     fontWebView.visibility = View.VISIBLE
                 }
             }
-
             fontWebView.loadUrl(url)
-
         }
-
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        if (event.action == KeyEvent.ACTION_DOWN) {
+        if (event.action === KeyEvent.ACTION_DOWN) {
             when (keyCode) {
                 KeyEvent.KEYCODE_BACK -> {
-                    if (uiWebView.canGoBack()) {
-                        uiWebView.goBack()
+                    if (fontWebView.canGoBack()) {
+                        fontWebView.goBack()
                     } else {
                         finish()
                     }

@@ -10,7 +10,7 @@ import com.example.devlist.data.model.DevResource
 import kotlinx.coroutines.launch
 
 class PublicApiViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
     private val _apiMutableLivedata = MutableLiveData<DevResource>()
     val apiLiveData: LiveData<DevResource> = _apiMutableLivedata
 
@@ -19,7 +19,10 @@ class PublicApiViewModel : ViewModel() {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
             val ui = api.getDevList("tools-and-utilities/public-apis").body()
-            _apiMutableLivedata.value = ui!!
+
+                //apiDatabase.apiDao().addApi(ui.resources.toList())
+               // apiDatabase.apiDao().addApi(ui.resources)
+                _apiMutableLivedata.value = ui!!
         }
     }
 }

@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.devlist.R
 import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.PublicApiWebViewActivity
-import com.example.devlist.ui.webview.UiWebViewActivityActivity
 
 class ApiAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<ApiAdapter.ViewHolder>() {
 

@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devlist.R
 import com.example.devlist.data.model.Resource
-import com.example.devlist.ui.webview.FontWebViewActivityActivity
+import com.example.devlist.ui.webview.FontWebViewActivity
 
 
 class FontAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<FontAdapter.ViewHolder>() {
@@ -25,7 +25,7 @@ class FontAdapter(private val context: FragmentActivity, private val articles: L
 
         // for webpage view
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, FontWebViewActivityActivity::class.java)
+            val intent = Intent(context, FontWebViewActivity::class.java)
             intent.putExtra("URL",article.links.website)
             context.startActivity(intent)
         }
