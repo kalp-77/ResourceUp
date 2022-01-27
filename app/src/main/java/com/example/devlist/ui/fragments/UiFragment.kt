@@ -44,7 +44,7 @@ class UiFragment : Fragment() {
                 uiRecycler.layoutManager = LinearLayoutManager(activity)
             }
 
-            uiViewModel.uiLiveData.observe(this@UiFragment.viewLifecycleOwner, {
+            uiViewModel.uiLiveData.observe(this@UiFragment.viewLifecycleOwner) {
                 uiProgressBar.visibility = View.GONE
                 if (it != null) {
                     uiRecycler.visibility = View.VISIBLE
@@ -53,7 +53,7 @@ class UiFragment : Fragment() {
                     uiRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }
-            })
+            }
         }
         return binding.root
     }

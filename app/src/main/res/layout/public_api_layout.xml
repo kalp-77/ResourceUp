@@ -7,15 +7,20 @@
     </data>
 
     <androidx.cardview.widget.CardView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
         android:layout_width="match_parent"
-        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@color/black"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -24,26 +29,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/teal_700"
+                android:textColor="#C61C1427"
                 android:textSize="32sp">
 
             </TextView>
 
             <TextView
+                android:layout_marginTop="4dp"
                 android:id="@+id/apiDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="description"
-                android:textColor="@color/purple_200"
-                android:textSize="24sp" />
+                android:textColor="@color/purple_500"
+                android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/apiType"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="type"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="Type : "
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/apiType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="type : "
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,8 +74,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="auth : "
-                    android:textColor="@color/white" />
+                    android:text="Auth : "
+                    android:textColor="@color/purple_500" />
 
                 <TextView
                     android:id="@+id/apiAuth"
@@ -62,13 +83,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:text="No"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/purple_500" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="cors : "
-                    android:textColor="@color/white" />
+                    android:text="Cors : "
+                    android:textColor="@color/purple_500" />
 
                 <TextView
                     android:id="@+id/apiCors"
@@ -76,27 +97,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:text="unknown "
-                    android:textColor="@color/white" />
+                    android:textColor="@color/purple_500" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="https : "
-                    android:textColor="@color/white" />
+                    android:text="Https : "
+                    android:textColor="@color/purple_500" />
 
                 <TextView
                     android:id="@+id/apiHttps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="yes"
-                    android:textColor="@color/white" />
-
-
+                    android:textColor="@color/purple_700" />
             </LinearLayout>
 
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.cardview.widget.CardView>
 </layout>

@@ -15,7 +15,7 @@ import com.example.devlist.R
 
 import kotlinx.android.synthetic.main.ui_web_view_activity.*
 
-class UiWebViewActivityActivity : AppCompatActivity() {
+class UiWebViewActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
