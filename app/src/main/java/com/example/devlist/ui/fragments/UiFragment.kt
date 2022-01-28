@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.devlist.data.dataSource.ImgDataSrc
+import com.example.devlist.data.model.ImgItem
 import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.UiFragmentBinding
 import com.example.devlist.ui.adapters.UiAdapter
@@ -27,6 +29,7 @@ class UiFragment : Fragment() {
     lateinit var adapter: UiAdapter
     private var uiArticles = mutableListOf<Resource>()   // Contains Response from webserver
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,7 +49,8 @@ class UiFragment : Fragment() {
                 if (it != null) {
                     uiRecycler.visibility = View.VISIBLE
                     uiArticles = it.resources as MutableList<Resource>
-                    adapter = UiAdapter(requireActivity(), uiArticles)
+                    val myDataset = ImgDataSrc().loadImg()
+                    adapter = UiAdapter(requireActivity(), uiArticles,myDataset)
                     uiRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }

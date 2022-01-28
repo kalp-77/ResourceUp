@@ -1,5 +1,6 @@
 package com.example.devlist.ui.webview
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
@@ -17,6 +18,9 @@ class IconsWebViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.icons_web_view_activity)
+
+        window.statusBarColor = Color.BLACK
+
         window.setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
         val url = intent.getStringExtra("URL")
 
