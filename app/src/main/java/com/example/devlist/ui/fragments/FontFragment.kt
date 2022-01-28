@@ -41,7 +41,7 @@ class FontFragment : Fragment() {
                 fontRecycler.layoutManager = LinearLayoutManager(activity)
             }
 
-            fontViewModel.fontLiveData.observe(this@FontFragment.viewLifecycleOwner, {
+            fontViewModel.fontLiveData.observe(this@FontFragment.viewLifecycleOwner) {
                 fontProgressBar.visibility = View.GONE
                 if (it != null) {
                     fontRecycler.visibility = View.VISIBLE
@@ -50,7 +50,7 @@ class FontFragment : Fragment() {
                     fontRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }
-            })
+            }
         }
         return binding.root
     }

@@ -1,11 +1,9 @@
 package com.example.devlist.ui.fragments
 
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -561,8 +559,5 @@ class PublicApiFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
-
 
 }

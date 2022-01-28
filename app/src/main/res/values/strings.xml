@@ -2,4 +2,9 @@
     <string name="app_name">DevList</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="auth">AUTH : </string>
+    <string name="corps">CORPS :</string>
+    <string name="https">HTTPS :</string>
+    <string name="strings">\"AUTH : \"</string>
+
 </resources>

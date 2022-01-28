@@ -1,10 +1,7 @@
 package com.example.devlist.ui.webview
 
-import android.os.Build
 import android.os.Bundle
-
 import android.view.KeyEvent
-
 import android.view.View
 import android.view.WindowManager
 import android.webkit.WebSettings
@@ -12,7 +9,6 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.devlist.R
-
 import kotlinx.android.synthetic.main.ui_web_view_activity.*
 
 class UiWebViewActivity : AppCompatActivity() {

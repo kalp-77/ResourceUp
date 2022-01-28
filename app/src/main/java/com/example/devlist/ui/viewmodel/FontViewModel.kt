@@ -10,7 +10,6 @@ import com.example.devlist.data.model.DevResource
 import kotlinx.coroutines.launch
 
 class FontViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
 
     private val _fontLivedata = MutableLiveData<DevResource>()
     val fontLiveData : LiveData<DevResource> = _fontLivedata

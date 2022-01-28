@@ -3,7 +3,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,8 +10,6 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.UiFragmentBinding
 import com.example.devlist.ui.adapters.UiAdapter
 import com.example.devlist.ui.viewmodel.UiViewModel
-import kotlinx.android.synthetic.main.public_api_fragment.*
-import kotlinx.android.synthetic.main.ui_fragment.*
 
 class UiFragment : Fragment() {
 
@@ -57,31 +54,6 @@ class UiFragment : Fragment() {
         }
         return binding.root
     }
-
-
-    /**
-     *  Without using coroutines and view model
-     */
-//    @DelicateCoroutinesApi
-//    private fun getUiList() {
-//        val api = ApiHelper.getInstance().create(ApiInterface::class.java).getUiList("ui-design/inspiration")
-//        api.enqueue(object : Callback<DevResource> {
-//            override fun onFailure(call: Call<DevResource>, t: Throwable) {
-//                Log.d("DEV", "Error in Fetching list", t)
-//            }
-//            override fun onResponse(call: Call<DevResource>, response: Response<DevResource>) {
-//                val list = response.body()
-//                if (list != null) {
-//                    uiArticles.addAll(list.resources)
-//                    adapter.notifyDataSetChanged()
-//                    Log.d("kalp","${list.count}")
-//                } else {
-//                    Toast.makeText(activity, "The Response is empty", Toast.LENGTH_LONG).show()
-//                }
-//            }
-//        })
-//     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
