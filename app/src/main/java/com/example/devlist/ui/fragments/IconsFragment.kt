@@ -38,7 +38,7 @@ class IconsFragment : Fragment() {
                 iconRecycler.layoutManager = LinearLayoutManager(activity)
             }
 
-            iconViewModel.iconLiveData.observe(this@IconsFragment.viewLifecycleOwner, {
+            iconViewModel.iconLiveData.observe(this@IconsFragment.viewLifecycleOwner) {
                 iconProgressBar.visibility = View.GONE
                 if (it != null) {
                     iconRecycler.visibility = View.VISIBLE
@@ -47,7 +47,7 @@ class IconsFragment : Fragment() {
                     iconRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }
-            })
+            }
         }
 
         return binding.root

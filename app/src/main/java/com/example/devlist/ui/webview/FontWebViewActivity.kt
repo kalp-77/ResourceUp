@@ -10,7 +10,6 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.devlist.R
 import kotlinx.android.synthetic.main.font_web_view_activity.*
-import kotlinx.android.synthetic.main.ui_web_view_activity.*
 
 
 class FontWebViewActivity: AppCompatActivity() {

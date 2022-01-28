@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +25,15 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         holder.apiType.text = "Type : " + article.apiCategory
         holder.apiName.text = article.name
         holder.apiDesc.text = article.description
-
+        holder.share.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            val link :String = article.links.website
+            val body = "Look at this !! $link"
+            intent.putExtra(Intent.EXTRA_TEXT,link)
+            intent.putExtra(Intent.EXTRA_TEXT,body)
+            context.startActivity(Intent.createChooser(intent,"share"))
+        }
         //for webpage view
         holder.itemView.setOnClickListener {
             val intent = Intent(context,PublicApiWebViewActivity::class.java)
@@ -54,9 +63,10 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         var apiDesc: TextView = itemView.findViewById(R.id.apiDesc)
         var apiType: TextView = itemView.findViewById(R.id.apiType)
         var apiAuth: TextView = itemView.findViewById(R.id.apiAuth)
-//        var apiCors: TextView = itemView.findViewById(R.id.apiCors)
         var apiHttps: TextView = itemView.findViewById(R.id.apiHttps)
+        var share : ImageView = itemView.findViewById(R.id.share)
     }
+
 
 
 }
