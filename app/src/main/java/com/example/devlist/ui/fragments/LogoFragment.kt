@@ -25,6 +25,8 @@ class LogoFragment : Fragment() {
 
     lateinit var adapter: LogoAdapter
     private var logoArticles = mutableListOf<Resource>()
+    private var logoArticles2 = mutableListOf<Resource>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +39,7 @@ class LogoFragment : Fragment() {
                 logoRecycler.layoutManager = LinearLayoutManager(activity)
             }
 
-            logoViewModel.logoLiveData.observe(this@LogoFragment.viewLifecycleOwner, {
+            logoViewModel.logoLiveData.observe(this@LogoFragment.viewLifecycleOwner) {
                 logoProgressBar.visibility = View.GONE
                 if (it != null) {
                     logoRecycler.visibility = View.VISIBLE
@@ -46,7 +48,15 @@ class LogoFragment : Fragment() {
                     logoRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }
-            })
+            }
+            logoViewModel.logoLiveData2.observe(this@LogoFragment.viewLifecycleOwner) {
+                if (it != null) {
+                    logoArticles2 = it.resources as MutableList<Resource>
+                    adapter = LogoAdapter(requireActivity(), logoArticles2)
+                    logoRecycler.adapter = adapter
+                    adapter.notifyDataSetChanged()
+                }
+            }
         }
         return binding.root
     }

@@ -1,5 +1,6 @@
 package com.example.devlist.ui.webview
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -14,6 +15,9 @@ import kotlinx.android.synthetic.main.image_web_view_activity.*
 
 class ImageWebViewActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        window.statusBarColor = Color.BLACK
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.image_web_view_activity)
         window.setFlags(

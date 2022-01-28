@@ -12,7 +12,6 @@ import com.example.devlist.databinding.AssetsFragmentBinding
 import com.example.devlist.ui.adapters.TabLayAssetAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.assets_fragment.*
 
 class AssetsFragment : Fragment() {
 
@@ -32,13 +31,12 @@ class AssetsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // navController object
-        val navController = Navigation.findNavController(view)
+        Navigation.findNavController(view)
 
-        val tabLayout=view.findViewById<TabLayout>(R.id.tab_layout)
-        var viewPager2 = view.findViewById<ViewPager2>(R.id.view_pager_2)
+        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
+        val viewPager2 = view.findViewById<ViewPager2>(R.id.view_pager_2)
 
-        viewPager2.adapter= TabLayAssetAdapter(parentFragmentManager, lifecycle)
+        viewPager2.adapter= TabLayAssetAdapter(childFragmentManager, lifecycle)
 
         TabLayoutMediator(tabLayout, viewPager2){
                 tab, position->

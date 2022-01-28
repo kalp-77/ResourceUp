@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_share.xml" value="0.1245" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1245" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.1245" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main.xml" value="0.14407866609662248" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.14407866609662248" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.22" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_splash_screen.xml" value="0.14407866609662248" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/home_fragment.xml" value="0.14407866609662248" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/image_layout.xml" value="0.14407866609662248" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.14407866609662248" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_layout.xml" value="0.22" />
       </map>
     </option>
   </component>
