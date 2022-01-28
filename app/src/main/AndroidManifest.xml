@@ -18,6 +18,17 @@
         android:theme="@style/Theme.DevList">
 
         <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
             android:name=".ui.webview.IconsWebViewActivity"
             android:exported="false" />
         <activity
@@ -32,15 +43,14 @@
         <activity
             android:name=".ui.webview.FontWebViewActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.webview.ImageWebViewActivity"
+            android:exported="false" />
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
