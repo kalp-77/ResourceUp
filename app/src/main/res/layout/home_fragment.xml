@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -9,40 +10,113 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragments.HomeFragment">
+        tools:context=".ui.fragments.HomeFragment"
+        android:background="@drawable/bg1">
 
         <!-- TODO: Update blank fragment layout -->
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ff6b6b"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Welcome to DevResources!!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
-
-        <Button
-            android:id="@+id/apiBtn"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="70dp"
+            android:background="#00FF"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="DevResources"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#7153C3"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="333dp"
             android:layout_gravity="bottom"
-            android:layout_margin="50dp"
-            android:text="Public-Api" />
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp">
 
-        <Button
-            android:id="@+id/uiBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="50dp"
-            android:text="Ui-Design" />
 
-        <Button
-            android:id="@+id/assetsBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="150dp"
-            android:text="Assets" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/apiBtn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="3dp"
+                android:backgroundTint="#95D6A0"
+                android:text="Public-Api"
+                app:icon="@mipmap/assett_foreground"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/black" />
+
+            <Button
+                android:id="@+id/uiBtn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:backgroundTint="#CF757F"
+                android:text="Ui-Design"
+                app:icon="@mipmap/assett_foreground"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/black" />
+
+            <Button
+                android:id="@+id/assetsBtn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="#A795D8"
+                android:text="Assets"
+                app:icon="@mipmap/assett_foreground"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/black" />
+
+            <Button
+                android:id="@+id/toolBtn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#A795D8"
+                android:text="tools"
+                app:icon="@mipmap/assett_foreground"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/black" />
+
+            <Button
+                android:id="@+id/learnBtn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="#665C81"
+                android:text="learn"
+                app:icon="@mipmap/assett_foreground"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/black" />
+
+            <Button
+                android:id="@+id/jobBtn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                app:icon="@mipmap/assett_foreground"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#A795D8"
+                android:text="jobs" />
+        </RelativeLayout>
 
 
 

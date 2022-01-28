@@ -1,37 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
     </data>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#84C9E8"
-        tools:context=".ui.fragments.AssetsFragment">
+        android:orientation="vertical"
+        android:background="@drawable/font_gradient"
+        android:padding="15dp">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/font_gradient"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabTextColor="@color/black"
+            app:tabIndicatorColor="@color/black"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+            />
+        <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:text="asset_fragment"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            android:id="@+id/view_pager_2"
+            />
 
-        <Button
-            android:id="@+id/iconBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Icons" />
-        <Button
-            android:id="@+id/fontBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="Icons" />
 
-    </FrameLayout>
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:layout_gravity="bottom"-->
+        <!--            android:padding="2dp">-->
+
+
+        <!--        <Button-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:id="@+id/iconBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:text="Icons" />-->
+        <!--        <Button-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:id="@+id/fontBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            android:text="Fonts" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/imageBtn"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_alignParentRight="true"-->
+        <!--            android:text="Images"/>-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/logoBtn"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            android:text="Logos"-->
+        <!--            />-->
+    </LinearLayout>
+
+
+
+
 </layout>

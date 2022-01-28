@@ -21,10 +21,9 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
-        holder.apiType.text = article.apiCategory
+        holder.apiType.text = "Type : " + article.apiCategory
         holder.apiName.text = article.name
         holder.apiDesc.text = article.description
-        holder.apiCors.text = article.cors
 
         //for webpage view
         holder.itemView.setOnClickListener {
@@ -33,14 +32,14 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
             context.startActivity(intent)
         }
         if(article.https){
-            holder.apiHttps.text = "YES"
+            holder.apiHttps.text = "HTTPS : YES"
         }else{
-            holder.apiHttps.text = "NO"
+            holder.apiHttps.text = "HTTPS : NO"
         }
         if(article.auth == ""){
-            holder.apiAuth.text = "No"
+            holder.apiAuth.text = "AUTH : No"
         }else{
-            holder.apiAuth.text = article.auth
+            holder.apiAuth.text = "AUTH : " + article.auth
         }
 
     }
@@ -55,7 +54,7 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         var apiDesc: TextView = itemView.findViewById(R.id.apiDesc)
         var apiType: TextView = itemView.findViewById(R.id.apiType)
         var apiAuth: TextView = itemView.findViewById(R.id.apiAuth)
-        var apiCors: TextView = itemView.findViewById(R.id.apiCors)
+//        var apiCors: TextView = itemView.findViewById(R.id.apiCors)
         var apiHttps: TextView = itemView.findViewById(R.id.apiHttps)
     }
 
