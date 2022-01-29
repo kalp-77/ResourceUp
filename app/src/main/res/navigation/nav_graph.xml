@@ -69,4 +69,28 @@
             android:id="@+id/action_fontFragment_to_assetsFragment"
             app:destination="@id/assetsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/programmingFragment"
+        android:name="com.example.devlist.ui.fragments.ProgrammingFragment"
+        android:label="ProgrammingFragment" >
+        <action
+            android:id="@+id/action_programmingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/UTubeFragment"
+        android:name="com.example.devlist.ui.fragments.UTubeFragment"
+        android:label="UTubeFragment" >
+        <action
+            android:id="@+id/action_UTubeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uiKitFragment"
+        android:name="com.example.devlist.ui.fragments.UiKitFragment"
+        android:label="UiKitFragment" >
+        <action
+            android:id="@+id/action_uiKitFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
