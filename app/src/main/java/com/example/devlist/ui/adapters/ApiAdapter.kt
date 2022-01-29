@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
@@ -22,6 +23,10 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
+
+        //card animation
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
+
         holder.apiType.text = "Type : " + article.apiCategory
         holder.apiName.text = article.name
         holder.apiDesc.text = article.description
@@ -50,6 +55,10 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         }else{
             holder.apiAuth.text = "AUTH : " + article.auth
         }
+
+        //apply animation to holder
+        holder.itemView.startAnimation(animation)
+
 
     }
 

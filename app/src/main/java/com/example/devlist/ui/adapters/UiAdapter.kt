@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
@@ -25,6 +26,10 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
         val item = dataSrc[position]
+
+        //card animation
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
+
         holder.uiName.text = article.name
         holder.uiDesc.text = article.description
 
@@ -35,6 +40,10 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
             intent.putExtra("URL",article.links.website)
             context.startActivity(intent)
         }
+
+        //apply animation to holder
+        holder.itemView.startAnimation(animation)
+
 
     }
 
