@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/learn"
+        android:enabled="true"
+        android:icon="@drawable/coding"
+        android:title="learn"
+        app:cnb_backgroundColor="#FFFFFF"
+        app:cnb_iconColor="#FB8C00"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#FB8C00" />
+    <item
+        android:id="@+id/uTube"
+        android:enabled="true"
+        android:icon="@drawable/youtube"
+        android:title="uTube"
+        app:cnb_backgroundColor="#FFFFFF"
+        app:cnb_iconColor="#FF0000"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#FB0900" />
+    <item
+        android:id="@+id/uiKit"
+        android:enabled="true"
+        android:icon="@drawable/ui_kit"
+        android:title="ui-kit"
+        app:cnb_backgroundColor="#FFFFFF"
+        app:cnb_iconColor="#D73DFF"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#D45DFF" />
+
+</menu>
