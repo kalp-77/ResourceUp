@@ -16,6 +16,7 @@ import com.example.devlist.ui.adapters.FontAdapter
 import com.example.devlist.ui.adapters.LogoAdapter
 import com.example.devlist.ui.viewmodel.ImageViewModel
 import com.example.devlist.ui.viewmodel.LogoViewModel
+import kotlinx.android.synthetic.main.logo_fragment.*
 
 class LogoFragment : Fragment() {
 

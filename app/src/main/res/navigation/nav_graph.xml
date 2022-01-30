@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_homeFragment_to_assetsFragment"
             app:destination="@id/assetsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_jobFragment"
+            app:destination="@id/jobFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_utilitiesFragment"
+            app:destination="@id/utilitiesFragment" />
     </fragment>
     <fragment
         android:id="@+id/publicApiFragment"
@@ -68,6 +74,23 @@
         <action
             android:id="@+id/action_fontFragment_to_assetsFragment"
             app:destination="@id/assetsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.example.devlist.ui.fragments.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" >
+        <action
+            android:id="@+id/action_jobFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/utilitiesFragment"
+        android:name="com.example.devlist.ui.fragments.UtilitiesFragment"
+        android:label="UtilitiesFragment" >
+        <action
+            android:id="@+id/action_utilitiesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/programmingFragment"

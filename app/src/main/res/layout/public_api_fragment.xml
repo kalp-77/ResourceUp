@@ -51,7 +51,9 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            app:cardElevation="4dp"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackgroundBorderless">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -64,7 +66,9 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
-                            app:cardElevation="4dp">
+                            app:cardElevation="4dp"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackgroundBorderless">
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -122,35 +126,40 @@
                             android:id="@+id/animals"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
-                            <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="31dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/img_dog">
+                                </ImageView>
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Animals"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+                                    android:textSize="14sp" />
+                            </LinearLayout>
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/anime"
                             android:layout_width="60dp"
                             android:layout_height="70dp"
                             android:layout_marginBottom="2dp"
-                            app:cardElevation="4dp">
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -175,25 +184,55 @@
                             android:id="@+id/antiMalware"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_malware"></ImageView>
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:textSize="12sp"
-                                android:text="Anti-Malware"/>
+                                android:layout_gravity="bottom|center"
+                                android:layout_marginBottom="10dp"
+                                android:text="Anti"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center"
+                                android:text="Malware"
+                                android:textSize="12sp" />
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/artDesign"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_art"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginBottom="10dp"
                                 android:textSize="16sp"
                                 android:text="Art"/>
                         </androidx.cardview.widget.CardView>
@@ -201,12 +240,21 @@
                             android:id="@+id/auth"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_auth"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="bottom|center"
                                 android:textSize="16sp"
                                 android:text="Auth"/>
                         </androidx.cardview.widget.CardView>
@@ -214,12 +262,14 @@
                             android:id="@+id/blockchain"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center|bottom"
                                 android:textSize="16sp"
                                 android:text="Blockchain"/>
                         </androidx.cardview.widget.CardView>
@@ -227,12 +277,21 @@
                             android:id="@+id/books"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_books"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center|bottom"
                                 android:textSize="16sp"
                                 android:text="Books"/>
                         </androidx.cardview.widget.CardView>
@@ -240,12 +299,21 @@
                             android:id="@+id/business"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_bsns"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center|bottom"
                                 android:textSize="14sp"
                                 android:text="Business"/>
                         </androidx.cardview.widget.CardView>
@@ -253,25 +321,43 @@
                             android:id="@+id/calendar"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_calender"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:textSize="16sp"
+                                android:layout_gravity="center|bottom"
+                                android:textSize="14sp"
                                 android:text="Calendar"/>
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/cloudStorage"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_cloud"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center|bottom"
                                 android:textSize="16sp"
                                 android:text="Cloud"/>
                         </androidx.cardview.widget.CardView>
@@ -279,34 +365,54 @@
                             android:id="@+id/continuousIntegration"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_integratn"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:textSize="16sp"
+                                android:layout_gravity="center|bottom"
+                                android:textSize="14sp"
                                 android:text="Integration"/>
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/currencyExchange"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/img_currncy"></ImageView>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center|bottom"
                                 android:textSize="16sp"
-                                android:text="Currency"/>
+                                android:text="Currncy"/>
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/dataValidation"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -318,8 +424,10 @@
                             android:id="@+id/development"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -331,8 +439,10 @@
                             android:id="@+id/dictionaries"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -344,8 +454,10 @@
                             android:id="@+id/documents"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -357,8 +469,10 @@
                             android:id="@+id/email"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -370,8 +484,10 @@
                             android:id="@+id/entertainment"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
-                            app:cardElevation="4dp">
+                            android:layout_height="70dp"
+                            app:cardElevation="4dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -383,7 +499,7 @@
                             android:id="@+id/env"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             app:cardElevation="4dp">
                             <TextView
                                 android:layout_width="wrap_content"
@@ -394,7 +510,7 @@
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/events"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="60dp"
                             app:cardElevation="4dp">
@@ -407,7 +523,7 @@
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:id="@+id/finance"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="60dp"
                             app:cardElevation="4dp">
@@ -422,7 +538,7 @@
                             android:id="@+id/food"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             app:cardElevation="4dp">
                             <TextView
                                 android:layout_width="wrap_content"
@@ -435,7 +551,7 @@
                             android:id="@+id/games"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             app:cardElevation="4dp">
                             <TextView
                                 android:layout_width="wrap_content"
@@ -448,7 +564,7 @@
                             android:id="@+id/geocoding"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             app:cardElevation="4dp">
                             <TextView
                                 android:layout_width="wrap_content"
@@ -464,7 +580,7 @@
                             android:id="@+id/gov"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             app:cardElevation="4dp">
                             <TextView
                                 android:layout_width="wrap_content"
@@ -477,7 +593,7 @@
                             android:id="@+id/health"
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
-                            android:layout_height="60dp"
+                            android:layout_height="70dp"
                             app:cardElevation="4dp">
                             <TextView
                                 android:layout_width="wrap_content"

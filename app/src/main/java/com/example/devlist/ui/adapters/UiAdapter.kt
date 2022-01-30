@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devlist.R
-import com.example.devlist.data.dataSource.ImgDataSrc
 import com.example.devlist.data.model.ImgItem
 import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.UiWebViewActivity
