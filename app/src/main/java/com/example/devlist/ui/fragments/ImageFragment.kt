@@ -1,20 +1,15 @@
 package com.example.devlist.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.devlist.R
 import com.example.devlist.data.model.Resource
-import com.example.devlist.databinding.FontFragmentBinding
 import com.example.devlist.databinding.ImageFragmentBinding
-import com.example.devlist.ui.adapters.FontAdapter
 import com.example.devlist.ui.adapters.ImageAdapter
-import com.example.devlist.ui.viewmodel.FontViewModel
 import com.example.devlist.ui.viewmodel.ImageViewModel
 
 class ImageFragment : Fragment() {
@@ -37,7 +32,7 @@ class ImageFragment : Fragment() {
                 imageRecycler.layoutManager = LinearLayoutManager(activity)
             }
 
-            imageViewModel.imageLiveData.observe(this@ImageFragment.viewLifecycleOwner, {
+            imageViewModel.imageLiveData.observe(this@ImageFragment.viewLifecycleOwner) {
                 imageProgressBar.visibility = View.GONE
                 if (it != null) {
                     imageRecycler.visibility = View.VISIBLE
@@ -46,7 +41,7 @@ class ImageFragment : Fragment() {
                     imageRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }
-            })
+            }
         }
         return binding.root
     }

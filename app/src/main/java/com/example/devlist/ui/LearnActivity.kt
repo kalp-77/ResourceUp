@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -14,6 +13,7 @@ import com.example.devlist.R
 import com.example.devlist.ui.fragments.ProgrammingFragment
 import com.example.devlist.ui.fragments.UTubeFragment
 import com.example.devlist.ui.fragments.UiKitFragment
+import com.example.devlist.ui.utils.applyWindowInsets
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
 import kotlinx.android.synthetic.main.activity_learn.*
 
@@ -61,9 +61,7 @@ class LearnActivity : AppCompatActivity() {
     }
     private fun switchFragment(fragment: Fragment) {
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment)
-        fragmentTransaction1.commit()
-
+        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
     private fun loadFragment(fragment: Fragment) {
         // load fragment
