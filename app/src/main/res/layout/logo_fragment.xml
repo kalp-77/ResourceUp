@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragments.IconsFragment">
+        tools:context=".ui.fragments.LogoFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:visibility="gone"

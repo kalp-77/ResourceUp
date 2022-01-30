@@ -14,8 +14,7 @@ class SplashScreen : AppCompatActivity() {
 
     private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
-
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -28,9 +27,8 @@ class SplashScreen : AppCompatActivity() {
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
         window.statusBarColor = Color.TRANSPARENT
         mDelayHandler = Handler()
-
-        //Navigate with delay
         mDelayHandler!!.postDelayed(mRunnable, SPLASH_DELAY)
+
     }
 
     public override fun onDestroy() {
@@ -41,4 +39,5 @@ class SplashScreen : AppCompatActivity() {
 
         super.onDestroy()
     }
+
 }

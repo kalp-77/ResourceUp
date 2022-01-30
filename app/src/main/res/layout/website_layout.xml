@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:id="@+id/websiteName"
+                android:textColor="#105050"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/websiteDesc"
+                android:layout_width="match_parent"
+                android:textColor="@color/teal_700"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="description">
+            </TextView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

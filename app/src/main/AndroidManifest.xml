@@ -6,6 +6,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -15,7 +17,9 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.DevList">
-
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -24,8 +28,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".ui.webview.IconsWebViewActivity"
@@ -38,14 +40,24 @@
             android:name=".ui.webview.UiWebViewActivity"
             android:exported="false"
             android:hardwareAccelerated="false" />
-
         <activity
             android:name=".ui.webview.FontWebViewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.webview.ImageWebViewActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".ui.webview.WebsiteWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.ResumeWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.ExtensionWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.InterviewWebViewActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
@@ -54,6 +66,7 @@
             android:exported="true">
 
         </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

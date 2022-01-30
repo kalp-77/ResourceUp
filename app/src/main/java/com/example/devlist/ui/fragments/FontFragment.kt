@@ -11,11 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devlist.R
 import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.FontFragmentBinding
-import com.example.devlist.databinding.UiFragmentBinding
 import com.example.devlist.ui.adapters.FontAdapter
-import com.example.devlist.ui.adapters.UiAdapter
 import com.example.devlist.ui.viewmodel.FontViewModel
-import com.example.devlist.ui.viewmodel.UiViewModel
 import kotlinx.android.synthetic.main.font_fragment.*
 
 class FontFragment : Fragment() {

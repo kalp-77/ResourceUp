@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/jobsbg"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:scrollbarStyle="insideOverlay"
+                android:text="JOBS"
+                android:textSize="32sp">
+            </TextView>
+        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000f"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabTextColor="@color/black"
+            app:tabIndicatorColor="#000f"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:tabSelectedTextColor="@color/white"
+            app:tabRippleColor="@color/white"
+            />
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_pager_2"
+            />
+    </LinearLayout>
+
+
+
+
+</layout>

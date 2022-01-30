@@ -10,7 +10,8 @@
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.FontFragment">
+    tools:context=".ui.fragments.FontFragment"
+    android:background="#00FFFFFF">
 
 
     <androidx.recyclerview.widget.RecyclerView
