@@ -25,7 +25,6 @@ class ImageWebViewActivity: AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED
         );
         val url = intent.getStringExtra("URL")
-
         if (url != null) {
             // to load webView faster
             imageWebView.settings.setRenderPriority(WebSettings.RenderPriority.HIGH)

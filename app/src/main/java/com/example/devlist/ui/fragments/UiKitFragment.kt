@@ -29,7 +29,7 @@ class UiKitFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = UiKitFragmentBinding.inflate(inflater, container, false)
         binding.apply {
