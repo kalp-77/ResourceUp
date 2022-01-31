@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_kit_layout.xml" value="0.1422541156606163" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.22" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_kit_layout.xml" value="0.14407866609662248" />
       </map>
     </option>
   </component>

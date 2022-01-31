@@ -1,12 +1,9 @@
 package com.example.devlist.data.model
 
 
-import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "publicApi")
 data class Resource(
     @PrimaryKey(autoGenerate = true)
     val apiId: Int,
@@ -27,7 +24,6 @@ data class Resource(
     @SerializedName("keywords")
     val keywords: List<String>,
     @SerializedName("links")
-    @Ignore
     val links: Links,
     @SerializedName("name")
     val name: String

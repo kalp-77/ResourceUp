@@ -19,10 +19,7 @@ class PublicApiViewModel : ViewModel() {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
             val ui = api.getDevList("tools-and-utilities/public-apis").body()
-
-                //apiDatabase.apiDao().addApi(ui.resources.toList())
-               // apiDatabase.apiDao().addApi(ui.resources)
-                _apiMutableLivedata.value = ui!!
+            _apiMutableLivedata.value = ui!!
         }
     }
 }

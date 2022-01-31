@@ -82,5 +82,11 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.4.1'
     implementation 'androidx.room:room-ktx:2.4.1'
 
+    //chip navigation bar library
     implementation 'com.github.ismaeldivita:chip-navigation-bar:1.3.4'
+
+    //okhttp library for caching
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
+
 }
