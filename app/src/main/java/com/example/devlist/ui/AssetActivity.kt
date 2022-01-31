@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_learn.*
 
 class AssetActivity : AppCompatActivity() {
     private val menu by lazy { findViewById<ChipNavigationBar>(R.id.bottom_menu) }
-    private val button by lazy { findViewById<ImageView>(R.id.expand_button)}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_asset)
