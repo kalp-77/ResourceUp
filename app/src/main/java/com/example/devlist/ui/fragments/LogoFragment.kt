@@ -16,6 +16,7 @@ import com.example.devlist.ui.adapters.FontAdapter
 import com.example.devlist.ui.adapters.LogoAdapter
 import com.example.devlist.ui.viewmodel.ImageViewModel
 import com.example.devlist.ui.viewmodel.LogoViewModel
+import kotlinx.android.synthetic.main.logo_fragment.*
 
 class LogoFragment : Fragment() {
 
@@ -27,6 +28,11 @@ class LogoFragment : Fragment() {
     private var logoArticles = mutableListOf<Resource>()
     private var logoArticles2 = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = LogoFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -71,5 +71,4 @@ class LearnActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-
 }

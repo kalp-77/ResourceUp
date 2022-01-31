@@ -10,8 +10,27 @@
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.FontFragment">
-
+    tools:context=".ui.fragments.FontFragment"
+    android:background="#00FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4E8C8"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scrollbarStyle="insideOverlay"
+            android:text="FONTS"
+            android:textSize="32sp">
+        </TextView>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:visibility="gone"
@@ -19,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    </LinearLayout>
     <ProgressBar
         android:id="@+id/fontProgressBar"
         android:visibility="visible"

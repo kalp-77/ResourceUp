@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.AssetFragment">
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:elevation="16dp"
+            android:layout_gravity="bottom"
+            app:cnb_menuResource="@menu/menuasset"
+            app:cnb_minExpandedWidth="150dp"
+            app:cnb_radius="30dp"
+            android:background="#FFFFFF"
+            >
+        </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/ll">
+
+        </androidx.fragment.app.FragmentContainerView>
+
+    </FrameLayout>
+</layout>
+

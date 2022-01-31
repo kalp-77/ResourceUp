@@ -11,69 +11,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/font_gradient"
-        android:padding="15dp">
+        android:background="@drawable/assetsbg"
+        android:padding="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:scrollbarStyle="insideOverlay"
+                android:text="ASSETS"
+                android:textSize="32sp">
+            </TextView>
+        </LinearLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/font_gradient"
+            android:background="#FF6F91"
             app:tabIndicatorAnimationMode="elastic"
-            app:tabTextColor="@color/black"
-            app:tabIndicatorColor="@color/black"
-            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:tabTextColor="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            app:tabSelectedTextColor="#000000"
+            app:tabIconTint="@color/black"
+            android:layout_marginTop="20dp"
             />
         <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/view_pager_2"
             />
-
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:orientation="horizontal"-->
-        <!--            android:layout_gravity="bottom"-->
-        <!--            android:padding="2dp">-->
-
-
-        <!--        <Button-->
-        <!--            android:layout_margin="5dp"-->
-        <!--            android:id="@+id/iconBtn"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_alignParentBottom="true"-->
-        <!--            android:text="Icons" />-->
-        <!--        <Button-->
-        <!--            android:layout_margin="5dp"-->
-        <!--            android:id="@+id/fontBtn"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_alignParentBottom="true"-->
-        <!--            android:layout_centerInParent="true"-->
-        <!--            android:text="Fonts" />-->
-        <!--        <Button-->
-        <!--            android:id="@+id/imageBtn"-->
-        <!--            android:layout_margin="5dp"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_alignParentBottom="true"-->
-        <!--            android:layout_alignParentRight="true"-->
-        <!--            android:text="Images"/>-->
-
-        <!--        <Button-->
-        <!--            android:id="@+id/logoBtn"-->
-        <!--            android:layout_margin="5dp"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_centerInParent="true"-->
-        <!--            android:text="Logos"-->
-        <!--            />-->
     </LinearLayout>
-
-
-
-
 </layout>
