@@ -14,7 +14,6 @@ class SplashScreen : AppCompatActivity() {
 
     private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
-
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
             finish()
@@ -34,11 +33,9 @@ class SplashScreen : AppCompatActivity() {
     }
 
     public override fun onDestroy() {
-
         if (mDelayHandler != null) {
             mDelayHandler!!.removeCallbacks(mRunnable)
         }
-
         super.onDestroy()
     }
 }
