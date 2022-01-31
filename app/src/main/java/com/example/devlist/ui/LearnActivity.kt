@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.transition.ChangeBounds
@@ -20,7 +21,6 @@ import kotlinx.android.synthetic.main.activity_learn.*
 
 
 class LearnActivity : AppCompatActivity() {
-
     private val menu by lazy { findViewById<ChipNavigationBar>(R.id.bottom_menu) }
     private val button by lazy { findViewById<ImageView>(R.id.expand_button)}
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +35,7 @@ class LearnActivity : AppCompatActivity() {
         loadFragment(ProgrammingFragment.newInstance())
         menu.setOnItemSelectedListener(object : ChipNavigationBar.OnItemSelectedListener {
             override fun onItemSelected(id: Int) {
-                when (id) {
+                val option = when (id) {
                     R.id.learn -> {
                         switchFragment(ProgrammingFragment.newInstance())
                     }
@@ -48,6 +48,7 @@ class LearnActivity : AppCompatActivity() {
                     R.id.cp -> {
                         switchFragment(CpChallengeFragment.newInstance())
                     }
+                    else -> {}
                 }
             }
         })

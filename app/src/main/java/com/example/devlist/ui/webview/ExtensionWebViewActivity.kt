@@ -1,5 +1,6 @@
 package com.example.devlist.ui.webview
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -14,6 +15,8 @@ import kotlinx.android.synthetic.main.extension_web_view_activity.*
 class ExtensionWebViewActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.statusBarColor = Color.BLACK
+
         setContentView(R.layout.extension_web_view_activity)
         window.setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
         val url = intent.getStringExtra("URL")
