@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/font_gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enter Name"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:gravity="center">
         </TextView>
         <EditText
@@ -24,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Name"
+        android:textColorHint="#5C5C5C"
         android:inputType="textCapSentences"
         android:layout_marginTop="4dp"/>
         <CheckBox
@@ -31,7 +33,9 @@
             android:layout_height="wrap_content"
             android:text="Remember Me"
             android:layout_marginTop="4dp"
-            android:id="@+id/checkBox"/>
+            android:id="@+id/checkBox"
+            android:textColor="@color/white"
+            />
     <Button
         android:id="@+id/save"
         android:layout_width="wrap_content"
@@ -39,7 +43,9 @@
         android:layout_below="@+id/inUserId"
         android:layout_gravity="center"
         android:layout_marginTop="4dp"
-        android:text="SAVE" />
+        android:text="SAVE"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
 
     </LinearLayout>
 

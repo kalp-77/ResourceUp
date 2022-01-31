@@ -22,9 +22,14 @@ class IconsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val iconViewModel: IconsViewModel by viewModels()
-
     private lateinit var adapter: IconAdapter
     private var iconArticles = mutableListOf<Resource>()
+
+    companion object{
+        fun newInstance() = IconsFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

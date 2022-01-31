@@ -13,9 +13,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#00FFFFFF"
+            android:background="#9EB6FD"
             android:orientation="vertical">
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:scrollbarStyle="insideOverlay"
+                    android:text="Website Builder"
+                    android:textSize="32sp">
+                </TextView>
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:visibility="gone"
                 android:id="@+id/websiteRecycler"

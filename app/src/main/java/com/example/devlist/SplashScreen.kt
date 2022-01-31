@@ -32,11 +32,9 @@ class SplashScreen : AppCompatActivity() {
     }
 
     public override fun onDestroy() {
-
         if (mDelayHandler != null) {
             mDelayHandler!!.removeCallbacks(mRunnable)
         }
-
         super.onDestroy()
     }
 

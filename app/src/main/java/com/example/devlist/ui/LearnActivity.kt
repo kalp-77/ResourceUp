@@ -61,7 +61,7 @@ class LearnActivity : AppCompatActivity() {
     }
     private fun switchFragment(fragment: Fragment) {
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment)
     }
     private fun loadFragment(fragment: Fragment) {
         // load fragment
@@ -70,6 +70,5 @@ class LearnActivity : AppCompatActivity() {
         transaction.add(R.id.fragmentContainerView2, fragment)
         transaction.commit()
     }
-
 
 }

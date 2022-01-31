@@ -13,7 +13,10 @@ import com.example.devlist.LoginActivity
 import com.example.devlist.R
 import com.example.devlist.databinding.HomeFragmentBinding
 import com.example.devlist.databinding.HomeFragmentBinding.inflate
+import com.example.devlist.ui.AssetActivity
+import com.example.devlist.ui.JobActivity
 import com.example.devlist.ui.LearnActivity
+import com.example.devlist.ui.UtilityActivity
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
@@ -34,8 +37,6 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -53,7 +54,6 @@ class HomeFragment : Fragment() {
         }
 
 
-
         // navController object
         val navController = Navigation.findNavController(view)
 
@@ -64,17 +64,20 @@ class HomeFragment : Fragment() {
             navController.navigate(R.id.action_homeFragment_to_uiFragment)
         }
         assetsBtn.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_assetsFragment)
+            val intent = Intent(context, AssetActivity::class.java)
+            startActivity(intent)
         }
         learnBtn.setOnClickListener {
             val intent = Intent(context, LearnActivity::class.java)
             startActivity(intent)
         }
         jobBtn.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_jobFragment)
+            val intent = Intent(context, JobActivity::class.java)
+            startActivity(intent)
         }
         utilitiesBtn.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_utilitiesFragment)
+            val intent = Intent(context, UtilityActivity::class.java)
+            startActivity(intent)
         }
 
     }

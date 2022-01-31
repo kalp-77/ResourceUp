@@ -1,6 +1,5 @@
 package com.example.devlist.ui.adapters
 
-import android.app.Application
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
