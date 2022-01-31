@@ -1,14 +1,17 @@
 package com.example.devlist.ui
 
 import android.graphics.Color
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.transition.ChangeBounds
+import androidx.transition.TransitionManager
 import com.example.devlist.R
-import com.example.devlist.ui.fragments.ExtensionFragment
-import com.example.devlist.ui.fragments.WebsiteFragment
+import com.example.devlist.ui.fragments.*
+import com.example.devlist.ui.utils.applyWindowInsets
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
 import kotlinx.android.synthetic.main.activity_learn.*
 
