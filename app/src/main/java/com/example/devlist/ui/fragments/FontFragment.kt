@@ -24,6 +24,12 @@ class FontFragment : Fragment() {
     lateinit var adapter: FontAdapter
     private var fontArticles = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = FontFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

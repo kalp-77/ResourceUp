@@ -23,6 +23,13 @@ class ResumeFragment : Fragment() {
     lateinit var adapter: ResumeAdapter
     private var resumeArticles = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = ResumeFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

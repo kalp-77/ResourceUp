@@ -7,7 +7,7 @@
         android:enabled="true"
         android:icon="@drawable/coding"
         android:title="learn"
-        app:cnb_backgroundColor="#FFFFFF"
+        app:cnb_backgroundColor="#EDD6B8"
         app:cnb_iconColor="#FB8C00"
         app:cnb_iconTintMode="src_in"
         app:cnb_textColor="#FB8C00" />
@@ -16,7 +16,7 @@
         android:enabled="true"
         android:icon="@drawable/youtube"
         android:title="uTube"
-        app:cnb_backgroundColor="#FFFFFF"
+        app:cnb_backgroundColor="#FFE3E3"
         app:cnb_iconColor="#FF0000"
         app:cnb_iconTintMode="src_in"
         app:cnb_textColor="#FB0900" />
@@ -25,7 +25,7 @@
         android:enabled="true"
         android:icon="@drawable/ui_kit"
         android:title="ui-kit"
-        app:cnb_backgroundColor="#FFFFFF"
+        app:cnb_backgroundColor="#EBD0F3"
         app:cnb_iconColor="#D73DFF"
         app:cnb_iconTintMode="src_in"
         app:cnb_textColor="#D45DFF" />

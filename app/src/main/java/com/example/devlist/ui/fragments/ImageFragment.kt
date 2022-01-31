@@ -21,6 +21,11 @@ class ImageFragment : Fragment() {
     lateinit var adapter: ImageAdapter
     private var imageArticles = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = ImageFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

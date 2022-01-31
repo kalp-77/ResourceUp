@@ -28,6 +28,11 @@ class LogoFragment : Fragment() {
     private var logoArticles = mutableListOf<Resource>()
     private var logoArticles2 = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = LogoFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

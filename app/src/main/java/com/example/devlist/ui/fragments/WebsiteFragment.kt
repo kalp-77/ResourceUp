@@ -21,6 +21,12 @@ class WebsiteFragment : Fragment() {
     lateinit var adapter: WebsiteAdapter
     private var websiteArticles = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = WebsiteFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

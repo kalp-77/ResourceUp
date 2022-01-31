@@ -22,6 +22,12 @@ class InterviewFragment : Fragment() {
     private lateinit var adapter: InterviewAdapter
     private var interviewArticles = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = InterviewFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

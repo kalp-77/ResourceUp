@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,10 @@ class ResumeAdapter(private val context: FragmentActivity, private val articles:
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
+
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+
+
         holder.resumeName.text = article.name
         holder.resumeDesc.text = article.description
 
@@ -29,6 +34,7 @@ class ResumeAdapter(private val context: FragmentActivity, private val articles:
             intent.putExtra("URL",article.links.website)
             context.startActivity(intent)
         }
+        holder.itemView.startAnimation(animation)
     }
 
     override fun getItemCount(): Int {

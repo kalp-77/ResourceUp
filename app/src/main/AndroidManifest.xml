@@ -15,8 +15,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.DevList">
+        android:theme="@style/Theme.DevList"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.AssetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UtilityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.JobActivity"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
@@ -29,9 +38,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.webview.IconsWebViewActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ui.webview.IconsWebViewActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".ui.webview.PublicApiWebViewActivity"
             android:exported="false"
@@ -40,32 +49,28 @@
             android:name=".ui.webview.UiWebViewActivity"
             android:exported="false"
             android:hardwareAccelerated="false" />
-        <activity
-            android:name=".ui.webview.FontWebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.webview.ImageWebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.webview.WebsiteWebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.webview.ResumeWebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.webview.ExtensionWebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.webview.InterviewWebViewActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ui.webview.FontWebViewActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".ui.webview.ImageWebViewActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".ui.webview.WebsiteWebViewActivity"-->
+<!--            android:exported="false" /> &lt;!&ndash; <activity &ndash;&gt;-->
+        <!-- android:name=".ui.webview.ResumeWebViewActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.webview.ExtensionWebViewActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.webview.InterviewWebViewActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ui.LearnActivity"
-            android:exported="true">
-
-        </activity>
             android:exported="true" />
     </application>
 

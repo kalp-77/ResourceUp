@@ -20,6 +20,11 @@ class ExtensionFragment : Fragment() {
     lateinit var adapter: ExtensionAdapter
     private var extensionArticles = mutableListOf<Resource>()
 
+    companion object{
+        fun newInstance() = ExtensionFragment().apply {
+            arguments = Bundle().apply {  }
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
