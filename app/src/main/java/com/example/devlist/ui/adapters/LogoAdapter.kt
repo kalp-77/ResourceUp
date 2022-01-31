@@ -13,9 +13,9 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.ImageWebViewActivity
 
 class LogoAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<LogoAdapter.ViewHolder>()  {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LogoAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.logo_layout, parent, false)
-        return LogoAdapter.ViewHolder(view)
+        return ViewHolder(view)
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
@@ -27,7 +27,12 @@ class LogoAdapter(private val context: FragmentActivity, private val articles: L
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ImageWebViewActivity::class.java)
-            intent.putExtra("URL",article.links.website)
+            if(article.links.website == null){
+                intent.putExtra("URL",article.links.gitHub)
+            }
+            else{
+                intent.putExtra("URL", article.links.website)
+            }
             context.startActivity(intent)
         }
         holder.itemView.startAnimation(animation)

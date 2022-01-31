@@ -1,17 +1,14 @@
 package com.example.devlist.ui
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import androidx.transition.ChangeBounds
-import androidx.transition.TransitionManager
 import com.example.devlist.R
-import com.example.devlist.ui.fragments.*
-import com.example.devlist.ui.utils.applyWindowInsets
+import com.example.devlist.ui.fragments.ExtensionFragment
+import com.example.devlist.ui.fragments.WebsiteFragment
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
 import kotlinx.android.synthetic.main.activity_learn.*
 
@@ -42,9 +39,8 @@ class UtilityActivity : AppCompatActivity() {
     }
     private fun switchFragment(fragment: Fragment) {
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment)
         fragmentTransaction1.commit()
-
     }
     private fun loadFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()

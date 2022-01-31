@@ -1,6 +1,7 @@
 package com.example.devlist.ui.adapters
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,12 @@ class ProgrammingAdapter(private val context: FragmentActivity, private val arti
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ImageWebViewActivity::class.java)
-            intent.putExtra("URL", article.links.website)
+            if(article.links.website == null){
+                intent.putExtra("URL",article.links.gitHub)
+            }
+            else{
+                intent.putExtra("URL", article.links.website)
+            }
             context.startActivity(intent)
         }
         holder.itemView.startAnimation(animation)

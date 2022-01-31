@@ -25,30 +25,46 @@
                 android:id="@+id/hi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="Hi"
                 android:textColor="@color/black"
                 android:textSize="30dp"
-                android:padding="5dp"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/nameTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="Name TextView"
                 android:textColor="@color/black"
                 android:textSize="30dp"
-                android:padding="5dp"
-                app:layout_constraintLeft_toRightOf="@id/hi" />
+                app:layout_constraintLeft_toRightOf="@id/hi"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageView
                 android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:text="Logout"
-                app:layout_constraintRight_toRightOf="parent" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+<!--            <Button-->
+<!--                android:id="@+id/logout"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:background="@color/black"-->
+<!--                android:text="Logout"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/nameTv"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <RelativeLayout

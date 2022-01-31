@@ -46,7 +46,7 @@ class AssetActivity : AppCompatActivity() {
     }
     private fun switchFragment(fragment: Fragment) {
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment)
         fragmentTransaction1.commit()
     }
     private fun loadFragment(fragment: Fragment) {

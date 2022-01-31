@@ -30,7 +30,12 @@ class CpChallengeAdapter(private val context: FragmentActivity, private val arti
         // for webpage view
         holder.itemView.setOnClickListener {
             val intent = Intent(context, FontWebViewActivity::class.java)
-            intent.putExtra("URL",article.links.website)
+            if(article.links.website == null){
+                intent.putExtra("URL",article.links.gitHub)
+            }
+            else{
+                intent.putExtra("URL", article.links.website)
+            }
             context.startActivity(intent)
         }
         holder.itemView.startAnimation(animation)
