@@ -20,5 +20,14 @@
         app:cnb_iconColor="#FF0000"
         app:cnb_iconTintMode="src_in"
         app:cnb_textColor="#FB0900" />
+    <item
+        android:id="@+id/boards"
+        android:enabled="true"
+        android:icon="@drawable/youtube"
+        android:title="boards"
+        app:cnb_backgroundColor="#FAD5D5"
+        app:cnb_iconColor="#FF0000"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#FB0900" />
 
 </menu>

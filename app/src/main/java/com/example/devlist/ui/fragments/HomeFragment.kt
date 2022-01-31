@@ -53,7 +53,6 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-
         // navController object
         val navController = Navigation.findNavController(view)
 

@@ -30,7 +30,8 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true"/>
        
         <activity
             android:name=".SplashScreen"

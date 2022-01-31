@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +19,9 @@ class LogoAdapter(private val context: FragmentActivity, private val articles: L
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+
+
         holder.logoName.text = article.name
         holder.logoDesc.text = article.description
 
@@ -26,6 +30,8 @@ class LogoAdapter(private val context: FragmentActivity, private val articles: L
             intent.putExtra("URL",article.links.website)
             context.startActivity(intent)
         }
+        holder.itemView.startAnimation(animation)
+
     }
 
     override fun getItemCount(): Int {

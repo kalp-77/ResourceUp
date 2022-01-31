@@ -3,12 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_asset.xml" value="0.14407866609662248" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_job.xml" value="0.14407866609662248" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_learn.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_utility.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/api_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/asset_fragment.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
@@ -39,6 +35,10 @@
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/activity_utility.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/asset_fragment.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/assets_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/boards_fragment.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/boards_layout.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/cp_challenge_fragment.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/cp_challenge_layout.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/extension_fragment.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/extension_layout.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/extension_web_view_activity.xml" value="0.18385416666666668" />

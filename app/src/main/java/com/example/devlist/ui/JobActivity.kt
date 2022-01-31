@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
 import com.example.devlist.R
+import com.example.devlist.ui.fragments.BoardsFragment
 import com.example.devlist.ui.fragments.InterviewFragment
 import com.example.devlist.ui.fragments.ResumeFragment
 import com.example.devlist.ui.utils.applyWindowInsets
@@ -40,6 +41,9 @@ class JobActivity : AppCompatActivity() {
                     R.id.interview -> {
                         switchFragment(InterviewFragment.newInstance())
                     }
+                    R.id.boards -> {
+                        switchFragment(BoardsFragment.newInstance())
+                    }
                 }
             }
         })
@@ -56,7 +60,8 @@ class JobActivity : AppCompatActivity() {
     }
         private fun switchFragment(fragment: Fragment) {
             val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-            fragmentTransaction1.replace(R.id.fragmentContainerView3, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+            fragmentTransaction1.replace(R.id.fragmentContainerView3, fragment)
+            fragmentTransaction1.commit()
         }
         private fun loadFragment(fragment: Fragment) {
             val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()

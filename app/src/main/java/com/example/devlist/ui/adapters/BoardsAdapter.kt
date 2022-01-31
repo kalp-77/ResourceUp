@@ -10,25 +10,25 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devlist.R
 import com.example.devlist.data.model.Resource
-import com.example.devlist.ui.webview.IconsWebViewActivity
+import com.example.devlist.ui.webview.FontWebViewActivity
 
-class IconAdapter(private val context: FragmentActivity, private val articles: List<Resource>) :RecyclerView.Adapter<IconAdapter.ViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.icons_layout, parent, false)
+class BoardsAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<BoardsAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.boards_layout, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
-        holder.iconName.text = article.name
-        holder.iconDesc.text = article.description
 
+        //card animation
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
 
-
+        holder.boardName.text = article.name
+        holder.boardDesc.text = article.description
+        // for webpage view
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, IconsWebViewActivity::class.java)
+            val intent = Intent(context, FontWebViewActivity::class.java)
             intent.putExtra("URL",article.links.website)
             context.startActivity(intent)
         }
@@ -39,10 +39,12 @@ class IconAdapter(private val context: FragmentActivity, private val articles: L
         return articles.size
     }
 
-    //View Holder
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var iconName: TextView = itemView.findViewById(R.id.iconName)
-        var iconDesc: TextView = itemView.findViewById(R.id.iconDesc)
+        var boardName: TextView = itemView.findViewById(R.id.boardName)
+        var boardDesc: TextView = itemView.findViewById(R.id.boardDesc)
     }
 
 }
+
+

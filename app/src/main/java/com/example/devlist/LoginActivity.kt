@@ -7,12 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login3.*
+import kotlin.system.exitProcess
 
 class LoginActivity : AppCompatActivity() {
 
     lateinit var sharedPreferences: SharedPreferences
     var isRemembered= false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login3)
@@ -40,5 +40,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, SplashScreen::class.java))
+        moveTaskToBack(true)
     }
 }

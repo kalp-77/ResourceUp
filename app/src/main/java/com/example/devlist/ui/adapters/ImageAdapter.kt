@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -22,11 +23,14 @@ class ImageAdapter (private val context: FragmentActivity, private val articles:
         holder.imageName.text = article.name
         holder.imageDesc.text = article.description
 
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ImageWebViewActivity::class.java)
             intent.putExtra("URL",article.links.website)
             context.startActivity(intent)
         }
+        holder.itemView.startAnimation(animation)
     }
 
     override fun getItemCount(): Int {
