@@ -73,7 +73,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            />
         <activity
             android:name=".ui.LearnActivity"
             android:exported="true" />

@@ -10,7 +10,6 @@ import kotlinx.android.synthetic.main.activity_login3.*
 import kotlin.system.exitProcess
 
 class LoginActivity : AppCompatActivity() {
-
     lateinit var sharedPreferences: SharedPreferences
     var isRemembered= false
     override fun onCreate(savedInstanceState: Bundle?) {

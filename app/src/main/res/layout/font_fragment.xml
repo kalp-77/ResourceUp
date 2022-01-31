@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F4E8C8"
+        android:background="@drawable/fontsbg"
         android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:layout_margin="20dp"
             android:scrollbarStyle="insideOverlay"
             android:text="FONTS"
-            android:textSize="32sp">
+            android:textSize="32dp">
         </TextView>
     </LinearLayout>
 
