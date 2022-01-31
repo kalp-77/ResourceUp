@@ -1,0 +1,24 @@
+package com.example.devlist.ui.viewmodel
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.devlist.data.api.ApiHelper
+import com.example.devlist.data.api.ApiInterface
+import com.example.devlist.data.model.DevResource
+import kotlinx.coroutines.launch
+
+class CpChallengeViewModel : ViewModel() {
+    private val _cpLivedata = MutableLiveData<DevResource>()
+    val cpLiveData : LiveData<DevResource> = _cpLivedata
+
+    // coroutines
+    init {
+        viewModelScope.launch {
+            val api = ApiHelper.getInstance().create(ApiInterface::class.java)
+            val ui = api.getDevList("programming/code-challenges").body()
+            _cpLivedata.value = ui!!
+        }
+    }
+}
