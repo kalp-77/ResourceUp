@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
 import com.example.devlist.R
+import com.example.devlist.ui.fragments.CpChallengeFragment
 import com.example.devlist.ui.fragments.ProgrammingFragment
 import com.example.devlist.ui.fragments.UTubeFragment
 import com.example.devlist.ui.fragments.UiKitFragment
@@ -44,6 +45,9 @@ class LearnActivity : AppCompatActivity() {
                     R.id.uiKit -> {
                         switchFragment(UiKitFragment.newInstance())
                     }
+                    R.id.cp -> {
+                        switchFragment(CpChallengeFragment.newInstance())
+                    }
                 }
             }
         })
@@ -62,6 +66,7 @@ class LearnActivity : AppCompatActivity() {
     private fun switchFragment(fragment: Fragment) {
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
         fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment)
+        fragmentTransaction1.commit()
     }
     private fun loadFragment(fragment: Fragment) {
         // load fragment

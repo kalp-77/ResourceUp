@@ -47,7 +47,6 @@ private fun View.doOnApplyWindowInset(f: (View, WindowInsets, InitialPadding) ->
                 v.removeOnAttachStateChangeListener(this)
                 v.requestApplyInsets()
             }
-
             override fun onViewDetachedFromWindow(v: View) = Unit
         })
     }
