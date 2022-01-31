@@ -11,29 +11,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.AssetFragment">
-
-        <com.ismaeldivita.chipnavigation.ChipNavigationBar
-            android:id="@+id/bottom_menu"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:elevation="16dp"
-            android:layout_gravity="bottom"
-            app:cnb_menuResource="@menu/menuasset"
-            app:cnb_minExpandedWidth="150dp"
-            app:cnb_radius="30dp"
-            android:background="#FFFFFF"
-            >
-        </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+            android:layout_height="match_parent">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView2"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toEndOf="@+id/ll">
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView2"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_menu"
+                android:layout_marginBottom="0dp">
 
-        </androidx.fragment.app.FragmentContainerView>
+            </androidx.fragment.app.FragmentContainerView>
+
+            <com.ismaeldivita.chipnavigation.ChipNavigationBar
+                android:id="@+id/bottom_menu"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="#FFFFFF"
+                android:elevation="16dp"
+                app:cnb_menuResource="@menu/menuasset"
+                app:cnb_minExpandedWidth="150dp"
+                app:cnb_radius="30dp"></com.ismaeldivita.chipnavigation.ChipNavigationBar>
+        </RelativeLayout>
+
+
+
 
     </FrameLayout>
 </layout>
