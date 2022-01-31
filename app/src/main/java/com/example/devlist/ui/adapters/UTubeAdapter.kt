@@ -29,7 +29,12 @@ class UTubeAdapter (private val context: FragmentActivity, private val articles:
             // for webpage view
             holder.itemView.setOnClickListener {
                 val intent = Intent(context, ImageWebViewActivity::class.java)
-                intent.putExtra("URL",article.links.youTube)
+                if(article.links.youTube == null){
+                    intent.putExtra("URL",article.links.website)
+                }
+                else{
+                    intent.putExtra("URL", article.links.youTube)
+                }
                 context.startActivity(intent)
             }
             holder.itemView.startAnimation(animation)

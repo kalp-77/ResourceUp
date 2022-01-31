@@ -36,7 +36,12 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
         // for webpage view
         holder.itemView.setOnClickListener {
             val intent = Intent(context,UiWebViewActivity::class.java)
-            intent.putExtra("URL",article.links.website)
+            if(article.links.website == null){
+                intent.putExtra("URL",article.links.gitHub)
+            }
+            else{
+                intent.putExtra("URL", article.links.website)
+            }
             context.startActivity(intent)
         }
 

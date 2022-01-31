@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_learn.*
 
 class AssetActivity : AppCompatActivity() {
     private val menu by lazy { findViewById<ChipNavigationBar>(R.id.bottom_menu) }
-    private val button by lazy { findViewById<ImageView>(R.id.expand_button)}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_asset)
@@ -46,7 +45,8 @@ class AssetActivity : AppCompatActivity() {
     }
     private fun switchFragment(fragment: Fragment) {
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransaction1.replace(R.id.fragmentContainerView2, fragment)
+        fragmentTransaction1.commit()
     }
     private fun loadFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()

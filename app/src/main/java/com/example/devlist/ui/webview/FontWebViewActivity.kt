@@ -15,7 +15,6 @@ import kotlinx.android.synthetic.main.font_web_view_activity.*
 
 class FontWebViewActivity: AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.font_web_view_activity)

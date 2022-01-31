@@ -42,7 +42,12 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         //for webpage view
         holder.itemView.setOnClickListener {
             val intent = Intent(context,PublicApiWebViewActivity::class.java)
-            intent.putExtra("URL",article.links.website)
+            if(article.links.website == null){
+                intent.putExtra("URL",article.links.gitHub)
+            }
+            else{
+                intent.putExtra("URL", article.links.website)
+            }
             context.startActivity(intent)
         }
         if(article.https){
