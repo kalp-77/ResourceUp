@@ -183,6 +183,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -312,8 +313,8 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
                                 <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
                                     android:layout_marginBottom="4dp"
                                     android:layout_gravity="center_horizontal"
                                     android:src="@drawable/img_books">
@@ -326,7 +327,6 @@
                                     android:text="Books"/>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
-<!--                        business-->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/business"
                             android:layout_width="60dp"
@@ -486,8 +486,8 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
                                 <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
                                     android:layout_marginBottom="4dp"
                                     android:layout_gravity="center_horizontal"
                                     android:src="@drawable/img_data">
@@ -519,7 +519,7 @@
                                     android:layout_height="30dp"
                                     android:layout_marginBottom="4dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/img_integratn">
+                                    android:src="@drawable/img_dev">
                                 </ImageView>
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -641,7 +641,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:textSize="12dp"
+                                    android:textSize="10dp"
                                     android:text="Entertainment"/>
                             </LinearLayout>
 
@@ -820,8 +820,6 @@
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
-
-
                         <androidx.cardview.widget.CardView
                             android:id="@+id/gov"
                             android:layout_width="60dp"
@@ -1000,6 +998,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1026,6 +1025,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1058,6 +1058,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1084,6 +1085,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1110,6 +1112,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1136,6 +1139,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1162,6 +1166,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1188,6 +1193,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1214,6 +1220,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1241,6 +1248,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1267,6 +1275,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1294,6 +1303,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1321,6 +1331,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1353,6 +1364,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1380,6 +1392,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1407,6 +1420,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1434,6 +1448,7 @@
                             android:layout_width="60dp"
                             android:layout_marginBottom="2dp"
                             android:layout_height="70dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             app:cardElevation="4dp">
                             <LinearLayout
                                 android:layout_width="wrap_content"

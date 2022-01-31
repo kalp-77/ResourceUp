@@ -29,6 +29,8 @@
                     android:elevation="16dp"
                     app:cnb_addLeftInset="true"
                     app:cnb_addTopInset="true"
+                    app:cnb_addBottomInset="true"
+                    app:cnb_addRightInset="true"
                     app:cnb_menuResource="@menu/menu"
                     app:cnb_minExpandedWidth="150dp"
                     app:cnb_orientationMode="vertical"

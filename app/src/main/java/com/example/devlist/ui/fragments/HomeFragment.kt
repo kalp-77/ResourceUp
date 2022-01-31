@@ -6,8 +6,10 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.Navigation
 import com.example.devlist.LoginActivity
 import com.example.devlist.R
@@ -44,13 +46,30 @@ class HomeFragment : Fragment() {
         val name= preferences.getString("NAME","")
         nameTv.text= name
 
+        // pop up option menu
         logout.setOnClickListener{
-            val editor: SharedPreferences.Editor=preferences.edit()
-            editor.clear()
-            editor.apply()
+            val popup = PopupMenu(requireContext(), it)
+            val inflater: MenuInflater = popup.menuInflater
+            inflater.inflate(R.menu.action, popup.menu)
+            popup.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.login -> {
+                        val editor: SharedPreferences.Editor = preferences.edit()
+                        editor.clear()
+                        editor.apply()
+                        val intent = Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
+                        startActivity(intent)
+                    }
+                    R.id.about -> {
 
-            val intent= Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
-            startActivity(intent)
+                    }
+                    R.id.theme -> {
+
+                    }
+                }
+                true
+            }
+            popup.show()
         }
 
 

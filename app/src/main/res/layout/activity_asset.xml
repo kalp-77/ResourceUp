@@ -28,14 +28,19 @@
             <com.ismaeldivita.chipnavigation.ChipNavigationBar
                 android:id="@+id/bottom_menu"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="58dp"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom"
                 android:background="#FFFFFF"
-                android:elevation="16dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 app:cnb_menuResource="@menu/menuasset"
                 app:cnb_minExpandedWidth="150dp"
-                app:cnb_radius="30dp"></com.ismaeldivita.chipnavigation.ChipNavigationBar>
+                app:cnb_radius="30dp">
+
+            </com.ismaeldivita.chipnavigation.ChipNavigationBar>
         </RelativeLayout>
 
 

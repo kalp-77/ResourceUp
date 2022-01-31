@@ -26,7 +26,12 @@ class IconAdapter(private val context: FragmentActivity, private val articles: L
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, IconsWebViewActivity::class.java)
-            intent.putExtra("URL",article.links.website)
+            if(article.links.website == null){
+                intent.putExtra("URL",article.links.gitHub)
+            }
+            else{
+                intent.putExtra("URL", article.links.website)
+            }
             context.startActivity(intent)
         }
     }

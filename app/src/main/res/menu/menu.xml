@@ -33,10 +33,10 @@
         android:id="@+id/cp"
         android:enabled="true"
         android:icon="@drawable/web1"
-        android:title="challenges"
-        app:cnb_backgroundColor="#FFFFFF"
-        app:cnb_iconColor="#C0CA33"
+        android:title="cha"
+        app:cnb_backgroundColor="#B5F7FF"
+        app:cnb_iconColor="#0599AC"
         app:cnb_iconTintMode="src_in"
-        app:cnb_textColor="#C0CA33" />
+        app:cnb_textColor="@color/teal_700"/>
 
 </menu>
