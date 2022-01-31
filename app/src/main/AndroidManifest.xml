@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DevList"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:name=".data.api.Myapplication"
+        android:theme="@style/Theme.DevList">
         <activity
             android:name=".ui.AssetActivity"
             android:exported="false" />
@@ -29,6 +31,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+       
         <activity
             android:name=".SplashScreen"
             android:exported="true">

@@ -46,14 +46,14 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
             context.startActivity(intent)
         }
         if(article.https){
-            holder.apiHttps.text = "HTTPS : YES"
+            holder.apiHttps.text = "Https : Yes"
         }else{
-            holder.apiHttps.text = "HTTPS : NO"
+            holder.apiHttps.text = "Https : No"
         }
         if(article.auth == ""){
-            holder.apiAuth.text = "AUTH : No"
+            holder.apiAuth.text = "Auth : No"
         }else{
-            holder.apiAuth.text = "AUTH : " + article.auth
+            holder.apiAuth.text = "Auth : " + article.auth
         }
 
         //apply animation to holder

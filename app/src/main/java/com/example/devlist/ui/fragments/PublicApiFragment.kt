@@ -25,7 +25,6 @@ class PublicApiFragment : Fragment() {
     private var publicApiArticles = mutableListOf<Resource>()
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
