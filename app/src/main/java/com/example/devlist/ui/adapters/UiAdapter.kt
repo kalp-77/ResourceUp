@@ -27,7 +27,7 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
         val item = dataSrc[position]
 
         //card animation
-        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
         holder.uiName.text = article.name
         holder.uiDesc.text = article.description
@@ -44,9 +44,16 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
             }
             context.startActivity(intent)
         }
-
-        //apply animation to holder
         holder.itemView.startAnimation(animation)
+        holder.share.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            val link :String = article.links.website
+            val body = "Look at this !! $link"
+            intent.putExtra(Intent.EXTRA_TEXT,link)
+            intent.putExtra(Intent.EXTRA_TEXT,body)
+            context.startActivity(Intent.createChooser(intent,"share"))
+        }
 
 
     }
@@ -60,6 +67,7 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
         var uiName: TextView = itemView.findViewById(R.id.uiName)
         var uiDesc: TextView = itemView.findViewById(R.id.uiDesc)
         var uiImg: ImageView = itemView.findViewById(R.id.uiImg)
+        var share : ImageView = itemView.findViewById(R.id.share)
     }
 
 }

@@ -26,8 +26,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:scrollbarStyle="insideOverlay"
-                    android:text="Extensions"
-                    android:textSize="32sp">
+                    android:text="EXTENSIONS"
+                    android:textSize="32dp">
                 </TextView>
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView

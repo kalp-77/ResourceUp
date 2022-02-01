@@ -1,18 +1,16 @@
 package com.example.devlist.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.WebsiteFragmentBinding
 import com.example.devlist.ui.adapters.WebsiteAdapter
 import com.example.devlist.ui.viewmodel.WebsiteViewModel
-import kotlinx.android.synthetic.main.website_fragment.*
 
 class WebsiteFragment : Fragment() {
     private var _binding: WebsiteFragmentBinding? = null
@@ -41,12 +39,18 @@ class WebsiteFragment : Fragment() {
                 websiteProgressBar.visibility = View.GONE
                 if (it != null) {
                     websiteRecycler.visibility = View.VISIBLE
-                    websiteArticles = it.resources as MutableList<Resource>
-                    adapter = WebsiteAdapter(requireActivity(), websiteArticles)
-                    websiteRecycler.adapter = adapter
-                    adapter.notifyDataSetChanged()
+                    websiteArticles.addAll(it.resources)
                 }
             }
+            websiteViewModel.website2LiveData.observe(this@WebsiteFragment.viewLifecycleOwner) {
+                websiteProgressBar.visibility = View.GONE
+                if (it != null) {
+                    websiteArticles.addAll(it.resources)
+                }
+            }
+            adapter = WebsiteAdapter(requireActivity(), websiteArticles)
+            websiteRecycler.adapter = adapter
+            adapter.notifyDataSetChanged()
         }
 
         return binding.root

@@ -25,7 +25,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:scrollbarStyle="insideOverlay"
-                    android:text="UI-DESIGNS"
+                    android:text="UI-DESIGNS INSPIRATION"
                     android:textSize="32dp">
                 </TextView>
             </LinearLayout>

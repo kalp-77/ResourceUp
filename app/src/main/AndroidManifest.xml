@@ -31,10 +31,12 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:noHistory="true"/>
-       
+            android:noHistory="true"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar"/>
+
         <activity
             android:name=".SplashScreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

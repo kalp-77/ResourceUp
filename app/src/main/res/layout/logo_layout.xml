@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="3dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
         app:cardBackgroundColor="@color/white"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -41,6 +41,19 @@
                 android:textSize="15dp"
                 android:text="description">
             </TextView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

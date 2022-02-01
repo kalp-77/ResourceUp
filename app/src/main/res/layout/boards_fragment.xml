@@ -13,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F0FFD3C2"
+            android:background="#E4FFC9"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -25,8 +25,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:scrollbarStyle="insideOverlay"
-                    android:text="Boards"
-                    android:textSize="32sp">
+                    android:text="BOARDS"
+                    android:textSize="32dp">
                 </TextView>
             </LinearLayout>
 

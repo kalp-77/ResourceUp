@@ -18,26 +18,27 @@
             android:layout_height="match_parent"
             android:padding="0dp">
         <!-- TODO: Update blank fragment layout -->
-                <LinearLayout
-                    android:id="@+id/moreicon"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:padding="30dp">
-                    <ImageView
-                        android:id="@+id/logout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:src="@drawable/ic_outline_more_vert_24">
+            <LinearLayout
+                android:id="@+id/moreicon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="30dp">
 
-                    </ImageView>
-                </LinearLayout>
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_outline_more_vert_24">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/usermnmee"
-                    android:layout_marginLeft="25dp"
+                android:layout_marginLeft="25dp"
                 android:layout_below="@+id/moreicon">
                 <TextView
                     android:id="@+id/hi"
@@ -48,9 +49,9 @@
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold"
+                    android:layout_marginEnd="15dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/nameTv"
                     android:layout_width="wrap_content"
@@ -62,17 +63,19 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/hi"
                     app:layout_constraintTop_toTopOf="@id/hi" />
-                </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/usermnmee">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
                     android:fontFamily="casual"
-                    android:text="What are you learning today?"
-                    android:layout_marginLeft="25dp"/>
+                    android:text="What are you learning today?" />
             </LinearLayout>
 
 
@@ -82,8 +85,7 @@
                 android:layout_below="@id/usermnmee"
                 android:columnCount="2"
                 android:padding="30dp"
-                android:rowCount="3"
-                >
+                android:rowCount="3">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/apiBtn"
@@ -108,7 +110,8 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/api_gr"/>
+                            android:src="@drawable/api_gr" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -38,6 +39,15 @@ class ExtensionAdapter(private val context: FragmentActivity, private val articl
             context.startActivity(intent)
         }
         holder.itemView.startAnimation(animation)
+        holder.share.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            val link :String = article.links.website
+            val body = "Look at this !! $link"
+            intent.putExtra(Intent.EXTRA_TEXT,link)
+            intent.putExtra(Intent.EXTRA_TEXT,body)
+            context.startActivity(Intent.createChooser(intent,"share"))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -47,6 +57,7 @@ class ExtensionAdapter(private val context: FragmentActivity, private val articl
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var extensionName: TextView = itemView.findViewById(R.id.extensionName)
         var extensionDesc: TextView = itemView.findViewById(R.id.extensionDesc)
+        var share : ImageView = itemView.findViewById(R.id.share)
     }
 
 }
