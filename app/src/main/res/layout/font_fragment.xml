@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fontsbg"
+        android:background="#F0E2FD"
         android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,6 +45,7 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:indeterminateTint="#9676B5"
         android:layout_gravity="center"/>
 
 </FrameLayout>

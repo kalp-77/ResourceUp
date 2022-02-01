@@ -31,7 +31,10 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/menu/menujob.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/api_gradient.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/circlebg.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/effect.xml" value="0.18888888888888888" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/font_gradient.xml" value="0.2" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/home_gradient.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/ic_back.xml" value="0.1787037037037037" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/ic_baseline_font_download_24.xml" value="0.2" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/drawable/round_button.xml" value="0.19074074074074074" />
@@ -59,15 +62,15 @@
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/font_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/font_web_view_activity.xml" value="0.11956521739130435" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/fragment_job.xml" value="0.18385416666666668" />
-        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/home_fragment.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/home_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/icons_fragment.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/icons_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/icons_web_view_activity.xml" value="0.12318840579710146" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/image_fragment.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/image_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/image_web_view_activity.xml" value="0.18385416666666668" />
-        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/interview_fragment.xml" value="0.18385416666666668" />
-        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/interview_layout.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/interview_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/interview_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/interview_web_view_activity.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/job_fragment.xml" value="0.12318840579710146" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/job_layout.xml" value="0.12318840579710146" />
@@ -76,9 +79,9 @@
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/logo_fragment.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/logo_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/programming_fragment.xml" value="0.18385416666666668" />
-        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/programming_layout.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/programming_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_layout.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/public_api_web_view_activity.xml" value="0.1" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/resume_fragment.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/HP/Downloads/DevResources-master/DevResources-master/app/src/main/res/layout/resume_layout.xml" value="0.18385416666666668" />
