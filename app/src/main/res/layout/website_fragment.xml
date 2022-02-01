@@ -13,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/websitebg"
+            android:background="#C1CAF8"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,6 +26,7 @@
                     android:layout_margin="20dp"
                     android:scrollbarStyle="insideOverlay"
                     android:text="WEBSITE BUILDER"
+                    android:textColor="#000000"
                     android:textSize="32sp">
                 </TextView>
             </LinearLayout>

@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="casual"
                     android:text="Hi"
-                    android:textColor="@color/black"
+                    android:textColor="#000000"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     android:layout_marginEnd="15dp"
@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="casual"
                     android:text="Name TextView"
-                    android:textColor="@color/black"
+                    android:textColor="#000000"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/hi"
@@ -75,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:fontFamily="casual"
+                    android:textColor="#000000"
                     android:text="What are you learning today?" />
             </LinearLayout>
 

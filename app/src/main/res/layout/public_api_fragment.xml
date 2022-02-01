@@ -26,6 +26,7 @@
                     android:layout_margin="20dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:scrollbarStyle="insideOverlay"
+                    android:textColor="#000000"
                     android:text="PUBLIC-APIS"
                     android:textSize="32dp">
                 </TextView>
@@ -36,7 +37,7 @@
                 <ScrollView
                     android:fadeScrollbars="true"
                     android:id="@+id/scrollView"
-                    android:background="@color/white"
+                    android:background="#FFFFFF"
                     android:backgroundTintMode="multiply"
                     android:layout_width="60dp"
                     android:visibility="visible"
@@ -1484,6 +1485,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="ALL CATEGORY"
+                        android:textColor="#000000"
                         android:layout_marginBottom="15dp"
                         android:textSize="30dp">
                     </TextView>

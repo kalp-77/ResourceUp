@@ -7,7 +7,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/.idea/misc.xml b/.idea/misc.xml
 --- a/.idea/misc.xml	(revision ad895379f70b655558c478b4f7926c92bf44d29b)
-+++ b/.idea/misc.xml	(date 1643733355927)
++++ b/.idea/misc.xml	(date 1643735758050)
 @@ -9,7 +9,6 @@
          <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_login3.xml" value="0.14407866609662248" />
          <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />

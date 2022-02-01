@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="@drawable/splash">
+    android:background="@drawable/splash_final">
 
     <TextView
         android:id="@+id/header"
@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="308dp"
-        android:text="DevResources"
+        android:text="ResourceUp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="40dp"
@@ -30,22 +30,11 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="-29dp"
         android:gravity="center"
-        android:text="Think.Find.Create"
+        android:text="Think. Find. Create"
         android:textAllCaps="false"
         android:textSize="20dp"
         android:textStyle="bold">
 
     </TextView>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="82dp"
-        android:layout_height="68dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="234dp"
-        app:srcCompat="@drawable/web1" />
 
 </RelativeLayout>
