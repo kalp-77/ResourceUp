@@ -7,25 +7,29 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".LoginActivity"
-    android:background="@drawable/login_bg">
+    android:background="@drawable/login_bg2">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HELLO THERE, WELCOME BACK!!"
-        android:textSize="35sp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="200dp"
-        android:layout_marginBottom="40dp"
-        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="HELLO THERE, WELCOME BACK!!"
+        android:textColor="#624C8E"
+        android:textSize="55dp"></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What should we call you?"
+        android:textSize="15sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#624C8E"
         android:layout_marginStart="10dp">
     </TextView>
 
-    <ImageView
-        android:id="@+id/gifView"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/giphy2">
-
-    </ImageView>
 
 
     <LinearLayout
@@ -38,11 +42,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
-            android:outlineAmbientShadowColor="@color/white"
+            android:textColorHint="#624C8E"
+            android:outlineAmbientShadowColor="@color/black"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameEdt"
                 android:layout_width="match_parent"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content">
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -54,18 +60,18 @@
             android:text="Remember Me"
             android:layout_marginTop="4dp"
             android:id="@+id/checkBox"
-            android:textColor="@color/white"
-            />
-        <Button
-            android:id="@+id/save"
-            android:layout_width="wrap_content"
+            android:textColor="@color/black" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:textSize="15dp"
             android:layout_below="@+id/inUserId"
-            android:layout_gravity="center"
-            android:layout_marginTop="4dp"
+            android:layout_gravity=""
+            android:layout_marginTop="5dp"
             android:text="SAVE"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
+            android:textColor="#624C8E"
+            android:backgroundTint="#F6F1FF"/>
 
     </LinearLayout>
 
