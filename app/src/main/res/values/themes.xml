@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.DevList" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +14,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+<!--    <style name="Theme.DevList.NoActionBarAnsStatusBar">-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:windowTranslucentNavigation">true</item>-->
+<!--        <item name="android:fitsSystemWindows">true</item>-->
+<!--    </style>-->
 </resources>

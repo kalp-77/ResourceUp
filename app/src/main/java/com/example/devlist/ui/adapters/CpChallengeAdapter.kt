@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,7 @@ class CpChallengeAdapter(private val context: FragmentActivity, private val arti
         val article = articles[position]
 
         //card animation
-        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
         holder.cpName.text = article.name
         holder.cpDesc.text = article.description
@@ -39,6 +40,15 @@ class CpChallengeAdapter(private val context: FragmentActivity, private val arti
             context.startActivity(intent)
         }
         holder.itemView.startAnimation(animation)
+        holder.share.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            val link :String = article.links.website
+            val body = "Look at this !! $link"
+            intent.putExtra(Intent.EXTRA_TEXT,link)
+            intent.putExtra(Intent.EXTRA_TEXT,body)
+            context.startActivity(Intent.createChooser(intent,"share"))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -49,6 +59,7 @@ class CpChallengeAdapter(private val context: FragmentActivity, private val arti
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var cpName: TextView = itemView.findViewById(R.id.cpName)
         var cpDesc: TextView = itemView.findViewById(R.id.cpDesc)
+        var share : ImageView = itemView.findViewById(R.id.share)
     }
 
 }

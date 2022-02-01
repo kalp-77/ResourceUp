@@ -33,7 +33,7 @@
         android:id="@+id/cp"
         android:enabled="true"
         android:icon="@drawable/web1"
-        android:title="cha"
+        android:title="coding"
         app:cnb_backgroundColor="#B5F7FF"
         app:cnb_iconColor="#0599AC"
         app:cnb_iconTintMode="src_in"

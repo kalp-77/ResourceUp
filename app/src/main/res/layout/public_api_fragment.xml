@@ -27,7 +27,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:scrollbarStyle="insideOverlay"
                     android:text="PUBLIC-APIS"
-                    android:textSize="32sp">
+                    android:textSize="32dp">
                 </TextView>
             </LinearLayout>
             <LinearLayout
@@ -1485,7 +1485,7 @@
                         android:layout_marginLeft="15dp"
                         android:text="ALL CATEGORY"
                         android:layout_marginBottom="15dp"
-                        android:textSize="28sp">
+                        android:textSize="30dp">
                     </TextView>
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/apiRecycler"

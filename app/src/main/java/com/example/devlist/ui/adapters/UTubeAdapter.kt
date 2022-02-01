@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +23,7 @@ class UTubeAdapter (private val context: FragmentActivity, private val articles:
             val article = articles[position]
 
             //card animation
-            val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+            val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
             holder.uTubeName.text = article.name
             holder.uTubeDesc.text = article.description
@@ -38,6 +39,15 @@ class UTubeAdapter (private val context: FragmentActivity, private val articles:
                 context.startActivity(intent)
             }
             holder.itemView.startAnimation(animation)
+            holder.share.setOnClickListener{
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.type = "text/plain"
+                val link :String = article.links.website
+                val body = "Look at this !! $link"
+                intent.putExtra(Intent.EXTRA_TEXT,link)
+                intent.putExtra(Intent.EXTRA_TEXT,body)
+                context.startActivity(Intent.createChooser(intent,"share"))
+            }
         }
 
         override fun getItemCount(): Int {
@@ -48,6 +58,7 @@ class UTubeAdapter (private val context: FragmentActivity, private val articles:
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             var uTubeName: TextView = itemView.findViewById(R.id.uTubeName)
             var uTubeDesc: TextView = itemView.findViewById(R.id.uTubeDesc)
+            var share : ImageView = itemView.findViewById(R.id.share)
         }
 
 

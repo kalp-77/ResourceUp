@@ -3,19 +3,33 @@ package com.example.devlist
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_login3.*
+import kotlin.system.exitProcess
+import kotlinx.coroutines.DelicateCoroutinesApi
 
 class LoginActivity : AppCompatActivity() {
 
     lateinit var sharedPreferences: SharedPreferences
-    var isRemembered= false
+    private var isRemembered = false
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login3)
+
+        Glide.with(this)
+            .load(R.drawable.giphy2)
+            .into(gifView);
+
+        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+        window.statusBarColor = Color.TRANSPARENT
+        window.navigationBarColor = Color.TRANSPARENT
 
         sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
@@ -25,7 +39,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         save.setOnClickListener{
             val name: String = nameEdt.text.toString()
             val checked: Boolean = checkBox.isChecked
@@ -40,5 +53,11 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, SplashScreen::class.java))
+        moveTaskToBack(true)
     }
 }

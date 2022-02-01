@@ -22,7 +22,7 @@ class UtilityActivity : AppCompatActivity() {
         window.statusBarColor = Color.TRANSPARENT
         window.navigationBarColor = Color.TRANSPARENT
 
-        loadFragment(WebsiteFragment.newInstance())
+        loadFragment(ExtensionFragment.newInstance())
         menu.setOnItemSelectedListener(object : ChipNavigationBar.OnItemSelectedListener {
             override fun onItemSelected(id: Int) {
                 when (id) {

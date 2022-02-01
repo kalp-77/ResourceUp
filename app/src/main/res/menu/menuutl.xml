@@ -5,20 +5,20 @@
     <item
         android:id="@+id/extension"
         android:enabled="true"
-        android:icon="@drawable/coding"
+        android:icon="@drawable/chip_ext"
         android:title="extension"
         app:cnb_backgroundColor="#E7CAF8"
-        app:cnb_iconColor="#B800FB"
+        app:cnb_iconColor="#EA53A6"
         app:cnb_iconTintMode="src_in"
-        app:cnb_textColor="#B800FB" />
+        app:cnb_textColor="#EA5383" />
     <item
         android:id="@+id/website"
         android:enabled="true"
-        android:icon="@drawable/youtube"
+        android:icon="@drawable/chip_web_builder"
         android:title="website"
-        app:cnb_backgroundColor="#C0F3CC"
-        app:cnb_iconColor="#058822"
+        app:cnb_backgroundColor="#BEC7F4"
+        app:cnb_iconColor="#39458E"
         app:cnb_iconTintMode="src_in"
-        app:cnb_textColor="#058822" />
+        app:cnb_textColor="#39458E" />
 
 </menu>

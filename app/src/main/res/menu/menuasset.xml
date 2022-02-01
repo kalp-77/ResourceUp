@@ -7,10 +7,10 @@
         android:enabled="true"
         android:icon="@drawable/ic_baseline_font_download_24"
         android:title="fonts"
-        app:cnb_backgroundColor="#F3E2C9"
-        app:cnb_iconColor="#FB8C00"
+        app:cnb_backgroundColor="#F0E2FD"
+        app:cnb_iconColor="#A87DFF"
         app:cnb_iconTintMode="src_in"
-        app:cnb_textColor="#FB8C00" />
+        app:cnb_textColor="#A87DFF" />
     <item
         android:id="@+id/images"
         android:enabled="true"

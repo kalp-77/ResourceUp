@@ -72,7 +72,6 @@ class HomeFragment : Fragment() {
             popup.show()
         }
 
-
         // navController object
         val navController = Navigation.findNavController(view)
 

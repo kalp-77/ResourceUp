@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
 import com.example.devlist.R
+import com.example.devlist.ui.fragments.BoardsFragment
 import com.example.devlist.ui.fragments.InterviewFragment
 import com.example.devlist.ui.fragments.ResumeFragment
 import com.example.devlist.ui.utils.applyWindowInsets
@@ -39,6 +40,9 @@ class JobActivity : AppCompatActivity() {
                     }
                     R.id.interview -> {
                         switchFragment(InterviewFragment.newInstance())
+                    }
+                    R.id.boards -> {
+                        switchFragment(BoardsFragment.newInstance())
                     }
                 }
             }
