@@ -1,1 +1,1 @@
-# DevResources - App
+# ResourceUp - App
