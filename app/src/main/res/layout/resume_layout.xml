@@ -20,15 +20,13 @@
             android:orientation="vertical"
             android:background="@color/white"
             android:padding="16dp">
-
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:id="@+id/resumeName"
                 android:textColor="#105050"
-                android:textSize="30sp">
+                android:textSize="25dp">
             </TextView>
 
             <TextView
@@ -36,9 +34,22 @@
                 android:layout_width="match_parent"
                 android:textColor="@color/teal_700"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="15dp"
                 android:text="description">
             </TextView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share_res"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

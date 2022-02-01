@@ -17,8 +17,6 @@ class UiKitFragment : Fragment() {
     private val uiKitViewModel: UiKitViewModel by viewModels()
     lateinit var adapter: UiKitAdapter
     private var uiKitArticles = mutableListOf<Resource>()
-    private var tempArticles = mutableListOf<Resource>()
-
 
     companion object{
         fun newInstance() = UiKitFragment().apply {
@@ -41,22 +39,19 @@ class UiKitFragment : Fragment() {
                 uiKitProgressBar.visibility = View.GONE
                 if (it != null) {
                     uiKitRecycler.visibility = View.VISIBLE
-                    uiKitArticles = it.resources as MutableList<Resource>
-                    adapter = UiKitAdapter(requireActivity(), uiKitArticles)
-                    uiKitRecycler.adapter = adapter
-                    adapter.notifyDataSetChanged()
+                    uiKitArticles.addAll(it.resources)
                 }
             }
             uiKitViewModel.tempLiveData.observe(this@UiKitFragment.viewLifecycleOwner) {
                 uiKitProgressBar.visibility = View.GONE
                 if (it != null) {
                     uiKitRecycler.visibility = View.VISIBLE
-                    tempArticles = it.resources as MutableList<Resource>
-                    adapter = UiKitAdapter(requireActivity(), tempArticles)
-                    uiKitRecycler.adapter = adapter
-                    adapter.notifyDataSetChanged()
+                    uiKitArticles.addAll(it.resources)
                 }
             }
+            adapter = UiKitAdapter(requireActivity(), uiKitArticles)
+            uiKitRecycler.adapter = adapter
+            adapter.notifyDataSetChanged()
         }
         return binding.root
     }

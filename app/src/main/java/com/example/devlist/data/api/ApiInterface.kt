@@ -10,5 +10,4 @@ interface ApiInterface {
 
     @GET("v1/list?")
     suspend fun getDevList(@Query("category") list:String) : Response<DevResource>
-
 }

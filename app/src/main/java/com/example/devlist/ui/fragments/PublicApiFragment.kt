@@ -47,7 +47,7 @@ class PublicApiFragment : Fragment() {
                     change()
                 }
                 binding.listAll.setOnClickListener {
-                    TV.text = "ALL RESOURCES"
+                    TV.text = "ALL CATEGORY"
                     publicApiArticles.clear()
                     publicApiArticles.addAll(result.resources)
                     change()

@@ -30,6 +30,7 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         holder.apiType.text = "Type : " + article.apiCategory
         holder.apiName.text = article.name
         holder.apiDesc.text = article.description
+        // for sharing the link
         holder.share.setOnClickListener{
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
