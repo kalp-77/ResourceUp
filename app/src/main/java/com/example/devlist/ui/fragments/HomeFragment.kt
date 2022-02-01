@@ -60,12 +60,6 @@ class HomeFragment : Fragment() {
                         val intent = Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
                         startActivity(intent)
                     }
-                    R.id.about -> {
-
-                    }
-                    R.id.theme -> {
-
-                    }
                 }
                 true
             }

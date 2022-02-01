@@ -33,7 +33,7 @@
             <TextView
                 android:id="@+id/websiteDesc"
                 android:layout_width="match_parent"
-                android:textColor="@color/teal_700"
+                android:textColor="#510322"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="description">

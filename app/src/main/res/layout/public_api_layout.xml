@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:text="yes"
                     android:textSize="14dp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="#6200EE"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/share"
                     app:layout_constraintStart_toEndOf="@+id/apiAuth"
