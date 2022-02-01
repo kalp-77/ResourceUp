@@ -19,9 +19,6 @@
         <action
             android:id="@+id/action_homeFragment_self"
             app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_assetsFragment"
-            app:destination="@id/assetsFragment" />
     </fragment>
     <fragment
         android:id="@+id/publicApiFragment"
@@ -42,32 +39,20 @@
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/assetsFragment"
-        android:name="com.example.devlist.ui.fragments.AssetsFragment"
-        android:label="assets_fragment"
-        tools:layout="@layout/assets_fragment" >
-        <action
-            android:id="@+id/action_assetsFragment_to_iconsFragment2"
-            app:destination="@id/iconsFragment" />
-        <action
-            android:id="@+id/action_assetsFragment_to_fontFragment"
-            app:destination="@id/fontFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/iconsFragment"
         android:name="com.example.devlist.ui.fragments.IconsFragment"
         android:label="IconsFragment" >
         <action
-            android:id="@+id/action_iconsFragment_to_assetsFragment"
-            app:destination="@id/assetsFragment" />
+            android:id="@+id/action_iconsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/fontFragment"
         android:name="com.example.devlist.ui.fragments.FontFragment"
         android:label="FontFragment" >
         <action
-            android:id="@+id/action_fontFragment_to_assetsFragment"
-            app:destination="@id/assetsFragment" />
+            android:id="@+id/action_fontFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/programmingFragment"
@@ -99,6 +84,46 @@
         android:label="CpChallengeFragment" >
         <action
             android:id="@+id/action_cpChallengeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardsFragment"
+        android:name="com.example.devlist.ui.fragments.BoardsFragment"
+        android:label="BoardsFragment" >
+        <action
+            android:id="@+id/action_boardsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.example.devlist.ui.fragments.LogoFragment"
+        android:label="LogoFragment" >
+        <action
+            android:id="@+id/action_logoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.devlist.ui.fragments.ImageFragment"
+        android:label="ImageFragment" >
+        <action
+            android:id="@+id/action_imageFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumeFragment"
+        android:name="com.example.devlist.ui.fragments.ResumeFragment"
+        android:label="ResumeFragment" >
+        <action
+            android:id="@+id/action_resumeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interviewFragment"
+        android:name="com.example.devlist.ui.fragments.InterviewFragment"
+        android:label="InterviewFragment" >
+        <action
+            android:id="@+id/action_interviewFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

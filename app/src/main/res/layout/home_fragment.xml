@@ -11,152 +11,289 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.HomeFragment"
-        android:background="@color/white">
-
-        <!-- TODO: Update blank fragment layout -->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/hi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Hi"
-                android:textColor="@color/black"
-                android:textSize="30dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/nameTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Name TextView"
-                android:textColor="@color/black"
-                android:textSize="30dp"
-                app:layout_constraintLeft_toRightOf="@id/hi"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/logout"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/img_phone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </ImageView>
-
-<!--            <Button-->
-<!--                android:id="@+id/logout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:layout_marginTop="4dp"-->
-<!--                android:background="@color/black"-->
-<!--                android:text="Logout"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/nameTv"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="@drawable/home2">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="40dp">
+            android:layout_height="match_parent"
+            android:padding="0dp">
+        <!-- TODO: Update blank fragment layout -->
+                <LinearLayout
+                    android:id="@+id/moreicon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="30dp">
+                    <ImageView
+                        android:id="@+id/logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_outline_more_vert_24">
+
+                    </ImageView>
+                </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usermnmee"
+                    android:layout_marginLeft="25dp"
+                android:layout_below="@+id/moreicon">
+                <TextView
+                    android:id="@+id/hi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="Hi"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="Name TextView"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/hi"
+                    app:layout_constraintTop_toTopOf="@id/hi" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usermnmee">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="What are you learning today?"
+                    android:layout_marginLeft="25dp"/>
+            </LinearLayout>
 
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/apiBtn"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="3dp"
-                android:backgroundTint="#CCBAF6"
-                android:text="Public-Api"
-                app:icon="@mipmap/assett_foreground"
-                app:iconGravity="top"
-                app:iconSize="30dp"
-                app:iconTint="@color/black" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/usermnmee"
+                android:columnCount="2"
+                android:padding="30dp"
+                android:rowCount="3"
+                >
 
-            <Button
-                android:id="@+id/uiBtn"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerInParent="true"
-                android:backgroundTint="#ABEDC3"
-                android:text="Ui-Design"
-                app:icon="@mipmap/assett_foreground"
-                app:iconGravity="top"
-                app:iconSize="30dp"
-                app:iconTint="@color/black" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/apiBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
 
-            <Button
-                android:id="@+id/assetsBtn"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="0dp"
-                android:backgroundTint="#95A0D8"
-                android:text="Assets"
-                app:icon="@mipmap/assett_foreground"
-                app:iconGravity="top"
-                app:iconSize="30dp"
-                app:iconTint="@color/black" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <Button
-                android:id="@+id/utilitiesBtn"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentEnd="true"
-                android:backgroundTint="#3C3947"
-                android:text="utilities"
-                app:icon="@mipmap/assett_foreground"
-                app:iconGravity="top"
-                app:iconSize="30dp"
-                app:iconTint="@color/black" />
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/api_gr"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Api"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/learnBtn"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:backgroundTint="#353142"
-                android:text="learn"
-                app:icon="@mipmap/assett_foreground"
-                app:iconGravity="top"
-                app:iconSize="30dp"
-                app:iconTint="@color/black" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/utilitiesBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
 
-            <Button
-                android:id="@+id/jobBtn"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true"
-                android:layout_marginBottom="24dp"
-                android:backgroundTint="#95D2D8"
-                android:text="jobs"
-                app:icon="@mipmap/assett_foreground"
-                app:iconGravity="top"
-                app:iconSize="30dp"
-                app:iconTint="@color/black" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/utility_gr" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Utilities"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/uiBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ui_gr" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UI"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/jobBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/job_gr" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Job"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/assetsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/font_gr" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Assets"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/learnBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/learn_gr" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Learn"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
         </RelativeLayout>
-
-
-
     </FrameLayout>
 </layout>

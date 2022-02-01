@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,8 @@ class ProgrammingAdapter(private val context: FragmentActivity, private val arti
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+
         holder.programmingName.text = article.name
         holder.programmingDesc.text = article.description
 
@@ -33,6 +36,7 @@ class ProgrammingAdapter(private val context: FragmentActivity, private val arti
             }
             context.startActivity(intent)
         }
+        holder.itemView.startAnimation(animation)
     }
 
     override fun getItemCount(): Int {

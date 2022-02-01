@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,8 @@ class InterviewAdapter(private val context: FragmentActivity, private val articl
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
+
         holder.interviewName.text = article.name
         holder.interviewDesc.text = article.description
 
@@ -33,6 +36,8 @@ class InterviewAdapter(private val context: FragmentActivity, private val articl
             }
             context.startActivity(intent)
         }
+        holder.itemView.startAnimation(animation)
+
     }
 
     override fun getItemCount(): Int {

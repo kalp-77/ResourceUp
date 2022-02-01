@@ -27,7 +27,7 @@ class UiAdapter(private val context: FragmentActivity, private val articles: Lis
         val item = dataSrc[position]
 
         //card animation
-        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
 
         holder.uiName.text = article.name
         holder.uiDesc.text = article.description

@@ -27,7 +27,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:scrollbarStyle="insideOverlay"
                     android:text="PUBLIC-APIS"
-                    android:textSize="32sp">
+                    android:textSize="32dp">
                 </TextView>
             </LinearLayout>
             <LinearLayout
