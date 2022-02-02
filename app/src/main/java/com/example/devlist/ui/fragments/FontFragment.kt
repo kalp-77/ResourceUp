@@ -20,7 +20,6 @@ class FontFragment : Fragment() {
     private var _binding: FontFragmentBinding? = null
     private val binding get() = _binding!!
     private val fontViewModel: FontViewModel by viewModels()
-
     lateinit var adapter: FontAdapter
     private var fontArticles = mutableListOf<Resource>()
 
@@ -34,16 +33,11 @@ class FontFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        // inflate the layout and bind to the _binding
         _binding = FontFragmentBinding.inflate(inflater, container, false)
-
-        // apply recycler adapter binding to the fragment
         binding.apply {
             fontRecycler.apply {
                 fontRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             fontViewModel.fontLiveData.observe(this@FontFragment.viewLifecycleOwner) {
                 fontProgressBar.visibility = View.GONE
                 if (it != null) {
@@ -57,7 +51,6 @@ class FontFragment : Fragment() {
         }
         return binding.root
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

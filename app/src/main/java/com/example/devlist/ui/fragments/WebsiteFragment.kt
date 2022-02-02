@@ -13,6 +13,7 @@ import com.example.devlist.ui.adapters.WebsiteAdapter
 import com.example.devlist.ui.viewmodel.WebsiteViewModel
 
 class WebsiteFragment : Fragment() {
+
     private var _binding: WebsiteFragmentBinding? = null
     private val binding get() = _binding!!
     private val websiteViewModel: WebsiteViewModel by viewModels()
@@ -34,7 +35,6 @@ class WebsiteFragment : Fragment() {
             websiteRecycler.apply {
                 websiteRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             websiteViewModel.websiteLiveData.observe(this@WebsiteFragment.viewLifecycleOwner) {
                 websiteProgressBar.visibility = View.GONE
                 if (it != null) {
@@ -52,9 +52,9 @@ class WebsiteFragment : Fragment() {
             websiteRecycler.adapter = adapter
             adapter.notifyDataSetChanged()
         }
-
         return binding.root
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

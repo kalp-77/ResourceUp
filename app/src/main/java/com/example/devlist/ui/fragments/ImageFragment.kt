@@ -17,7 +17,6 @@ class ImageFragment : Fragment() {
     private var _binding: ImageFragmentBinding? = null
     private val binding get() = _binding!!
     private val imageViewModel: ImageViewModel by viewModels()
-
     lateinit var adapter: ImageAdapter
     private var imageArticles = mutableListOf<Resource>()
 
@@ -30,7 +29,6 @@ class ImageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = ImageFragmentBinding.inflate(inflater, container, false)
         binding.apply {
             imageRecycler.apply {
@@ -51,11 +49,9 @@ class ImageFragment : Fragment() {
         return binding.root
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

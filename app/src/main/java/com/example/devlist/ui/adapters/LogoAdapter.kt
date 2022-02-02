@@ -14,6 +14,7 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.ImageWebViewActivity
 
 class LogoAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<LogoAdapter.ViewHolder>()  {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.logo_layout, parent, false)
         return ViewHolder(view)
@@ -22,10 +23,8 @@ class LogoAdapter(private val context: FragmentActivity, private val articles: L
         val article = articles[position]
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
 
-
         holder.logoName.text = article.name
         holder.logoDesc.text = article.description
-
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ImageWebViewActivity::class.java)
             if(article.links.website == null){
@@ -46,13 +45,11 @@ class LogoAdapter(private val context: FragmentActivity, private val articles: L
             intent.putExtra(Intent.EXTRA_TEXT,body)
             context.startActivity(Intent.createChooser(intent,"share"))
         }
-
     }
 
     override fun getItemCount(): Int {
         return articles.size
     }
-
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var logoName: TextView = itemView.findViewById(R.id.logoName)

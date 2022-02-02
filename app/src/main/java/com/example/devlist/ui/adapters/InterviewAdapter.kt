@@ -14,6 +14,7 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.InterviewWebViewActivity
 
 class InterviewAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<InterviewAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.interview_layout, parent, false)
         return ViewHolder(view)
@@ -25,8 +26,6 @@ class InterviewAdapter(private val context: FragmentActivity, private val articl
 
         holder.interviewName.text = article.name
         holder.interviewDesc.text = article.description
-
-
         holder.itemView.setOnClickListener {
             val intent = Intent(context, InterviewWebViewActivity::class.java)
             if(article.links.website == null){
@@ -47,7 +46,6 @@ class InterviewAdapter(private val context: FragmentActivity, private val articl
             intent.putExtra(Intent.EXTRA_TEXT,body)
             context.startActivity(Intent.createChooser(intent,"share"))
         }
-
     }
 
     override fun getItemCount(): Int {

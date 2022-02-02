@@ -21,13 +21,10 @@ class UTubeAdapter (private val context: FragmentActivity, private val articles:
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val article = articles[position]
-
-            //card animation
             val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
             holder.uTubeName.text = article.name
             holder.uTubeDesc.text = article.description
-            // for webpage view
             holder.itemView.setOnClickListener {
                 val intent = Intent(context, ImageWebViewActivity::class.java)
                 if(article.links.youTube == null){
@@ -54,12 +51,9 @@ class UTubeAdapter (private val context: FragmentActivity, private val articles:
             return articles.size
         }
 
-
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             var uTubeName: TextView = itemView.findViewById(R.id.uTubeName)
             var uTubeDesc: TextView = itemView.findViewById(R.id.uTubeDesc)
             var share : ImageView = itemView.findViewById(R.id.share)
         }
-
-
 }

@@ -21,7 +21,6 @@ class PublicApiWebViewActivity : AppCompatActivity() {
         setContentView(R.layout.public_api_web_view_activity)
 
         window.statusBarColor = Color.BLACK
-
         window.setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
 
         val url = intent.getStringExtra("URL")

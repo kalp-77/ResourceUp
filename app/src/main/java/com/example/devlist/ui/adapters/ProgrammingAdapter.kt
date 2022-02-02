@@ -15,6 +15,7 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.ImageWebViewActivity
 
 class ProgrammingAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<ProgrammingAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.programming_layout, parent, false)
         return ViewHolder(view)
@@ -26,7 +27,6 @@ class ProgrammingAdapter(private val context: FragmentActivity, private val arti
 
         holder.programmingName.text = article.name
         holder.programmingDesc.text = article.description
-
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ImageWebViewActivity::class.java)
             if(article.links.website == null){

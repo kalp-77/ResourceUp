@@ -44,9 +44,7 @@ class ImageWebViewActivity: AppCompatActivity() {
                     imageWebView.visibility = View.VISIBLE
                 }
             }
-
             imageWebView.loadUrl(url)
-
         }
     }
 

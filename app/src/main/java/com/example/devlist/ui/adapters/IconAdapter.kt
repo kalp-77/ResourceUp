@@ -22,12 +22,10 @@ class IconAdapter(private val context: FragmentActivity, private val articles: L
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
-        holder.iconName.text = article.name
-        holder.iconDesc.text = article.description
-
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
 
-
+        holder.iconName.text = article.name
+        holder.iconDesc.text = article.description
         holder.itemView.setOnClickListener {
             val intent = Intent(context, IconsWebViewActivity::class.java)
             if(article.links.website == null){
@@ -54,7 +52,6 @@ class IconAdapter(private val context: FragmentActivity, private val articles: L
         return articles.size
     }
 
-    //View Holder
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var iconName: TextView = itemView.findViewById(R.id.iconName)
         var iconDesc: TextView = itemView.findViewById(R.id.iconDesc)

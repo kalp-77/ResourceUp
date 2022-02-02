@@ -25,8 +25,6 @@ import kotlinx.android.synthetic.main.home_fragment.*
 class HomeFragment : Fragment() {
 
     lateinit var preferences: SharedPreferences
-
-    // binding HomeFragment
     private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
 
@@ -34,7 +32,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = inflate(inflater, container, false)
         return binding.root
     }
@@ -91,7 +88,6 @@ class HomeFragment : Fragment() {
             val intent = Intent(context, UtilityActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     override fun onDestroyView() {

@@ -18,9 +18,7 @@ class UiWebViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ui_web_view_activity)
-
         window.statusBarColor = Color.BLACK
-
         window.setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
 
         val url = intent.getStringExtra("URL")
@@ -43,13 +41,9 @@ class UiWebViewActivity : AppCompatActivity() {
                     uiWebView.visibility = View.VISIBLE
                 }
             }
-
             uiWebView.loadUrl(url)
-
         }
-
     }
-
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
         if (event.action == KeyEvent.ACTION_DOWN) {

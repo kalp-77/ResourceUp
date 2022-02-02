@@ -15,7 +15,6 @@ class ProgrammingFragment : Fragment() {
 
     private var _binding: ProgrammingFragmentBinding? = null
     private val binding get() = _binding!!
-    //uiViewModel object
     private val proViewModel: ProgrammingViewModel by viewModels()
     lateinit var adapter: ProgrammingAdapter
     private var proArticles = mutableListOf<Resource>()
@@ -30,16 +29,11 @@ class ProgrammingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        // inflate the layout and bind to the _binding
         _binding = ProgrammingFragmentBinding.inflate(inflater, container, false)
-
-        // apply recycler adapter binding to the fragment
         binding.apply {
             proRecycler.apply {
                 proRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             proViewModel.programmingLiveData.observe(this@ProgrammingFragment.viewLifecycleOwner) {
                 proProgressBar.visibility = View.GONE
                 if (it != null) {

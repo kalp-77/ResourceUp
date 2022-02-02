@@ -15,10 +15,10 @@ import com.example.devlist.ui.viewmodel.InterviewViewModel
 import kotlinx.android.synthetic.main.interview_fragment.*
 
 class InterviewFragment : Fragment() {
+
     private var _binding: InterviewFragmentBinding? = null
     private val binding get() = _binding!!
     private val interviewViewModel: InterviewViewModel by viewModels()
-
     private lateinit var adapter: InterviewAdapter
     private var interviewArticles = mutableListOf<Resource>()
 
@@ -33,13 +33,10 @@ class InterviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = InterviewFragmentBinding.inflate(inflater, container, false)
-
-        // apply recycler adapter binding to the fragment
         binding.apply {
             interviewRecycler.apply {
                 interviewRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             interviewViewModel.interviewLiveData.observe(this@InterviewFragment.viewLifecycleOwner) {
                 interviewProgressBar.visibility = View.GONE
                 if (it != null) {
@@ -51,7 +48,6 @@ class InterviewFragment : Fragment() {
                 }
             }
         }
-
         return binding.root
     }
 

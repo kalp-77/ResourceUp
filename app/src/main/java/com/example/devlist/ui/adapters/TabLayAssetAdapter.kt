@@ -32,6 +32,4 @@ class TabLayAssetAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle)
             }
         }
     }
-
-
 }

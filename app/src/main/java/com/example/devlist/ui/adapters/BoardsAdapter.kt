@@ -14,6 +14,7 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.FontWebViewActivity
 
 class BoardsAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<BoardsAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.boards_layout, parent, false)
         return ViewHolder(view)
@@ -21,8 +22,6 @@ class BoardsAdapter(private val context: FragmentActivity, private val articles:
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
-
-        //card animation
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
         holder.boardName.text = article.name
@@ -48,7 +47,6 @@ class BoardsAdapter(private val context: FragmentActivity, private val articles:
     override fun getItemCount(): Int {
         return articles.size
     }
-
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var boardName: TextView = itemView.findViewById(R.id.boardName)

@@ -1,17 +1,6 @@
 package com.example.devlist.ui.utils
-import android.animation.ArgbEvaluator
-import android.animation.ValueAnimator
 import android.view.View
 import android.view.WindowInsets
-
-internal fun View.colorAnimation(from: Int, to: Int) {
-    ValueAnimator.ofObject(ArgbEvaluator(), from, to).apply {
-        duration = 300
-        addUpdateListener { animator ->
-            setBackgroundColor(animator.animatedValue as Int)
-        }
-    }.start()
-}
 
 internal fun View.applyWindowInsets(
     left: Boolean = false,
@@ -38,7 +27,6 @@ private fun View.doOnApplyWindowInset(f: (View, WindowInsets, InitialPadding) ->
         f(v, insets, initialPadding)
         insets
     }
-
     if (isAttachedToWindow) {
         requestApplyInsets()
     } else {

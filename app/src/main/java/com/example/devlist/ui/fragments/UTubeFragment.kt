@@ -13,6 +13,7 @@ import com.example.devlist.ui.adapters.UTubeAdapter
 import com.example.devlist.ui.viewmodel.UTubeViewModel
 
 class UTubeFragment : Fragment() {
+
     private var _binding: UTubeFragmentBinding? = null
     private val binding get() = _binding!!
     private val uTubeViewModel: UTubeViewModel by viewModels()
@@ -29,7 +30,6 @@ class UTubeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = UTubeFragmentBinding.inflate(inflater, container, false)
         binding.apply {
             uTubeRecycler.apply {

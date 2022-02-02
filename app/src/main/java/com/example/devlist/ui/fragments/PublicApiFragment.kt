@@ -18,26 +18,19 @@ class PublicApiFragment : Fragment() {
 
     private var _binding: PublicApiFragmentBinding? = null
     private val binding get() = _binding!!
-
     private val apiViewModel: PublicApiViewModel by viewModels()
-
     lateinit var adapter : ApiAdapter
     private var publicApiArticles = mutableListOf<Resource>()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // inflate the layout and bind to the _binding
         _binding = PublicApiFragmentBinding.inflate(inflater, container, false)
-
-        // apply recycler adapter binding to the fragment
         binding.apply {
             apiRecycler.apply {
                 apiRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             apiViewModel.apiLiveData.observe(this@PublicApiFragment.viewLifecycleOwner) {
                 apiProgressBar.visibility = View.GONE
                 val result: DevResource = it
@@ -542,7 +535,6 @@ class PublicApiFragment : Fragment() {
                     }
                     change()
                 }
-
             }
         }
         return binding.root

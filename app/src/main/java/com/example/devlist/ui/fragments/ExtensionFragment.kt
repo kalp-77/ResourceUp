@@ -1,11 +1,10 @@
 package com.example.devlist.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devlist.data.model.Resource
@@ -14,6 +13,7 @@ import com.example.devlist.ui.adapters.ExtensionAdapter
 import com.example.devlist.ui.viewmodel.ExtensionViewModel
 
 class ExtensionFragment : Fragment() {
+
     private var _binding: ExtensionFragmentBinding? = null
     private val binding get() = _binding!!
     private val extensionViewModel: ExtensionViewModel by viewModels()
@@ -25,6 +25,7 @@ class ExtensionFragment : Fragment() {
             arguments = Bundle().apply {  }
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,9 +47,9 @@ class ExtensionFragment : Fragment() {
                 }
             }
         }
-
         return binding.root
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

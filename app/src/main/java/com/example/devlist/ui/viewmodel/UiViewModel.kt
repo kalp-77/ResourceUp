@@ -10,7 +10,6 @@ import com.example.devlist.data.model.DevResource
 import kotlinx.coroutines.launch
 
 class UiViewModel(): ViewModel() {
-    // TODO: Implement the ViewModel
 
     private val _uiLivedata = MutableLiveData<DevResource>()
     val uiLiveData : LiveData<DevResource> = _uiLivedata

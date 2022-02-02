@@ -17,7 +17,6 @@ class ResumeWebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.resume_web_view_activity)
         window.statusBarColor = Color.BLACK
-
         window.setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
         val url = intent.getStringExtra("URL")
 

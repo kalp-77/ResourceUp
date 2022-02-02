@@ -17,7 +17,6 @@ class LogoFragment : Fragment() {
     private var _binding: LogoFragmentBinding? = null
     private val binding get() = _binding!!
     private val logoViewModel: LogoViewModel by viewModels()
-
     lateinit var adapter: LogoAdapter
     private var logoArticles = mutableListOf<Resource>()
 
@@ -37,7 +36,6 @@ class LogoFragment : Fragment() {
             logoRecycler.apply {
                 logoRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             logoViewModel.logoLiveData.observe(this@LogoFragment.viewLifecycleOwner) {
                 logoProgressBar.visibility = View.GONE
                 if (it != null) {
@@ -57,11 +55,9 @@ class LogoFragment : Fragment() {
         return binding.root
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

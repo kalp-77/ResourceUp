@@ -35,7 +35,6 @@ class CpChallengeFragment : Fragment() {
             cpRecycler.apply {
                 cpRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             cpChallengeViewModel.cpLiveData.observe(this@CpChallengeFragment.viewLifecycleOwner) {
                 cpProgressBar.visibility = View.GONE
                 if (it != null) {
@@ -54,6 +53,5 @@ class CpChallengeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

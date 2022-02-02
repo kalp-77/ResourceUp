@@ -26,8 +26,6 @@ class ExtensionAdapter(private val context: FragmentActivity, private val articl
 
         holder.extensionName.text = article.name
         holder.extensionDesc.text = article.description
-
-
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ExtensionWebViewActivity::class.java)
             if(article.links.website == null){

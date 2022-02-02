@@ -14,6 +14,7 @@ import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.ImageWebViewActivity
 
 class ImageAdapter (private val context: FragmentActivity, private val articles: List<Resource>):RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.image_layout, parent, false)
         return ViewHolder(view)
@@ -21,11 +22,10 @@ class ImageAdapter (private val context: FragmentActivity, private val articles:
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
-        holder.imageName.text = article.name
-        holder.imageDesc.text = article.description
-
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.slide_in_left)
 
+        holder.imageName.text = article.name
+        holder.imageDesc.text = article.description
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ImageWebViewActivity::class.java)
             if(article.links.website == null){
@@ -51,7 +51,6 @@ class ImageAdapter (private val context: FragmentActivity, private val articles:
     override fun getItemCount(): Int {
         return articles.size
     }
-
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imageName: TextView = itemView.findViewById(R.id.imageName)

@@ -23,14 +23,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login3)
 
-
-
         window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
         window.statusBarColor = Color.TRANSPARENT
         window.navigationBarColor = Color.TRANSPARENT
 
         sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
-
         isRemembered= sharedPreferences.getBoolean("CHECKBOX", false)
         if(isRemembered){
             val intent= Intent(this, MainActivity::class.java)
@@ -52,7 +49,6 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
     }
-
 
     override fun onBackPressed() {
         startActivity(Intent(this, SplashScreen::class.java))

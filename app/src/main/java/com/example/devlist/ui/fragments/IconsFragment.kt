@@ -16,11 +16,7 @@ import kotlinx.android.synthetic.main.icons_fragment.*
 class IconsFragment : Fragment() {
 
     private var _binding: IconsFragmentBinding? = null
-
-    // with the backing property of the kotlin we extract
-    // the non null value of the _binding
     private val binding get() = _binding!!
-
     private val iconViewModel: IconsViewModel by viewModels()
     private lateinit var adapter: IconAdapter
     private var iconArticles = mutableListOf<Resource>()
@@ -36,13 +32,10 @@ class IconsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = IconsFragmentBinding.inflate(inflater, container, false)
-
-        // apply recycler adapter binding to the fragment
         binding.apply {
             iconRecycler.apply {
                 iconRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             iconViewModel.iconLiveData.observe(this@IconsFragment.viewLifecycleOwner) {
                 iconProgressBar.visibility = View.GONE
                 if (it != null) {
@@ -54,7 +47,6 @@ class IconsFragment : Fragment() {
                 }
             }
         }
-
         return binding.root
     }
 
@@ -62,6 +54,5 @@ class IconsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

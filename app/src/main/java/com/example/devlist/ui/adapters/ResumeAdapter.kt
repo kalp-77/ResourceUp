@@ -23,9 +23,9 @@ class ResumeAdapter(private val context: FragmentActivity, private val articles:
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position]
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
+
         holder.resumeName.text = article.name
         holder.resumeDesc.text = article.description
-
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ResumeWebViewActivity::class.java)
             if(article.links.website == null){

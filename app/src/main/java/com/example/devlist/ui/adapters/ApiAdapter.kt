@@ -15,7 +15,6 @@ import com.example.devlist.ui.webview.PublicApiWebViewActivity
 
 class ApiAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<ApiAdapter.ViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.public_api_layout, parent, false)
         return ViewHolder(view)
@@ -30,6 +29,7 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         holder.apiType.text = "Type : " + article.apiCategory
         holder.apiName.text = article.name
         holder.apiDesc.text = article.description
+
         // for sharing the link
         holder.share.setOnClickListener{
             val intent = Intent(Intent.ACTION_SEND)
@@ -40,6 +40,7 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
             intent.putExtra(Intent.EXTRA_TEXT,body)
             context.startActivity(Intent.createChooser(intent,"share"))
         }
+
         //for webpage view
         holder.itemView.setOnClickListener {
             val intent = Intent(context,PublicApiWebViewActivity::class.java)
@@ -64,8 +65,6 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
 
         //apply animation to holder
         holder.itemView.startAnimation(animation)
-
-
     }
 
     override fun getItemCount(): Int {

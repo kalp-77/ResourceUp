@@ -12,6 +12,7 @@ import com.example.devlist.ui.adapters.UiKitAdapter
 import com.example.devlist.ui.viewmodel.UiKitViewModel
 
 class UiKitFragment : Fragment() {
+
     private var _binding: UiKitFragmentBinding? = null
     private val binding get() = _binding!!
     private val uiKitViewModel: UiKitViewModel by viewModels()
@@ -34,7 +35,6 @@ class UiKitFragment : Fragment() {
             uiKitRecycler.apply {
                 uiKitRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             uiKitViewModel.uiKitLiveData.observe(this@UiKitFragment.viewLifecycleOwner) {
                 uiKitProgressBar.visibility = View.GONE
                 if (it != null) {

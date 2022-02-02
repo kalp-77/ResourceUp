@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.12" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/effect.xml" value="0.184" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/font_gradient.xml" value="0.121" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_back.xml" value="0.184" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_extension_24.xml" value="0.184" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_font_download_24.xml" value="0.12" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.12" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_insert_emoticon_24.xml" value="0.12" />

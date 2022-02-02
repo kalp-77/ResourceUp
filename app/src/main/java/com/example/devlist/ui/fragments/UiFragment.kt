@@ -15,35 +15,22 @@ import com.example.devlist.ui.viewmodel.UiViewModel
 
 class UiFragment : Fragment() {
 
-    // assign the _binding variable initially to null and
-    // also when the view is destroyed again it has to be set to null
     private var _binding: UiFragmentBinding? = null
-
-    // with the backing property of the kotlin we extract
-    // the non null value of the _binding
     private val binding get() = _binding!!
-
-    //uiViewModel object
     private val uiViewModel: UiViewModel by viewModels()
-
     lateinit var adapter: UiAdapter
-    private var uiArticles = mutableListOf<Resource>()   // Contains Response from webserver
-
+    private var uiArticles = mutableListOf<Resource>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        // inflate the layout and bind to the _binding
         _binding = UiFragmentBinding.inflate(inflater, container, false)
-
-        // apply recycler adapter binding to the fragment
         binding.apply {
             uiRecycler.apply {
                 uiRecycler.layoutManager = LinearLayoutManager(activity)
             }
-
             uiViewModel.uiLiveData.observe(this@UiFragment.viewLifecycleOwner) {
                 uiProgressBar.visibility = View.GONE
                 if (it != null) {

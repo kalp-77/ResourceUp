@@ -26,7 +26,6 @@ class WebsiteAdapter (private val context: FragmentActivity, private val article
 
         holder.websiteName.text = article.name
         holder.websiteDesc.text = article.description
-
         holder.itemView.setOnClickListener {
             val intent = Intent(context, WebsiteWebViewActivity::class.java)
             if(article.links.website == null){

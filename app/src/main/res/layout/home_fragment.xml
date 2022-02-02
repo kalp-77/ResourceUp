@@ -17,8 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="0dp">
-        <!-- TODO: Update blank fragment layout -->
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/moreicon"
                 android:layout_width="match_parent"

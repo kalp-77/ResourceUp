@@ -21,13 +21,10 @@ class UiKitAdapter(private val context: FragmentActivity, private val articles: 
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val article = articles[position]
-
-            //card animation
             val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
             holder.uiKitName.text = article.name
             holder.uiKitDesc.text = article.description
-            // for webpage view
             holder.itemView.setOnClickListener {
                 val intent = Intent(context, ImageWebViewActivity::class.java)
                 if(article.links.website == null){
@@ -59,6 +56,4 @@ class UiKitAdapter(private val context: FragmentActivity, private val articles: 
             var uiKitDesc: TextView = itemView.findViewById(R.id.uiKitDesc)
             var share : ImageView = itemView.findViewById(R.id.share)
         }
-
-
 }
