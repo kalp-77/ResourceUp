@@ -39,6 +39,7 @@
                     android:background="@color/white"
                     android:backgroundTintMode="multiply"
                     android:layout_width="60dp"
+                    android:scrollbars="none"
                     android:visibility="visible"
                     android:layout_height="match_parent">
 

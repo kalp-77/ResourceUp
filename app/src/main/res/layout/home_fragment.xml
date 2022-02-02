@@ -22,42 +22,58 @@
                 android:id="@+id/moreicon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:padding="30dp">
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:gravity="start"
+                    android:text="ResourceUp"
+                    android:textColor="#312577"
+                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                    android:textSize="25dp">
+
+                </TextView>
 
                 <ImageView
                     android:id="@+id/logout"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="end"
+                    android:layout_marginLeft="200dp"
                     android:src="@drawable/ic_outline_more_vert_24">
 
                 </ImageView>
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/usermnmee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/usermnmee"
-                android:layout_marginLeft="25dp"
-                android:layout_below="@+id/moreicon">
+                android:layout_below="@+id/moreicon"
+                android:layout_marginLeft="25dp">
+
                 <TextView
                     android:id="@+id/hi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="15dp"
                     android:fontFamily="casual"
                     android:text="Hi"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold"
-                    android:layout_marginEnd="15dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/nameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="casual"
-                    android:text="Name TextView"
+                    android:text="Name"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold"
@@ -115,9 +131,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="Api"
                             android:textAlignment="center"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -150,6 +168,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:textSize="16dp"
                             android:text="Utilities"
                             android:textAlignment="center"
                             android:textColor="#000000"
@@ -187,6 +207,8 @@
                             android:layout_height="wrap_content"
                             android:text="UI"
                             android:textAlignment="center"
+                            android:paddingTop="20dp"
+                            android:textSize="16dp"
                             android:textColor="#000000"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -220,6 +242,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:textSize="16dp"
                             android:text="Job"
                             android:textAlignment="center"
                             android:textColor="#000000"
@@ -257,6 +281,8 @@
                             android:layout_height="wrap_content"
                             android:text="Assets"
                             android:textAlignment="center"
+                            android:paddingTop="20dp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -292,6 +318,8 @@
                             android:layout_height="wrap_content"
                             android:text="Learn"
                             android:textAlignment="center"
+                            android:paddingTop="20dp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
                     </LinearLayout>

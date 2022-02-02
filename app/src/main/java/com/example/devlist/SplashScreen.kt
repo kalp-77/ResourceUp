@@ -9,6 +9,7 @@ import android.view.View
 
 class SplashScreen : Activity() {
 
+
     private var mDelayHandler: Handler? = null
     private val SPLASH_DELAY: Long = 3000 //3 seconds
     private val mRunnable: Runnable = Runnable {
