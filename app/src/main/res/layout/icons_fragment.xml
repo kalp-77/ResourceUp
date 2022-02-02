@@ -47,7 +47,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:indeterminateTint="#E60000"
+            android:indeterminateTint="#138F18"
             android:layout_gravity="center"/>
 
     </FrameLayout>

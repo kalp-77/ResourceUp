@@ -15,11 +15,4 @@
         <!-- Customize your theme here. -->
     </style>
 
-<!--    <style name="Theme.DevList.NoActionBarAnsStatusBar">-->
-<!--        <item name="windowActionBar">false</item>-->
-<!--        <item name="android:windowNoTitle">true</item>-->
-<!--        <item name="android:windowTranslucentStatus">true</item>-->
-<!--        <item name="android:windowTranslucentNavigation">true</item>-->
-<!--        <item name="android:fitsSystemWindows">true</item>-->
-<!--    </style>-->
 </resources>

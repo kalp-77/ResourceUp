@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
+    android:fontFamily="@font/bungee"
     tools:context=".LoginActivity"
     android:background="@drawable/login_bg2">
 
@@ -13,12 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/bungeee"
         android:text="HELLO THERE, WELCOME BACK!!"
         android:textColor="#624C8E"
-        android:textSize="55dp"></TextView>
+        android:textSize="55dp">
+
+    </TextView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +43,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/black"
             android:hint="Username"
             android:textColorHint="#624C8E"
             android:outlineAmbientShadowColor="@color/black"
