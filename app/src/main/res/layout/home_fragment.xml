@@ -37,8 +37,6 @@
                     android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
                     android:textColor="#281E63"
                     android:textSize="25dp"
-                    app:layout_constraintEnd_toStartOf="@+id/logout"
-                    app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -46,11 +44,14 @@
 
                 <ImageView
                     android:id="@+id/logout"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:paddingTop="3dp"
                     android:src="@drawable/ic_outline_more_vert_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.96"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintTop_toTopOf="parent">
 
                 </ImageView>
