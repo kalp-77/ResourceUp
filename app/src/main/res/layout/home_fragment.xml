@@ -18,34 +18,44 @@
             android:layout_height="match_parent"
             android:padding="0dp">
         <!-- TODO: Update blank fragment layout -->
-            <LinearLayout
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/moreicon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="28dp">
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:fontFamily="@font/averia_sans_libre"
                     android:gravity="start"
+                    android:paddingTop="3dp"
                     android:text="ResourceUp"
-                    android:textColor="#312577"
                     android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
-                    android:textSize="25dp">
+                    android:textColor="#281E63"
+                    android:textSize="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                 </TextView>
 
                 <ImageView
                     android:id="@+id/logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end"
-                    android:layout_marginLeft="200dp"
-                    android:src="@drawable/ic_outline_more_vert_24">
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_outline_more_vert_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.96"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent">
 
                 </ImageView>
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:id="@+id/usermnmee"
@@ -169,10 +179,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:text="Utilities"
                             android:textAlignment="center"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -205,11 +215,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="UI"
                             android:textAlignment="center"
-                            android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -243,10 +253,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:text="Job"
                             android:textAlignment="center"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -279,11 +289,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="Assets"
                             android:textAlignment="center"
-                            android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:textColor="@color/black"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -316,11 +326,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="Learn"
                             android:textAlignment="center"
-                            android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:textColor="@color/black"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
