@@ -18,35 +18,43 @@
             android:layout_height="match_parent"
             android:padding="0dp">
         <!-- TODO: Update blank fragment layout -->
-            <LinearLayout
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/moreicon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="28dp">
 
                 <TextView
-                    android:paddingTop="3dp"
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:fontFamily="@font/averia_sans_libre"
                     android:gravity="start"
+                    android:paddingTop="3dp"
                     android:text="ResourceUp"
                     android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
                     android:textColor="#281E63"
-                    android:textSize="25dp">
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toStartOf="@+id/logout"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                 </TextView>
 
                 <ImageView
                     android:id="@+id/logout"
-                    android:paddingTop="3dp"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-                    android:layout_marginLeft="202dp"
-                    android:src="@drawable/ic_outline_more_vert_24">
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_outline_more_vert_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                 </ImageView>
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:id="@+id/usermnmee"
