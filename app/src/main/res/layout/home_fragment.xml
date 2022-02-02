@@ -25,23 +25,24 @@
                 android:padding="28dp">
 
                 <TextView
+                    android:paddingTop="3dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/averia_sans_libre"
                     android:gravity="start"
                     android:text="ResourceUp"
-                    android:textColor="#312577"
                     android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                    android:textColor="#281E63"
                     android:textSize="25dp">
 
                 </TextView>
 
                 <ImageView
                     android:id="@+id/logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end"
-                    android:layout_marginLeft="200dp"
+                    android:paddingTop="3dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="202dp"
                     android:src="@drawable/ic_outline_more_vert_24">
 
                 </ImageView>
@@ -169,10 +170,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:text="Utilities"
                             android:textAlignment="center"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -205,11 +206,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="UI"
                             android:textAlignment="center"
-                            android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -243,10 +244,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:text="Job"
                             android:textAlignment="center"
                             android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -279,11 +280,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="Assets"
                             android:textAlignment="center"
-                            android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:textColor="@color/black"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -316,11 +317,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
                             android:text="Learn"
                             android:textAlignment="center"
-                            android:paddingTop="20dp"
-                            android:textSize="16dp"
                             android:textColor="@color/black"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
