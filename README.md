@@ -4,7 +4,6 @@
 ### We often spend a lot of time finding good resources to get started with our project right?
  ResourceUp aims to provide all useful resources to developers in one single app✨<br> It contains 2k+ resources , with 1.4k+ free public API documentation which you can integrate in your project🙌🏻 <h4>
 </p>
-
 <p>
 <table>
   <tr>
@@ -14,6 +13,9 @@
     <td> <img src="https://user-images.githubusercontent.com/91387531/152636905-7ed6a2ec-6b94-4e6d-955c-0f2120647df7.jpeg" widhth="500" height="500">
   </tr>
  </p>
+ 
+ <img src="https://img.shields.io/badge/Contributors-2%20-orange"><br>
+
 
   <table>
     <tr>
