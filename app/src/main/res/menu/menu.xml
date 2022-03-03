@@ -8,9 +8,9 @@
         android:icon="@drawable/coding"
         android:title="learn"
         app:cnb_backgroundColor="#EDD6B8"
-        app:cnb_iconColor="#FB8C00"
+        app:cnb_iconColor="#E14C1E"
         app:cnb_iconTintMode="src_in"
-        app:cnb_textColor="#FB8C00" />
+        app:cnb_textColor="#E14C1E" />
     <item
         android:id="@+id/uTube"
         android:enabled="true"
@@ -32,7 +32,7 @@
     <item
         android:id="@+id/cp"
         android:enabled="true"
-        android:icon="@drawable/web1"
+        android:icon="@drawable/cp"
         android:title="coding"
         app:cnb_backgroundColor="#B5F7FF"
         app:cnb_iconColor="#0599AC"

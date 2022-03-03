@@ -76,8 +76,8 @@ dependencies {
     implementation 'org.jetbrains.anko:anko-design:0.10.5'
 
     //navigation component library
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0'
 
     //room
     implementation 'androidx.room:room-runtime:2.4.1'

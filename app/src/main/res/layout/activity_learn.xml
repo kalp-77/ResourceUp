@@ -12,10 +12,12 @@
         android:layout_height="match_parent"
         tools:context=".ui.fragments.LearnFragment">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ll"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -25,28 +27,28 @@
                     android:id="@+id/bottom_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:elevation="16dp"
                     app:cnb_addLeftInset="true"
                     app:cnb_addTopInset="true"
-                    app:cnb_addBottomInset="true"
-                    app:cnb_addRightInset="true"
                     app:cnb_menuResource="@menu/menu"
                     app:cnb_minExpandedWidth="150dp"
                     app:cnb_orientationMode="vertical"
-                    app:cnb_textAppearance="@style/TextAppearance.AppCompat.Body2">
+                    app:cnb_textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
                 </com.ismaeldivita.chipnavigation.ChipNavigationBar>
 
                 <ImageView
                     android:id="@+id/expand_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:layout_width="35dp"
+                    android:layout_height="44dp"
                     android:padding="8dp"
                     android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:tint="#696969" />
-            </LinearLayout>
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView2"
@@ -57,7 +59,7 @@
 
             </androidx.fragment.app.FragmentContainerView>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </FrameLayout>
 </layout>

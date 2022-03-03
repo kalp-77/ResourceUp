@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.UTubeFragmentBinding
+import com.example.devlist.ui.adapters.ResumeAdapter
 import com.example.devlist.ui.adapters.UTubeAdapter
 import com.example.devlist.ui.viewmodel.UTubeViewModel
 
@@ -19,6 +20,7 @@ class UTubeFragment : Fragment() {
     private val uTubeViewModel: UTubeViewModel by viewModels()
     lateinit var adapter: UTubeAdapter
     private var uTubeArticles = mutableListOf<Resource>()
+    private var uTubeArticles2 = mutableListOf<Resource>()
 
     companion object{
         fun newInstance() = UTubeFragment().apply {
@@ -38,6 +40,35 @@ class UTubeFragment : Fragment() {
             uTubeViewModel.uTubeLiveData.observe(this@UTubeFragment.viewLifecycleOwner) {
                 uTubeProgressBar.visibility = View.GONE
                 if (it != null) {
+                    searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                        override fun onQueryTextSubmit(p0: String?): Boolean {
+                            return true
+                        }
+                        override fun onQueryTextChange(p0: String?): Boolean {
+                            if(p0!!.isNotEmpty()){
+                                uTubeRecycler.visibility = View.VISIBLE
+                                uTubeArticles2.clear()
+                                val search = p0.lowercase()
+                                for(article in it.resources){
+                                    if(article.name.lowercase().contains(search)){
+                                        uTubeArticles2.add(article)
+                                    }
+                                }
+                                adapter = UTubeAdapter(requireActivity(), uTubeArticles2)
+                                uTubeRecycler.adapter = adapter
+                                adapter.notifyDataSetChanged()
+                            }
+                            else{
+                                uTubeRecycler.visibility = View.VISIBLE
+                                uTubeArticles2.clear()
+                                uTubeArticles = it.resources as MutableList<Resource>
+                                adapter = UTubeAdapter(requireActivity(), uTubeArticles)
+                                uTubeRecycler.adapter = adapter
+                                adapter.notifyDataSetChanged()
+                            }
+                            return true
+                        }
+                    })
                     uTubeRecycler.visibility = View.VISIBLE
                     uTubeArticles = it.resources as MutableList<Resource>
                     adapter = UTubeAdapter(requireActivity(), uTubeArticles)
