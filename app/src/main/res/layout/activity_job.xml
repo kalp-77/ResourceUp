@@ -15,7 +15,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ll"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -32,8 +33,10 @@
                     app:cnb_menuResource="@menu/menujob"
                     app:cnb_minExpandedWidth="150dp"
                     app:cnb_orientationMode="vertical"
-                    app:cnb_textAppearance="@style/TextAppearance.AppCompat.Body2">
-                </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+                    app:cnb_textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></com.ismaeldivita.chipnavigation.ChipNavigationBar>
 
                 <ImageView
                     android:id="@+id/expand_button3"
@@ -42,8 +45,10 @@
                     android:layout_gravity="end"
                     android:padding="8dp"
                     android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:tint="#696969" />
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <androidx.fragment.app.FragmentContainerView

@@ -11,6 +11,9 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_font_download_24.xml" value="0.12" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.12" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_insert_emoticon_24.xml" value="0.12" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.1" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_outline_more_vert_24.xml" value="0.1" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_share.xml" value="0.1455" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_share_board.xml" value="0.1455" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/ic_share_cp.xml" value="0.1455" />
@@ -29,20 +32,23 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/drawable/mybutton.xml" value="0.121" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/font/averia_sans_libre.xml" value="0.168875587858059" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/font/login_font.xml" value="0.168875587858059" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout-land/home_fragment.xml" value="0.17400598546387344" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout-land/ui_kit_fragment.xml" value="0.17400598546387344" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout-land/ui_layout.xml" value="0.17400598546387344" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_asset.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_job.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_learn.xml" value="0.14407866609662248" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_login3.xml" value="0.3333333333333333" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_login3.xml" value="0.1" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_splash_screen.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/activity_utility.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/api_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/asset_fragment.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/assets_fragment.xml" value="0.14407866609662248" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/assets_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/boards_fragment.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/boards_layout.xml" value="0.3333333333333333" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/cp_challenge_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/cp_challenge_fragment.xml" value="0.25" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/cp_challenge_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/extension_fragment.xml" value="0.22" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/extension_layout.xml" value="0.14407866609662248" />
@@ -50,9 +56,10 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/font_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/font_layout.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/home_fragment.xml" value="0.1" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/home_fragment.xml" value="0.16666666666666666" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_fragment.xml" value="0.22" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_layout.xml" value="0.14407866609662248" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/icons_web_view_activity.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/image_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/image_layout.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/interview_fragment.xml" value="0.22" />
@@ -62,14 +69,14 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/programming_fragment.xml" value="0.16666666666666666" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/programming_layout.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_activity.xml" value="0.17552083333333332" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.16877637130801687" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/public_api_layout.xml" value="0.14098360655737704" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/resume_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/resume_layout.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/u_tube_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/u_tube_layout.xml" value="0.4466666666666667" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_fragment.xml" value="0.4466666666666667" />
-        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_kit_fragment.xml" value="0.22" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_fragment.xml" value="0.16666666666666666" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_kit_fragment.xml" value="0.33201970443349754" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_kit_layout.xml" value="0.22" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/ui_web_fragment.xml" value="0.17552083333333332" />
@@ -78,6 +85,7 @@
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/website_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/layout/website_layout.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/menu/action.xml" value="0.22" />
+        <entry key="..\:/Andriod/DevList/app/src/main/res/menu/menu.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/menu/menuasset.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/menu/menujob.xml" value="0.14407866609662248" />
         <entry key="..\:/Andriod/DevList/app/src/main/res/menu/menuutl.xml" value="0.14407866609662248" />

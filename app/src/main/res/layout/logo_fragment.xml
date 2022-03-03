@@ -16,20 +16,38 @@
             android:layout_height="match_parent"
             android:background="#C6DBF4"
             android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:scrollbarStyle="insideOverlay"
-                android:text="LOGOS"
-                android:textSize="32dp">
-            </TextView>
-        </LinearLayout>
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center|start|end"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:scrollbarStyle="insideOverlay"
+                    android:text="LOGOS"
+                    android:textSize="32dp">
+                </TextView>
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end">
+
+                </androidx.appcompat.widget.SearchView>
+            </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:visibility="gone"
             android:id="@+id/logoRecycler"

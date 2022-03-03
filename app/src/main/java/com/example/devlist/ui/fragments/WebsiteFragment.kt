@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.WebsiteFragmentBinding
+import com.example.devlist.ui.adapters.ResumeAdapter
 import com.example.devlist.ui.adapters.WebsiteAdapter
 import com.example.devlist.ui.viewmodel.WebsiteViewModel
 
@@ -19,6 +20,7 @@ class WebsiteFragment : Fragment() {
     private val websiteViewModel: WebsiteViewModel by viewModels()
     lateinit var adapter: WebsiteAdapter
     private var websiteArticles = mutableListOf<Resource>()
+    private var websiteArticles2 = mutableListOf<Resource>()
 
     companion object{
         fun newInstance() = WebsiteFragment().apply {
@@ -48,6 +50,34 @@ class WebsiteFragment : Fragment() {
                     websiteArticles.addAll(it.resources)
                 }
             }
+            searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(p0: String?): Boolean {
+                    return true
+                }
+                override fun onQueryTextChange(p0: String?): Boolean {
+                    if(p0!!.isNotEmpty()){
+                        websiteRecycler.visibility = View.VISIBLE
+                        websiteArticles2.clear()
+                        val search = p0.lowercase()
+                        for(article in websiteArticles){
+                            if(article.name.lowercase().contains(search)){
+                                websiteArticles2.add(article)
+                            }
+                        }
+                        adapter = WebsiteAdapter(requireActivity(), websiteArticles2)
+                        websiteRecycler.adapter = adapter
+                        adapter.notifyDataSetChanged()
+                    }
+                    else{
+                        websiteRecycler.visibility = View.VISIBLE
+                        websiteArticles2.clear()
+                        adapter = WebsiteAdapter(requireActivity(), websiteArticles)
+                        websiteRecycler.adapter = adapter
+                        adapter.notifyDataSetChanged()
+                    }
+                    return true
+                }
+            })
             adapter = WebsiteAdapter(requireActivity(), websiteArticles)
             websiteRecycler.adapter = adapter
             adapter.notifyDataSetChanged()

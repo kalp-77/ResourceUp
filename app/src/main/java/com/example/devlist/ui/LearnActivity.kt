@@ -34,7 +34,7 @@ class LearnActivity : AppCompatActivity() {
         loadFragment(ProgrammingFragment.newInstance())
         menu.setOnItemSelectedListener(object : ChipNavigationBar.OnItemSelectedListener {
             override fun onItemSelected(id: Int) {
-                val option = when (id) {
+                when (id) {
                     R.id.learn -> {
                         switchFragment(ProgrammingFragment.newInstance())
                     }

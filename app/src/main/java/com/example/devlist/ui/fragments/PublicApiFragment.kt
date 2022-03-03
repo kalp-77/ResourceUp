@@ -21,6 +21,7 @@ class PublicApiFragment : Fragment() {
     private val apiViewModel: PublicApiViewModel by viewModels()
     lateinit var adapter : ApiAdapter
     private var publicApiArticles = mutableListOf<Resource>()
+    private var publicApiArticles2 = mutableListOf<Resource>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +36,33 @@ class PublicApiFragment : Fragment() {
                 apiProgressBar.visibility = View.GONE
                 val result: DevResource = it
                 if (it != null) {
+                    searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                        override fun onQueryTextSubmit(p0: String?): Boolean {
+                            return true
+                        }
+                        override fun onQueryTextChange(p0: String?): Boolean {
+                            if(p0!!.isNotEmpty()){
+                                apiRecycler.visibility = View.VISIBLE
+                                publicApiArticles2.clear()
+                                val search = p0.lowercase()
+                                for(article in it.resources){
+                                    if(article.name.lowercase().contains(search)){
+                                        publicApiArticles2.add(article)
+                                    }
+                                }
+                                adapter = ApiAdapter(requireActivity(), publicApiArticles2)
+                                apiRecycler.adapter = adapter
+                                adapter.notifyDataSetChanged()
+                            }
+                            else{
+                                apiRecycler.visibility = View.VISIBLE
+                                publicApiArticles2.clear()
+                                publicApiArticles.addAll(it.resources)
+                                change()
+                            }
+                            return true
+                        }
+                    })
                     apiRecycler.visibility = View.VISIBLE
                     publicApiArticles.addAll(it.resources)
                     change()

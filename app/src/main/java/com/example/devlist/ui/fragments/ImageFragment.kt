@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devlist.data.model.Resource
 import com.example.devlist.databinding.ImageFragmentBinding
+import com.example.devlist.ui.adapters.IconAdapter
 import com.example.devlist.ui.adapters.ImageAdapter
 import com.example.devlist.ui.viewmodel.ImageViewModel
 
@@ -19,6 +20,8 @@ class ImageFragment : Fragment() {
     private val imageViewModel: ImageViewModel by viewModels()
     lateinit var adapter: ImageAdapter
     private var imageArticles = mutableListOf<Resource>()
+    private var imageArticles2 = mutableListOf<Resource>()
+
 
     companion object{
         fun newInstance() = ImageFragment().apply {
@@ -38,6 +41,35 @@ class ImageFragment : Fragment() {
             imageViewModel.imageLiveData.observe(this@ImageFragment.viewLifecycleOwner) {
                 imageProgressBar.visibility = View.GONE
                 if (it != null) {
+                    searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                        override fun onQueryTextSubmit(p0: String?): Boolean {
+                            return true
+                        }
+                        override fun onQueryTextChange(p0: String?): Boolean {
+                            if(p0!!.isNotEmpty()){
+                                imageRecycler.visibility = View.VISIBLE
+                                imageArticles2.clear()
+                                val search = p0.lowercase()
+                                for(article in it.resources){
+                                    if(article.name.lowercase().contains(search)){
+                                        imageArticles2.add(article)
+                                    }
+                                }
+                                adapter = ImageAdapter(requireActivity(), imageArticles2)
+                                imageRecycler.adapter = adapter
+                                adapter.notifyDataSetChanged()
+                            }
+                            else{
+                                imageRecycler.visibility = View.VISIBLE
+                                imageArticles2.clear()
+                                imageArticles = it.resources as MutableList<Resource>
+                                adapter = ImageAdapter(requireActivity(), imageArticles)
+                                imageRecycler.adapter = adapter
+                                adapter.notifyDataSetChanged()
+                            }
+                            return true
+                        }
+                    })
                     imageRecycler.visibility = View.VISIBLE
                     imageArticles = it.resources as MutableList<Resource>
                     adapter = ImageAdapter(requireActivity(), imageArticles)
