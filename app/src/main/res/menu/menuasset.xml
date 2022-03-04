@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/fonts"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_font_download_24"
+        android:title="fonts"
+        app:cnb_backgroundColor="#F0E2FD"
+        app:cnb_iconColor="#A87DFF"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#A87DFF" />
+    <item
+        android:id="@+id/images"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_image_24"
+        android:title="images"
+        app:cnb_backgroundColor="#F1C6C6"
+        app:cnb_iconColor="#FF0000"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#FB0900" />
+    <item
+        android:id="@+id/logos"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_motion_photos_on_24"
+        android:title="logos"
+        app:cnb_backgroundColor="#BFCDF4"
+        app:cnb_iconColor="#0C64A8"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#0C64A8" />
+    <item
+        android:id="@+id/icons"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_insert_emoticon_24"
+        android:title="icons"
+        app:cnb_backgroundColor="#D0EFCA"
+        app:cnb_iconColor="#72BD52"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#72BD52" />
+
+</menu>

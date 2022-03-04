@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.devlist"
+    tools:ignore="ExtraText">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ResourceUp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:name=".data.api.Myapplication"
+        android:theme="@style/Theme.DevList">
+        <activity
+            android:name=".ui.AssetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UtilityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.JobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar"/>
+
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.webview.IconsWebViewActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.webview.PublicApiWebViewActivity"
+            android:exported="false"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".ui.webview.UiWebViewActivity"
+            android:exported="false"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".ui.webview.FontWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.ImageWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.WebsiteWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.ResumeWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.webview.ExtensionWebViewActivity"
+            android:exported="false" />
+         <activity
+            android:name=".ui.webview.InterviewWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.LearnActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

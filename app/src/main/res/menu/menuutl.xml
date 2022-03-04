@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/extension"
+        android:enabled="true"
+        android:icon="@drawable/chip_ext"
+        android:title="extension"
+        app:cnb_backgroundColor="#E7CAF8"
+        app:cnb_iconColor="#EA53A6"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#EA5383" />
+    <item
+        android:id="@+id/website"
+        android:enabled="true"
+        android:icon="@drawable/chip_web_builder"
+        android:title="website"
+        app:cnb_backgroundColor="#BEC7F4"
+        app:cnb_iconColor="#39458E"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#39458E" />
+
+</menu>

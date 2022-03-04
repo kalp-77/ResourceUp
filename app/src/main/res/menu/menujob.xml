@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/resume"
+        android:enabled="true"
+        android:icon="@drawable/job_resume"
+        android:title="resume"
+        app:cnb_backgroundColor="#AFE3FF"
+        app:cnb_iconColor="#1E88E5"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#1E88E5" />
+    <item
+        android:id="@+id/interview"
+        android:enabled="true"
+        android:icon="@drawable/job_interview"
+        android:title="interview"
+        app:cnb_backgroundColor="#FFD6E5"
+        app:cnb_iconColor="#FF477B"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#FF3971" />
+    <item
+        android:id="@+id/boards"
+        android:enabled="true"
+        android:icon="@drawable/job_boards"
+        android:title="boards"
+        app:cnb_backgroundColor="#E4FFC9"
+        app:cnb_iconColor="#356105"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="#356105" />
+
+</menu>
