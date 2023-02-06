@@ -64,30 +64,30 @@
                 android:layout_marginLeft="25dp">
 
                 <TextView
-                    android:id="@+id/hi"
+                    android:id="@+id/nameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="15dp"
                     android:fontFamily="casual"
-                    android:text="Hi"
+                    android:text=" "
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/nameTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:text="Name"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/hi"
-                    app:layout_constraintTop_toTopOf="@id/hi" />
+                <!--                <TextView-->
+                <!--                    android:id="@+id/nameTv"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:fontFamily="casual"-->
+                <!--                    android:text="Name"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="30dp"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    app:layout_constraintStart_toEndOf="@id/hi"-->
+                <!--                    app:layout_constraintTop_toTopOf="@id/hi" />-->
             </LinearLayout>
 
             <LinearLayout

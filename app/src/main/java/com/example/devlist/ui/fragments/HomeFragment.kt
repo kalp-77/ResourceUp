@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.Navigation
 import com.example.devlist.LoginActivity
@@ -19,12 +20,15 @@ import com.example.devlist.ui.AssetActivity
 import com.example.devlist.ui.JobActivity
 import com.example.devlist.ui.LearnActivity
 import com.example.devlist.ui.UtilityActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
 class HomeFragment : Fragment() {
 
-    lateinit var preferences: SharedPreferences
+    private lateinit var auth : FirebaseAuth
+//    lateinit var preferences: SharedPreferences
     private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
 
@@ -34,14 +38,24 @@ class HomeFragment : Fragment() {
     ): View? {
         _binding = inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
-        val name= preferences.getString("NAME","")
-        nameTv.text= name
+        auth = FirebaseAuth.getInstance()
+        checkUser()
+
+
+
+
+
+
+
+//        val preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+//        val name= preferences.getString("NAME","")
+//        nameTv.text= name
 
         // pop up option menu
         logout.setOnClickListener{
@@ -50,12 +64,14 @@ class HomeFragment : Fragment() {
             inflater.inflate(R.menu.action, popup.menu)
             popup.setOnMenuItemClickListener { menuItem ->
                 when (menuItem.itemId) {
-                    R.id.login -> {
-                        val editor: SharedPreferences.Editor = preferences.edit()
-                        editor.clear()
-                        editor.apply()
-                        val intent = Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
-                        startActivity(intent)
+                    R.id.logout -> {
+                        auth.signOut()
+                        checkUser()
+//                        val editor: SharedPreferences.Editor = preferences.edit()
+//                        editor.clear()
+//                        editor.apply()
+//                        val intent = Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
+//                        startActivity(intent)
                     }
                 }
                 true
@@ -88,6 +104,34 @@ class HomeFragment : Fragment() {
             val intent = Intent(context, UtilityActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun checkUser() {
+        val firebaseUser = auth.currentUser
+        if(firebaseUser!=null){
+            var display : TextView = binding.nameTv
+            var id = FirebaseAuth.getInstance().currentUser?.uid.toString()
+
+            FirebaseFirestore.getInstance().collection("users").get()
+                .addOnCompleteListener() {
+                    val result : StringBuffer = StringBuffer()
+                    if(it.isSuccessful){
+                        for(document in it.result){
+                            var it_id = document.get("user_UID")
+
+                            if(it_id.toString()==id) {
+                                result.append("Hi, ").append(document.data.getValue("Name"))
+                            }
+                        }
+                        display.text = result
+                    }
+                }
+        }
+        else{
+            val intent = Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onDestroyView() {
