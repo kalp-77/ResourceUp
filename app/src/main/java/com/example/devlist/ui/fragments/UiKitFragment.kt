@@ -42,13 +42,13 @@ class UiKitFragment : Fragment() {
                 uiKitProgressBar.visibility = View.GONE
                 if (it != null) {
                     uiKitRecycler.visibility = View.VISIBLE
-                    uiKitArticles1.addAll(it.resources)
+                    uiKitArticles1.addAll(it.data)
                 }
             }
             uiKitViewModel.tempLiveData.observe(this@UiKitFragment.viewLifecycleOwner) {
                 uiKitProgressBar.visibility = View.GONE
                 if (it != null) {
-                    uiKitArticles1.addAll(it.resources)
+                    uiKitArticles1.addAll(it.data)
                 }
             }
             adapter = UiKitAdapter(requireActivity(), uiKitArticles1)

@@ -49,7 +49,7 @@ class UTubeFragment : Fragment() {
                                 uTubeRecycler.visibility = View.VISIBLE
                                 uTubeArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         uTubeArticles2.add(article)
                                     }
@@ -61,7 +61,7 @@ class UTubeFragment : Fragment() {
                             else{
                                 uTubeRecycler.visibility = View.VISIBLE
                                 uTubeArticles2.clear()
-                                uTubeArticles = it.resources as MutableList<Resource>
+                                uTubeArticles = it.data as MutableList<Resource>
                                 adapter = UTubeAdapter(requireActivity(), uTubeArticles)
                                 uTubeRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -70,7 +70,7 @@ class UTubeFragment : Fragment() {
                         }
                     })
                     uTubeRecycler.visibility = View.VISIBLE
-                    uTubeArticles = it.resources as MutableList<Resource>
+                    uTubeArticles = it.data as MutableList<Resource>
                     adapter = UTubeAdapter(requireActivity(), uTubeArticles)
                     uTubeRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

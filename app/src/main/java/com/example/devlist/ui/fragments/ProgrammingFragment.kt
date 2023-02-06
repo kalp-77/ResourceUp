@@ -50,7 +50,7 @@ class ProgrammingFragment : Fragment() {
                                 proRecycler.visibility = View.VISIBLE
                                 proArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         proArticles2.add(article)
                                     }
@@ -62,7 +62,7 @@ class ProgrammingFragment : Fragment() {
                             else{
                                 proRecycler.visibility = View.VISIBLE
                                 proArticles2.clear()
-                                proArticles = it.resources as MutableList<Resource>
+                                proArticles = it.data as MutableList<Resource>
                                 adapter = ProgrammingAdapter(requireActivity(), proArticles,)
                                 proRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -71,7 +71,7 @@ class ProgrammingFragment : Fragment() {
                         }
                     })
                     proRecycler.visibility = View.VISIBLE
-                    proArticles = it.resources as MutableList<Resource>
+                    proArticles = it.data as MutableList<Resource>
                     adapter = ProgrammingAdapter(requireActivity(), proArticles)
                     proRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

@@ -17,7 +17,7 @@ class UTubeViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("programming/youtube-channels").body()
+            val ui = api.getDevList("Programming/YouTube Channels").body()
             _uTubeLivedata.value = ui!!
         }
     }

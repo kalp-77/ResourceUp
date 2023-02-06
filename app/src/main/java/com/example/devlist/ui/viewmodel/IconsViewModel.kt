@@ -18,7 +18,7 @@ class IconsViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("assets/icons").body()
+            val ui = api.getDevList("Assets/Icons").body()
             _iconMutableLivedata.value = ui!!
         }
     }

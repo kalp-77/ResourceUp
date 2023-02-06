@@ -49,7 +49,7 @@ class ResumeFragment : Fragment() {
                                 resumeRecycler.visibility = View.VISIBLE
                                 resumeArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         resumeArticles2.add(article)
                                     }
@@ -61,7 +61,7 @@ class ResumeFragment : Fragment() {
                             else{
                                 resumeRecycler.visibility = View.VISIBLE
                                 resumeArticles2.clear()
-                                resumeArticles = it.resources as MutableList<Resource>
+                                resumeArticles = it.data as MutableList<Resource>
                                 adapter = ResumeAdapter(requireActivity(), resumeArticles)
                                 resumeRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -70,7 +70,7 @@ class ResumeFragment : Fragment() {
                         }
                     })
                     resumeRecycler.visibility = View.VISIBLE
-                    resumeArticles = it.resources as MutableList<Resource>
+                    resumeArticles = it.data as MutableList<Resource>
                     adapter = ResumeAdapter(requireActivity(), resumeArticles)
                     resumeRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

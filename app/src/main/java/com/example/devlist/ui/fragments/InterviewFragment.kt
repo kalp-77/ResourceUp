@@ -52,7 +52,7 @@ class InterviewFragment : Fragment() {
                                 interviewRecycler.visibility = View.VISIBLE
                                 interviewArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         interviewArticles2.add(article)
                                     }
@@ -64,7 +64,7 @@ class InterviewFragment : Fragment() {
                             else{
                                 interviewRecycler.visibility = View.VISIBLE
                                 interviewArticles2.clear()
-                                interviewArticles = it.resources as MutableList<Resource>
+                                interviewArticles = it.data as MutableList<Resource>
                                 adapter = InterviewAdapter(requireActivity(), interviewArticles)
                                 interviewRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -73,7 +73,7 @@ class InterviewFragment : Fragment() {
                         }
                     })
                     interviewRecycler.visibility = View.VISIBLE
-                    interviewArticles = it.resources as MutableList<Resource>
+                    interviewArticles = it.data as MutableList<Resource>
                     adapter = InterviewAdapter(requireActivity(), interviewArticles)
                     interviewRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

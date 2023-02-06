@@ -15,7 +15,7 @@ class BoardsViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("jobs/boards").body()
+            val ui = api.getDevList("Jobs/Boards").body()
             _boardsLivedata.value = ui!!
         }
     }

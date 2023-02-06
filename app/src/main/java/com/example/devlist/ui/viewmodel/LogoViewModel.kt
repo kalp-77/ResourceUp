@@ -19,8 +19,8 @@ class LogoViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui2 = api.getDevList("assets/illustrations").body()
-            val ui = api.getDevList("assets/logos").body()
+            val ui2 = api.getDevList("Assets/Illustrations").body()
+            val ui = api.getDevList("Assets/Logos").body()
             _logoLivedata.value = ui!!
             _logoLivedata2.value = ui2!!
 

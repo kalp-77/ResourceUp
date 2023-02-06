@@ -12,7 +12,10 @@ import java.util.concurrent.TimeUnit
 // Api helper object
 object ApiHelper {
 
-    private const val BASE_URL = "https://api.devresourc.es/"
+    private const val BASE_URL = "https://resources-up-api.vercel.app"
+    private const val API_BASE_URL = "https://public-apis-mrunmayii.vercel.app"
+
+
     private var app = Myapplication
     private const val cacheSize = (10 * 1024 * 1024).toLong()
     private const val HEADER_CACHE_CONTROL = "Cache-Control"
@@ -22,6 +25,13 @@ object ApiHelper {
     fun getInstance() : Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient())
+            .build()
+    }
+    fun getInstanceApi() : Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(API_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient())
             .build()

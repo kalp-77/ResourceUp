@@ -16,7 +16,7 @@ class ImageViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("assets/images").body()
+            val ui = api.getDevList("Assets/Images").body()
             _imageLivedata.value = ui!!
         }
     }

@@ -10,10 +10,11 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devlist.R
+import com.example.devlist.data.model.Entry
 import com.example.devlist.data.model.Resource
 import com.example.devlist.ui.webview.PublicApiWebViewActivity
 
-class ApiAdapter(private val context: FragmentActivity, private val articles: List<Resource>): RecyclerView.Adapter<ApiAdapter.ViewHolder>() {
+class ApiAdapter(private val context: FragmentActivity, private val articles: List<Entry>): RecyclerView.Adapter<ApiAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.public_api_layout, parent, false)
@@ -26,15 +27,15 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         //card animation
         val animation = AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in)
 
-        holder.apiType.text = "Type : " + article.apiCategory
-        holder.apiName.text = article.name
-        holder.apiDesc.text = article.description
+        holder.apiType.text = "Type : " + article.Category
+        holder.apiName.text = article.API
+        holder.apiDesc.text = article.Description
 
         // for sharing the link
         holder.share.setOnClickListener{
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
-            val link :String = article.links.website
+            val link :String = article.Link
             val body = "Look at this !! $link"
             intent.putExtra(Intent.EXTRA_TEXT,link)
             intent.putExtra(Intent.EXTRA_TEXT,body)
@@ -44,23 +45,18 @@ class ApiAdapter(private val context: FragmentActivity, private val articles: Li
         //for webpage view
         holder.itemView.setOnClickListener {
             val intent = Intent(context,PublicApiWebViewActivity::class.java)
-            if(article.links.website == null){
-                intent.putExtra("URL",article.links.gitHub)
-            }
-            else{
-                intent.putExtra("URL", article.links.website)
-            }
+            intent.putExtra("URL",article.Link)
             context.startActivity(intent)
         }
-        if(article.https){
+        if(article.HTTPS){
             holder.apiHttps.text = "Https : Yes"
         }else{
             holder.apiHttps.text = "Https : No"
         }
-        if(article.auth == ""){
+        if(article.Auth == ""){
             holder.apiAuth.text = "Auth : No"
         }else{
-            holder.apiAuth.text = "Auth : " + article.auth
+            holder.apiAuth.text = "Auth : " + article.Auth
         }
 
         //apply animation to holder

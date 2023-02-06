@@ -48,7 +48,7 @@ class FontFragment : Fragment() {
                                 fontRecycler.visibility = View.VISIBLE
                                 fontArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         fontArticles2.add(article)
                                     }
@@ -60,7 +60,7 @@ class FontFragment : Fragment() {
                             else{
                                 fontRecycler.visibility = View.VISIBLE
                                 fontArticles2.clear()
-                                fontArticles = it.resources as MutableList<Resource>
+                                fontArticles = it.data as MutableList<Resource>
                                 adapter = FontAdapter(requireActivity(), fontArticles)
                                 fontRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -69,7 +69,7 @@ class FontFragment : Fragment() {
                         }
                     })
                     fontRecycler.visibility = View.VISIBLE
-                    fontArticles = it.resources as MutableList<Resource>
+                    fontArticles = it.data as MutableList<Resource>
                     adapter = FontAdapter(requireActivity(), fontArticles)
                     fontRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

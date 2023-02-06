@@ -17,7 +17,7 @@ class CpChallengeViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("programming/code-challenges").body()
+            val ui = api.getDevList("Programming/Code Challenges").body()
             _cpLivedata.value = ui!!
         }
     }

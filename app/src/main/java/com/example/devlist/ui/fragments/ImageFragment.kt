@@ -50,7 +50,7 @@ class ImageFragment : Fragment() {
                                 imageRecycler.visibility = View.VISIBLE
                                 imageArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         imageArticles2.add(article)
                                     }
@@ -62,7 +62,7 @@ class ImageFragment : Fragment() {
                             else{
                                 imageRecycler.visibility = View.VISIBLE
                                 imageArticles2.clear()
-                                imageArticles = it.resources as MutableList<Resource>
+                                imageArticles = it.data as MutableList<Resource>
                                 adapter = ImageAdapter(requireActivity(), imageArticles)
                                 imageRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -71,7 +71,7 @@ class ImageFragment : Fragment() {
                         }
                     })
                     imageRecycler.visibility = View.VISIBLE
-                    imageArticles = it.resources as MutableList<Resource>
+                    imageArticles = it.data as MutableList<Resource>
                     adapter = ImageAdapter(requireActivity(), imageArticles)
                     imageRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

@@ -2,7 +2,7 @@ package com.example.devlist.data.dataSource
 import com.example.devlist.R
 import com.example.devlist.data.model.ImgItem
 
-class ImgDataSrc(){
+class ImgDataSrc{
     fun loadImg(): List<ImgItem> {
         return listOf(
             ImgItem(R.drawable.ui_1_img),
@@ -29,6 +29,8 @@ class ImgDataSrc(){
             ImgItem(R.drawable.ui_img_21),
             ImgItem(R.drawable.ui_img_22),
             ImgItem(R.drawable.ui_img_23),
-            ImgItem(R.drawable.ui_img_24))
+            ImgItem(R.drawable.ui_img_24),
+            ImgItem(R.drawable.ui_img_26),
+            ImgItem(R.drawable.ui_img_27))
     }
 }

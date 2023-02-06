@@ -19,8 +19,8 @@ class WebsiteViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("tools-and-utilities/website-builders").body()
-            val ui2 = api.getDevList("tools-and-utilities/general").body()
+            val ui = api.getDevList("Tools & Utilities/Website Builders").body()
+            val ui2 = api.getDevList("Tools & Utilities/General").body()
 
             _websiteMutableLivedata.value = ui!!
             _website2MutableLivedata.value = ui2!!

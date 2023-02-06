@@ -50,7 +50,7 @@ class ExtensionFragment : Fragment() {
                                 extensionRecycler.visibility = View.VISIBLE
                                 extensionArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         extensionArticles2.add(article)
                                     }
@@ -62,7 +62,7 @@ class ExtensionFragment : Fragment() {
                             else{
                                 extensionRecycler.visibility = View.VISIBLE
                                 extensionArticles2.clear()
-                                extensionArticles = it.resources as MutableList<Resource>
+                                extensionArticles = it.data as MutableList<Resource>
                                 adapter = ExtensionAdapter(requireActivity(), extensionArticles)
                                 extensionRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -71,7 +71,7 @@ class ExtensionFragment : Fragment() {
                         }
                     })
                     extensionRecycler.visibility = View.VISIBLE
-                    extensionArticles = it.resources as MutableList<Resource>
+                    extensionArticles = it.data as MutableList<Resource>
                     adapter = ExtensionAdapter(requireActivity(),extensionArticles)
                     extensionRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

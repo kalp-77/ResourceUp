@@ -57,7 +57,7 @@ class CpChallengeFragment : Fragment() {
                                 cpRecycler.visibility = View.VISIBLE
                                 cpArticles2.clear()
                                 val search = p0.lowercase()
-                                for (article in it.resources) {
+                                for (article in it.data) {
                                     if (article.name.lowercase().contains(search)) {
                                         cpArticles2.add(article)
                                     }
@@ -68,7 +68,7 @@ class CpChallengeFragment : Fragment() {
                             } else {
                                 cpRecycler.visibility = View.VISIBLE
                                 cpArticles2.clear()
-                                cpArticles = it.resources as MutableList<Resource>
+                                cpArticles = it.data as MutableList<Resource>
                                 adapter = CpChallengeAdapter(requireActivity(), cpArticles)
                                 cpRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -77,7 +77,7 @@ class CpChallengeFragment : Fragment() {
                         }
                     })
                     cpRecycler.visibility = View.VISIBLE
-                    cpArticles = it.resources as MutableList<Resource>
+                    cpArticles = it.data as MutableList<Resource>
                     adapter = CpChallengeAdapter(requireActivity(), cpArticles)
                     cpRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

@@ -16,7 +16,7 @@ class ExtensionViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("tools-and-utilities/browsers-and-extensions").body()
+            val ui = api.getDevList("Tools & Utilities/Browsers & Extensions").body()
             _extensionMutableLivedata.value = ui!!
         }
     }

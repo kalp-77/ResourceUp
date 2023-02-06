@@ -51,7 +51,7 @@ class BoardsFragment : Fragment() {
                                 boardsRecycler.visibility = View.VISIBLE
                                 boardsArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         boardsArticles2.add(article)
                                     }
@@ -63,7 +63,7 @@ class BoardsFragment : Fragment() {
                             else{
                                 boardsRecycler.visibility = View.VISIBLE
                                 boardsArticles2.clear()
-                                boardsArticles = it.resources as MutableList<Resource>
+                                boardsArticles = it.data as MutableList<Resource>
                                 adapter = BoardsAdapter(requireActivity(), boardsArticles)
                                 boardsRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -72,7 +72,7 @@ class BoardsFragment : Fragment() {
                         }
                     })
                     boardsRecycler.visibility = View.VISIBLE
-                    boardsArticles = it.resources as MutableList<Resource>
+                    boardsArticles = it.data as MutableList<Resource>
                     adapter = BoardsAdapter(requireActivity(), boardsArticles)
                     boardsRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

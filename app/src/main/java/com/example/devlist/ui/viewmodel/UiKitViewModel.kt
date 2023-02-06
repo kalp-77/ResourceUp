@@ -21,8 +21,8 @@ class UiKitViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val pro = api.getDevList("programming/ui-kits-and-libraries").body()
-            val temp = api.getDevList("programming/templates").body()
+            val pro = api.getDevList("Programming/UI Kits & Libraries").body()
+            val temp = api.getDevList("Programming/Templates").body()
             _uiKitLivedata.value = pro!!
             _tempLivedata.value = temp!!
         }

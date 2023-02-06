@@ -6,19 +6,20 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.devlist.data.api.ApiHelper
 import com.example.devlist.data.api.ApiInterface
+import com.example.devlist.data.model.ApiModel
 import com.example.devlist.data.model.DevResource
 import kotlinx.coroutines.launch
 
 class PublicApiViewModel : ViewModel() {
 
-    private val _apiMutableLivedata = MutableLiveData<DevResource>()
-    val apiLiveData: LiveData<DevResource> = _apiMutableLivedata
+    private val _apiMutableLivedata = MutableLiveData<ApiModel>()
+    val apiLiveData: LiveData<ApiModel> = _apiMutableLivedata
 
     // coroutines
     init {
         viewModelScope.launch {
-            val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("tools-and-utilities/public-apis").body()
+            val api = ApiHelper.getInstanceApi().create(ApiInterface::class.java)
+            val ui = api.getApiList().body()
             _apiMutableLivedata.value = ui!!
         }
     }

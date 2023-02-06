@@ -16,7 +16,7 @@ class ResumeViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("jobs/resume-builders").body()
+            val ui = api.getDevList("Jobs/Resume Builders").body()
             _resumeMutableLivedata.value = ui!!
         }
     }

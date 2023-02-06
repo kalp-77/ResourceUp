@@ -43,12 +43,12 @@ class LogoFragment : Fragment() {
                 logoProgressBar.visibility = View.GONE
                 if (it != null) {
                     logoRecycler.visibility = View.VISIBLE
-                    logoArticles.addAll(it.resources)
+                    logoArticles.addAll(it.data)
                 }
             }
             logoViewModel.logoLiveData2.observe(this@LogoFragment.viewLifecycleOwner) {
                 if (it != null) {
-                    logoArticles.addAll(it.resources)
+                    logoArticles.addAll(it.data)
                 }
             }
             searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{

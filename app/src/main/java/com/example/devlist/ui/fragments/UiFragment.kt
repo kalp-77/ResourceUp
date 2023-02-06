@@ -46,7 +46,7 @@ class UiFragment : Fragment() {
                                 uiRecycler.visibility = View.VISIBLE
                                 uiArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         uiArticles2.add(article)
                                     }
@@ -59,7 +59,7 @@ class UiFragment : Fragment() {
                             else{
                                 uiRecycler.visibility = View.VISIBLE
                                 uiArticles2.clear()
-                                uiArticles = it.resources as MutableList<Resource>
+                                uiArticles = it.data as MutableList<Resource>
                                 val myDataset = ImgDataSrc().loadImg()
                                 adapter = UiAdapter(requireActivity(), uiArticles,myDataset)
                                 uiRecycler.adapter = adapter
@@ -69,7 +69,7 @@ class UiFragment : Fragment() {
                         }
                     })
                     uiRecycler.visibility = View.VISIBLE
-                    uiArticles = it.resources as MutableList<Resource>
+                    uiArticles = it.data as MutableList<Resource>
                     val myDataset = ImgDataSrc().loadImg()
                     adapter = UiAdapter(requireActivity(), uiArticles,myDataset)
                     uiRecycler.adapter = adapter

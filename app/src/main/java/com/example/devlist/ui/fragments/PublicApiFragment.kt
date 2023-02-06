@@ -1,14 +1,15 @@
 package com.example.devlist.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.devlist.data.model.DevResource
-import com.example.devlist.data.model.Resource
+import com.example.devlist.data.model.ApiModel
+import com.example.devlist.data.model.Entry
 import com.example.devlist.databinding.PublicApiFragmentBinding
 import com.example.devlist.ui.adapters.ApiAdapter
 import com.example.devlist.ui.viewmodel.PublicApiViewModel
@@ -20,8 +21,8 @@ class PublicApiFragment : Fragment() {
     private val binding get() = _binding!!
     private val apiViewModel: PublicApiViewModel by viewModels()
     lateinit var adapter : ApiAdapter
-    private var publicApiArticles = mutableListOf<Resource>()
-    private var publicApiArticles2 = mutableListOf<Resource>()
+    private var publicApiArticles = mutableListOf<Entry>()
+    private var publicApiArticles2 = mutableListOf<Entry>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +35,8 @@ class PublicApiFragment : Fragment() {
             }
             apiViewModel.apiLiveData.observe(this@PublicApiFragment.viewLifecycleOwner) {
                 apiProgressBar.visibility = View.GONE
-                val result: DevResource = it
+                val result: ApiModel = it
+                Log.d("kalp", "$result")
                 if (it != null) {
                     searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
                         override fun onQueryTextSubmit(p0: String?): Boolean {
@@ -45,8 +47,8 @@ class PublicApiFragment : Fragment() {
                                 apiRecycler.visibility = View.VISIBLE
                                 publicApiArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
-                                    if(article.name.lowercase().contains(search)){
+                                for(article in it[0].entries){
+                                    if(article.API.lowercase().contains(search)){
                                         publicApiArticles2.add(article)
                                     }
                                 }
@@ -57,27 +59,27 @@ class PublicApiFragment : Fragment() {
                             else{
                                 apiRecycler.visibility = View.VISIBLE
                                 publicApiArticles2.clear()
-                                publicApiArticles.addAll(it.resources)
+                                publicApiArticles.addAll(it[0].entries)
                                 change()
                             }
                             return true
                         }
                     })
                     apiRecycler.visibility = View.VISIBLE
-                    publicApiArticles.addAll(it.resources)
+                    publicApiArticles.addAll(it[0].entries)
                     change()
                 }
                 binding.listAll.setOnClickListener {
                     TV.text = "ALL CATEGORY"
                     publicApiArticles.clear()
-                    publicApiArticles.addAll(result.resources)
+                    publicApiArticles.addAll(result[0].entries)
                     change()
                 }
                 binding.crypto.setOnClickListener {
                     TV.text = "CRYPTOCURRENCY"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Cryptocurrency") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Cryptocurrency") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -86,8 +88,8 @@ class PublicApiFragment : Fragment() {
                 binding.vehicle.setOnClickListener {
                     TV.text = "VEHICLE"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Vehicle") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Vehicle") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -96,8 +98,8 @@ class PublicApiFragment : Fragment() {
                 binding.animals.setOnClickListener {
                     TV.text = "ANIMALS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Animals") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Animals") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -106,8 +108,8 @@ class PublicApiFragment : Fragment() {
                 binding.anime.setOnClickListener {
                     TV.text = "ANIME"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Anime") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Anime") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -116,8 +118,8 @@ class PublicApiFragment : Fragment() {
                 binding.antiMalware.setOnClickListener {
                     TV.text = "ANTI-MALWARE"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Anti-Malware") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Anti-Malware") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -126,8 +128,8 @@ class PublicApiFragment : Fragment() {
                 binding.artDesign.setOnClickListener {
                     TV.text = "ART-DESIGN"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Art & Design") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Art & Design") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -136,8 +138,8 @@ class PublicApiFragment : Fragment() {
                 binding.auth.setOnClickListener {
                     TV.text = "AUTHENTICATION"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Authentication & Authorization") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Authentication & Authorization") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -146,8 +148,8 @@ class PublicApiFragment : Fragment() {
                 binding.blockchain.setOnClickListener {
                     TV.text = "BLOCKCHAIN"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Blockchain") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Blockchain") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -156,8 +158,8 @@ class PublicApiFragment : Fragment() {
                 binding.books.setOnClickListener {
                     TV.text = "BOOKS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Books") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Books") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -166,8 +168,8 @@ class PublicApiFragment : Fragment() {
                 binding.business.setOnClickListener {
                     TV.text = "BUSINESS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Business") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Business") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -176,8 +178,8 @@ class PublicApiFragment : Fragment() {
                 binding.calendar.setOnClickListener {
                     TV.text = "CALENDER"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Calendar") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Calendar") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -186,8 +188,8 @@ class PublicApiFragment : Fragment() {
                 binding.cloudStorage.setOnClickListener {
                     TV.text = "CLOUD-STORAGE"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Cloud Storage & File Sharing") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Cloud Storage & File Sharing") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -196,8 +198,8 @@ class PublicApiFragment : Fragment() {
                 binding.continuousIntegration.setOnClickListener {
                     TV.text = "CONTINUOUS-INTEGRATION"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Continuous Integration") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Continuous Integration") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -206,8 +208,8 @@ class PublicApiFragment : Fragment() {
                 binding.currencyExchange.setOnClickListener {
                     TV.text = "CURRENCY-EXCHANGE"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Currency Exchange") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Currency Exchange") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -216,8 +218,8 @@ class PublicApiFragment : Fragment() {
                 binding.dataValidation.setOnClickListener {
                     TV.text = "DATA-VALIDATION"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Data Validation") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Data Validation") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -226,8 +228,8 @@ class PublicApiFragment : Fragment() {
                 binding.development.setOnClickListener {
                     TV.text = "DEVELOPMENT"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Development") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Development") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -236,8 +238,8 @@ class PublicApiFragment : Fragment() {
                 binding.dictionaries.setOnClickListener {
                     TV.text = "DICTIONARIES"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Dictionaries") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Dictionaries") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -246,8 +248,8 @@ class PublicApiFragment : Fragment() {
                 binding.documents.setOnClickListener {
                     TV.text = "DOCUMENTS & PRODUCTIVITY"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Documents & Productivity") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Documents & Productivity") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -256,8 +258,8 @@ class PublicApiFragment : Fragment() {
                 binding.email.setOnClickListener {
                     TV.text = "EMAIL"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Email") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Email") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -266,8 +268,8 @@ class PublicApiFragment : Fragment() {
                 binding.entertainment.setOnClickListener {
                     TV.text = "ENTERTAINMENT"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Entertainment") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Entertainment") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -276,8 +278,8 @@ class PublicApiFragment : Fragment() {
                 binding.env.setOnClickListener {
                     TV.text = "ENVIRONMENT"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Environment") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Environment") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -286,8 +288,8 @@ class PublicApiFragment : Fragment() {
                 binding.events.setOnClickListener {
                     TV.text = "EVENTS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Events") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Events") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -296,8 +298,8 @@ class PublicApiFragment : Fragment() {
                 binding.finance.setOnClickListener {
                     TV.text = "FINANCE"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Finance") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Finance") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -306,8 +308,8 @@ class PublicApiFragment : Fragment() {
                 binding.food.setOnClickListener {
                     TV.text = "FOOD & DRINKS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Food & Drink") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Food & Drink") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -316,8 +318,8 @@ class PublicApiFragment : Fragment() {
                 binding.games.setOnClickListener {
                     TV.text = "GAMES & COMICS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Games & Comics") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Games & Comics") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -326,8 +328,8 @@ class PublicApiFragment : Fragment() {
                 binding.geocoding.setOnClickListener {
                     TV.text = "GEOCODING"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Geocoding") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Geocoding") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -336,8 +338,8 @@ class PublicApiFragment : Fragment() {
                 binding.gov.setOnClickListener {
                     TV.text = "GOVERNMENT"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Government") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Government") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -346,8 +348,8 @@ class PublicApiFragment : Fragment() {
                 binding.health.setOnClickListener {
                     TV.text = "HEALTH"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Health") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Health") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -356,8 +358,8 @@ class PublicApiFragment : Fragment() {
                 binding.jobs.setOnClickListener {
                     TV.text = "JOBS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Jobs") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Jobs") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -366,8 +368,8 @@ class PublicApiFragment : Fragment() {
                 binding.ml.setOnClickListener {
                     TV.text = "MACHINE LEARNING"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Machine Learning") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Machine Learning") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -376,8 +378,8 @@ class PublicApiFragment : Fragment() {
                 binding.music.setOnClickListener {
                     TV.text = "MUSIC"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Music") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Music") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -386,8 +388,8 @@ class PublicApiFragment : Fragment() {
                 binding.news.setOnClickListener {
                     TV.text = "NEWS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "News") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "News") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -396,8 +398,8 @@ class PublicApiFragment : Fragment() {
                 binding.openData.setOnClickListener {
                     TV.text = "OPEN DATA"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Open Data") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Open Data") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -406,8 +408,8 @@ class PublicApiFragment : Fragment() {
                 binding.openSource.setOnClickListener {
                     TV.text = "OPEN SOURCE PROJECTS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Open Source Projects") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Open Source Projects") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -416,8 +418,8 @@ class PublicApiFragment : Fragment() {
                 binding.personality.setOnClickListener {
                     TV.text = "PERSONALITY"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Personality") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Personality") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -426,8 +428,8 @@ class PublicApiFragment : Fragment() {
                 binding.phone.setOnClickListener {
                     TV.text = "PHONE"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Phone") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Phone") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -436,8 +438,8 @@ class PublicApiFragment : Fragment() {
                 binding.photo.setOnClickListener {
                     TV.text = "PHOTOGRAPHY"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Photography") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Photography") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -446,8 +448,8 @@ class PublicApiFragment : Fragment() {
                 binding.programming.setOnClickListener {
                     TV.text = "PROGRAMMING"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Programming") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Programming") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -456,8 +458,8 @@ class PublicApiFragment : Fragment() {
                 binding.science.setOnClickListener {
                     TV.text = "SCIENCE & MATHS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Science & Math") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Science & Math") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -466,8 +468,8 @@ class PublicApiFragment : Fragment() {
                 binding.security.setOnClickListener {
                     TV.text = "SECURITY"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Security") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Security") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -476,8 +478,8 @@ class PublicApiFragment : Fragment() {
                 binding.shopping.setOnClickListener {
                     TV.text = "SHOPPING"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Shopping") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Shopping") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -486,8 +488,8 @@ class PublicApiFragment : Fragment() {
                 binding.social.setOnClickListener {
                     TV.text = "SOCIAL"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Social") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Social") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -496,8 +498,8 @@ class PublicApiFragment : Fragment() {
                 binding.sports.setOnClickListener {
                     TV.text = "SPORTS & FITNESS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Sports & Fitness") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Sports & Fitness") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -506,8 +508,8 @@ class PublicApiFragment : Fragment() {
                 binding.testData.setOnClickListener {
                     TV.text = "TEST DATA"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Test Data") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Test Data") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -516,8 +518,8 @@ class PublicApiFragment : Fragment() {
                 binding.textAnalysis.setOnClickListener {
                     TV.text = "TEXT ANALYSIS"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Text Analysis") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Text Analysis") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -526,8 +528,8 @@ class PublicApiFragment : Fragment() {
                 binding.tracking.setOnClickListener {
                     TV.text = "TRACKING"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Tracking") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Tracking") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -536,8 +538,8 @@ class PublicApiFragment : Fragment() {
                 binding.transport.setOnClickListener {
                     TV.text = "TRANSPORTATION"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Transportation") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Transportation") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -546,8 +548,8 @@ class PublicApiFragment : Fragment() {
                 binding.video.setOnClickListener {
                     TV.text = "VIDEO"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Video") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Video") {
                             publicApiArticles.add(article)
                         }
                     }
@@ -556,8 +558,8 @@ class PublicApiFragment : Fragment() {
                 binding.weather.setOnClickListener {
                     TV.text = "WEATHER"
                     publicApiArticles.clear()
-                    for (article in result.resources) {
-                        if (article.apiCategory == "Weather") {
+                    for (article in result[0].entries) {
+                        if (article.Category == "Weather") {
                             publicApiArticles.add(article)
                         }
                     }

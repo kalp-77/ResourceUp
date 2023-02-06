@@ -16,7 +16,7 @@ class InterviewViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val ui = api.getDevList("jobs/interviews").body()
+            val ui = api.getDevList("Jobs/Interviews").body()
             _interviewMutableLivedata.value = ui!!
         }
     }

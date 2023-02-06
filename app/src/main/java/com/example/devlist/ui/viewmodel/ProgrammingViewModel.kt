@@ -18,7 +18,7 @@ class ProgrammingViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val api = ApiHelper.getInstance().create(ApiInterface::class.java)
-            val pro = api.getDevList("programming/learn").body()
+            val pro = api.getDevList("Programming/Learn").body()
             _programmingLivedata.value = pro!!
         }
     }

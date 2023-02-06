@@ -50,7 +50,7 @@ class IconsFragment : Fragment() {
                                 iconRecycler.visibility = View.VISIBLE
                                 iconArticles2.clear()
                                 val search = p0.lowercase()
-                                for(article in it.resources){
+                                for(article in it.data){
                                     if(article.name.lowercase().contains(search)){
                                         iconArticles2.add(article)
                                     }
@@ -62,7 +62,7 @@ class IconsFragment : Fragment() {
                             else{
                                 iconRecycler.visibility = View.VISIBLE
                                 iconArticles2.clear()
-                                iconArticles = it.resources as MutableList<Resource>
+                                iconArticles = it.data as MutableList<Resource>
                                 adapter = IconAdapter(requireActivity(), iconArticles)
                                 iconRecycler.adapter = adapter
                                 adapter.notifyDataSetChanged()
@@ -71,7 +71,7 @@ class IconsFragment : Fragment() {
                         }
                     })
                     iconRecycler.visibility = View.VISIBLE
-                    iconArticles = it.resources as MutableList<Resource>
+                    iconArticles = it.data as MutableList<Resource>
                     adapter = IconAdapter(requireActivity(), iconArticles)
                     iconRecycler.adapter = adapter
                     adapter.notifyDataSetChanged()

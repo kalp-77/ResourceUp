@@ -41,13 +41,13 @@ class WebsiteFragment : Fragment() {
                 websiteProgressBar.visibility = View.GONE
                 if (it != null) {
                     websiteRecycler.visibility = View.VISIBLE
-                    websiteArticles.addAll(it.resources)
+                    websiteArticles.addAll(it.data)
                 }
             }
             websiteViewModel.website2LiveData.observe(this@WebsiteFragment.viewLifecycleOwner) {
                 websiteProgressBar.visibility = View.GONE
                 if (it != null) {
-                    websiteArticles.addAll(it.resources)
+                    websiteArticles.addAll(it.data)
                 }
             }
             searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
