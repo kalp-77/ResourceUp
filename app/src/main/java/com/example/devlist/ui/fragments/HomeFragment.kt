@@ -1,15 +1,13 @@
 package com.example.devlist.ui.fragments
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.Navigation
 import com.example.devlist.LoginActivity
@@ -21,14 +19,18 @@ import com.example.devlist.ui.JobActivity
 import com.example.devlist.ui.LearnActivity
 import com.example.devlist.ui.UtilityActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
 class HomeFragment : Fragment() {
 
     private lateinit var auth : FirebaseAuth
-//    lateinit var preferences: SharedPreferences
     private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
 
@@ -41,21 +43,15 @@ class HomeFragment : Fragment() {
 
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
+        val id = FirebaseAuth.getInstance().currentUser?.uid.toString()
+
         checkUser()
-
-
-
-
-
-
-
-//        val preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
-//        val name= preferences.getString("NAME","")
-//        nameTv.text= name
+        retrieveUsername(id)
 
         // pop up option menu
         logout.setOnClickListener{
@@ -67,11 +63,6 @@ class HomeFragment : Fragment() {
                     R.id.logout -> {
                         auth.signOut()
                         checkUser()
-//                        val editor: SharedPreferences.Editor = preferences.edit()
-//                        editor.clear()
-//                        editor.apply()
-//                        val intent = Intent(this@HomeFragment.requireContext(), LoginActivity::class.java)
-//                        startActivity(intent)
                     }
                 }
                 true
@@ -106,11 +97,27 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun retrieveUsername(uid:String) {
+        val database = Firebase.database
+        val db = database.getReference("users/${uid}")
+        db.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot.value as Map<*, *>
+                val username = value["Name"]
+                binding.nameTv.text = username.toString()
+                Log.d("Firebase", "Username: $username")
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("Firebase", "Failed to read value.", error.toException())
+            }
+        })
+    }
+
     private fun checkUser() {
         val firebaseUser = auth.currentUser
         if(firebaseUser!=null){
-            var display : TextView = binding.nameTv
-            var id = FirebaseAuth.getInstance().currentUser?.uid.toString()
+            val display = binding.nameTv
+            val id = FirebaseAuth.getInstance().currentUser?.uid.toString()
 
             FirebaseFirestore.getInstance().collection("users").get()
                 .addOnCompleteListener() {

@@ -9,9 +9,11 @@ import android.widget.Toast
 import com.example.devlist.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.public_api_fragment.*
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -74,16 +76,16 @@ class SignUpActivity : AppCompatActivity() {
         progressDialog.show()
         auth.createUserWithEmailAndPassword(binding.emailEdt.text.toString(),binding.passwordEdt.text.toString()).addOnSuccessListener {
             progressDialog.dismiss()
-            val db = FirebaseFirestore.getInstance()
-            val user:MutableMap<String,Any> = HashMap()
-            user["Name"]=binding.usernameEdt.text.toString()
-            user["Email"]=binding.emailEdt.text.toString()
-            user["user_UID"]= FirebaseAuth.getInstance().currentUser?.uid.toString()
 
-            Firebase.auth.uid?.let { it1 ->
-                db.collection("users").document(it1).set(user,
-                    SetOptions.merge())
-            }
+            val name = binding.usernameEdt.text.toString()
+            val email = binding.emailEdt.text.toString()
+            val uid = FirebaseAuth.getInstance().currentUser?.uid.toString()
+            val database = FirebaseDatabase.getInstance().reference
+            val data = HashMap<String, Any>()
+            data["Name"] = name
+            data["email"] = email
+            data["user_UID"] = uid
+            database.child("users").child(uid).setValue(data)
 
             Toast.makeText(this,"Account created successfully ", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
