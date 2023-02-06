@@ -9,15 +9,21 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
+        android:name=".data.api.Myapplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="ResourceUp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:name=".data.api.Myapplication"
-        android:theme="@style/Theme.DevList">
+        android:theme="@style/Theme.DevList"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".ui.AssetActivity"
             android:exported="false" />
@@ -31,12 +37,12 @@
             android:name=".LoginActivity"
             android:exported="false"
             android:noHistory="true"
-            android:theme="@style/Theme.Material3.Dark.NoActionBar"/>
-
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,7 +51,7 @@
         </activity>
         <activity
             android:name=".ui.webview.IconsWebViewActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.webview.PublicApiWebViewActivity"
             android:exported="false"
@@ -69,7 +75,7 @@
         <activity
             android:name=".ui.webview.ExtensionWebViewActivity"
             android:exported="false" />
-         <activity
+        <activity
             android:name=".ui.webview.InterviewWebViewActivity"
             android:exported="false" />
         <activity
