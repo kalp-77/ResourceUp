@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "401978552176",
+    "firebase_url": "https://resourceup-ca6df-default-rtdb.firebaseio.com",
     "project_id": "resourceup-ca6df",
     "storage_bucket": "resourceup-ca6df.appspot.com"
   },
@@ -14,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "401978552176-q0o697bebpj9b5dg5937q50g1p5m017k.apps.googleusercontent.com",
+          "client_id": "401978552176-a0clpsoadsea2j8jahlb7m8bkq13h109.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.devlist",
+            "certificate_hash": "a2519347caf8e8baa3c3db6ff84599b3df2a210f"
+          }
+        },
+        {
+          "client_id": "401978552176-9ti0itnislvinueu06cd9ogp64btlq1b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +36,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "401978552176-q0o697bebpj9b5dg5937q50g1p5m017k.apps.googleusercontent.com",
+              "client_id": "401978552176-9ti0itnislvinueu06cd9ogp64btlq1b.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
