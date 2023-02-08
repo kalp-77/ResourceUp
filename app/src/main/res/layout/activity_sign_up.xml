@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/bungeee"
         android:text="HELLO THERE, WHAT SHOULD WE CALL YOU?"
         android:padding="10dp"
@@ -117,6 +117,39 @@
             android:backgroundTint="#F6F1FF"/>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Or create account using"
+            android:textColor="#727273"
+            android:textSize="18dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/googleSignUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/icons8_google"
+            android:padding="15dp">
+        </androidx.appcompat.widget.AppCompatImageButton>
+<!--        <TextView-->
+<!--            android:id="@+id/noAccountText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="30dp"-->
+<!--            android:text="Already have an account? Log In"-->
+<!--            android:textColor="#624C8E"-->
+<!--            android:textSize="18dp" />-->
     </LinearLayout>
 
 </LinearLayout>

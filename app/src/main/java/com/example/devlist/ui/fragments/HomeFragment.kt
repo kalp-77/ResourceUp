@@ -18,6 +18,9 @@ import com.example.devlist.ui.AssetActivity
 import com.example.devlist.ui.JobActivity
 import com.example.devlist.ui.LearnActivity
 import com.example.devlist.ui.UtilityActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -31,6 +34,8 @@ import kotlinx.android.synthetic.main.home_fragment.*
 class HomeFragment : Fragment() {
 
     private lateinit var auth : FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
+
     private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
 
@@ -53,6 +58,13 @@ class HomeFragment : Fragment() {
         checkUser()
         retrieveUsername(id)
 
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = context?.let { GoogleSignIn.getClient(it, gso) }!!
+
         // pop up option menu
         logout.setOnClickListener{
             val popup = PopupMenu(requireContext(), it)
@@ -62,6 +74,7 @@ class HomeFragment : Fragment() {
                 when (menuItem.itemId) {
                     R.id.logout -> {
                         auth.signOut()
+                        googleSignInClient.signOut()
                         checkUser()
                     }
                 }
@@ -104,7 +117,8 @@ class HomeFragment : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.value as Map<*, *>
                 val username = value["Name"]
-                binding.nameTv.text = username.toString()
+                if(username != null) binding.nameTv.text = "Hi, "+username.toString()
+                else binding.nameTv.text = "Hey there!"
                 Log.d("Firebase", "Username: $username")
             }
             override fun onCancelled(error: DatabaseError) {
@@ -125,7 +139,6 @@ class HomeFragment : Fragment() {
                     if(it.isSuccessful){
                         for(document in it.result){
                             var it_id = document.get("user_UID")
-
                             if(it_id.toString()==id) {
                                 result.append("Hi, ").append(document.data.getValue("Name"))
                             }
