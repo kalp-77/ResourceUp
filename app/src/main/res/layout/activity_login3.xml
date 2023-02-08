@@ -32,18 +32,6 @@
 
         </TextView>
 
-        <!--    <TextView-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:text="What should we call you?"-->
-        <!--        android:textSize="15sp"-->
-        <!--        android:layout_marginTop="2dp"-->
-        <!--        android:layout_marginBottom="5dp"-->
-        <!--        android:textColor="#624C8E"-->
-        <!--        android:layout_marginStart="10dp">-->
-        <!--    </TextView>-->
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,14 +81,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <!--        <CheckBox-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:text="Remember Me"-->
-            <!--            android:layout_marginTop="4dp"-->
-            <!--            android:id="@+id/checkBox"-->
-            <!--            android:textColor="@color/black" />-->
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"

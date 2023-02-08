@@ -30,19 +30,19 @@
         android:layout_centerInParent="true">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:outlineSpotShadowColor="@color/black"
             android:hint="Username"
-            android:textColorHint="#624C8E"
             android:outlineAmbientShadowColor="@color/black"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            android:outlineSpotShadowColor="@color/black"
+            android:textColorHint="#624C8E">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usernameEdt"
                 android:layout_width="match_parent"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -119,37 +119,5 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Or create account using"
-            android:textColor="#727273"
-            android:textSize="18dp" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/googleSignUpBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/icons8_google"
-            android:padding="15dp">
-        </androidx.appcompat.widget.AppCompatImageButton>
-<!--        <TextView-->
-<!--            android:id="@+id/noAccountText"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="30dp"-->
-<!--            android:text="Already have an account? Log In"-->
-<!--            android:textColor="#624C8E"-->
-<!--            android:textSize="18dp" />-->
-    </LinearLayout>
 
 </LinearLayout>

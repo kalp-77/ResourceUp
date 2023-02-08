@@ -1,0 +1,210 @@
+Index: app/src/main/res/layout/activity_login3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:padding=\"16dp\"\r\n    android:fontFamily=\"@font/bungee\"\r\n    tools:context=\".LoginActivity\"\r\n    android:background=\"@drawable/login_bg2\">\r\n<!--    android:background=\"@drawable/login_bg2\">-->\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"vertical\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginTop=\"0dp\"\r\n            android:layout_marginBottom=\"0dp\"\r\n            android:fontFamily=\"@font/bungeee\"\r\n            android:text=\"HELLO THERE, WELCOME BACK!!\"\r\n            android:textColor=\"#624C8E\"\r\n            android:textSize=\"35dp\">\r\n\r\n        </TextView>\r\n\r\n        <!--    <TextView-->\r\n        <!--        android:layout_width=\"match_parent\"-->\r\n        <!--        android:layout_height=\"wrap_content\"-->\r\n        <!--        android:text=\"What should we call you?\"-->\r\n        <!--        android:textSize=\"15sp\"-->\r\n        <!--        android:layout_marginTop=\"2dp\"-->\r\n        <!--        android:layout_marginBottom=\"5dp\"-->\r\n        <!--        android:textColor=\"#624C8E\"-->\r\n        <!--        android:layout_marginStart=\"10dp\">-->\r\n        <!--    </TextView>-->\r\n\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_centerInParent=\"true\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <com.google.android.material.textfield.TextInputLayout\r\n                style=\"@style/Widget.Material3.TextInputLayout.OutlinedBox\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:focusable=\"false\"\r\n                android:hint=\"Email\"\r\n                android:outlineAmbientShadowColor=\"@color/black\"\r\n                android:outlineSpotShadowColor=\"@color/black\"\r\n                android:textColorHint=\"#624C8E\">\r\n\r\n                <com.google.android.material.textfield.TextInputEditText\r\n                    android:id=\"@+id/emailEdt\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:inputType=\"textEmailAddress\"\r\n                    android:textColor=\"@color/black\">\r\n\r\n                </com.google.android.material.textfield.TextInputEditText>\r\n\r\n            </com.google.android.material.textfield.TextInputLayout>\r\n\r\n            <com.google.android.material.textfield.TextInputLayout\r\n                style=\"@style/Widget.Material3.TextInputLayout.OutlinedBox\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:hint=\"Password\"\r\n                android:outlineAmbientShadowColor=\"@color/black\"\r\n                android:outlineSpotShadowColor=\"@color/black\"\r\n                android:textColorHint=\"#624C8E\"\r\n                app:passwordToggleEnabled=\"true\"\r\n                app:passwordToggleTint=\"#624C8E\">\r\n\r\n                <EditText\r\n                    android:id=\"@+id/passEdt\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:inputType=\"textPassword\"\r\n                    android:textColor=\"@color/black\">\r\n\r\n                </EditText>\r\n\r\n            </com.google.android.material.textfield.TextInputLayout>\r\n\r\n\r\n            <!--        <CheckBox-->\r\n            <!--            android:layout_width=\"match_parent\"-->\r\n            <!--            android:layout_height=\"wrap_content\"-->\r\n            <!--            android:text=\"Remember Me\"-->\r\n            <!--            android:layout_marginTop=\"4dp\"-->\r\n            <!--            android:id=\"@+id/checkBox\"-->\r\n            <!--            android:textColor=\"@color/black\" />-->\r\n            <Button\r\n                android:id=\"@+id/loginBtn\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_below=\"@+id/inUserId\"\r\n                android:layout_gravity=\"\"\r\n                android:layout_marginTop=\"15dp\"\r\n                android:backgroundTint=\"#F6F1FF\"\r\n                android:text=\"LOGIN\"\r\n                android:textColor=\"#624C8E\"\r\n                android:textSize=\"15dp\" />\r\n\r\n            <TextView\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:gravity=\"center\"\r\n                android:padding=\"10dp\"\r\n                android:text=\"Or connect with\"\r\n                android:textColor=\"#727273\"\r\n                android:textSize=\"18dp\" />\r\n\r\n            <androidx.appcompat.widget.AppCompatImageButton\r\n                android:id=\"@+id/googleSignIn\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_gravity=\"center\"\r\n                android:background=\"@drawable/icons8_google\"\r\n                android:padding=\"15dp\">\r\n            </androidx.appcompat.widget.AppCompatImageButton>\r\n\r\n            <TextView\r\n                android:id=\"@+id/noAccount\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:gravity=\"center\"\r\n                android:padding=\"30dp\"\r\n                android:text=\"Dont have acc? Sign Up\"\r\n                android:textColor=\"#624C8E\"\r\n                android:textSize=\"18dp\" />\r\n\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_login3.xml b/app/src/main/res/layout/activity_login3.xml
+--- a/app/src/main/res/layout/activity_login3.xml	(revision be708800510a6390ef79210dc74432f3ba074704)
++++ b/app/src/main/res/layout/activity_login3.xml	(date 1675862630709)
+@@ -32,18 +32,6 @@
+ 
+         </TextView>
+ 
+-        <!--    <TextView-->
+-        <!--        android:layout_width="match_parent"-->
+-        <!--        android:layout_height="wrap_content"-->
+-        <!--        android:text="What should we call you?"-->
+-        <!--        android:textSize="15sp"-->
+-        <!--        android:layout_marginTop="2dp"-->
+-        <!--        android:layout_marginBottom="5dp"-->
+-        <!--        android:textColor="#624C8E"-->
+-        <!--        android:layout_marginStart="10dp">-->
+-        <!--    </TextView>-->
+-
+-
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+@@ -93,14 +81,6 @@
+ 
+             </com.google.android.material.textfield.TextInputLayout>
+ 
+-
+-            <!--        <CheckBox-->
+-            <!--            android:layout_width="match_parent"-->
+-            <!--            android:layout_height="wrap_content"-->
+-            <!--            android:text="Remember Me"-->
+-            <!--            android:layout_marginTop="4dp"-->
+-            <!--            android:id="@+id/checkBox"-->
+-            <!--            android:textColor="@color/black" />-->
+             <Button
+                 android:id="@+id/loginBtn"
+                 android:layout_width="match_parent"
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'kotlin-android'\r\n    id 'kotlin-kapt'\r\n    id 'kotlin-android-extensions'\r\n    id 'androidx.navigation.safeargs.kotlin'\r\n}\r\napply plugin: 'com.google.gms.google-services'\r\nandroid {\r\n    compileSdk 31\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.devlist\"\r\n        minSdk 23\r\n        targetSdk 31\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = '1.8'\r\n    }\r\n\r\n    dataBinding {\r\n        enabled true\r\n    }\r\n    buildFeatures {\r\n        viewBinding true\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.core:core-ktx:1.7.0'\r\n    implementation 'androidx.appcompat:appcompat:1.4.1'\r\n    implementation 'com.google.android.material:material:1.5.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\r\n    implementation 'androidx.legacy:legacy-support-v4:1.0.0'\r\n    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'\r\n    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'\r\n    implementation 'androidx.annotation:annotation:1.2.0'\r\n    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'\r\n    implementation 'com.google.firebase:firebase-firestore-ktx:24.0.1'\r\n    implementation 'com.google.firebase:firebase-database-ktx:20.0.3'\r\n    testImplementation 'junit:junit:4.+'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n    // dependencies\r\n\r\n    // retrofit and gson converter\r\n    implementation 'com.google.code.gson:gson:2.8.9'\r\n    implementation 'com.squareup.retrofit2:retrofit:2.9.0'\r\n    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'\r\n\r\n    //Glide-for rendering images\r\n    implementation 'com.github.bumptech.glide:glide:4.12.0'\r\n    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'\r\n    kapt 'com.github.bumptech.glide:compiler:4.12.0'\r\n\r\n    // recyclerview\r\n    implementation 'androidx.recyclerview:recyclerview:1.2.1'\r\n    // For control over item selection of both touch and mouse driven selection\r\n    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'\r\n\r\n    //card view\r\n    implementation 'androidx.cardview:cardview:1.0.0'\r\n    implementation 'org.jetbrains.anko:anko-design:0.10.5'\r\n\r\n    //navigation component library\r\n    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0'\r\n    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0'\r\n\r\n    //room\r\n    implementation 'androidx.room:room-runtime:2.4.1'\r\n    annotationProcessor 'androidx.room:room-compiler:2.4.1'\r\n    // To use Kotlin annotation processing tool (kapt)\r\n    kapt 'androidx.room:room-compiler:2.4.1'\r\n    implementation 'androidx.room:room-ktx:2.4.1'\r\n\r\n    //chip navigation bar library\r\n    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.3.4'\r\n\r\n    //okhttp library for caching\r\n    implementation \"com.squareup.okhttp3:okhttp:4.9.0\"\r\n    implementation \"com.squareup.okhttp3:logging-interceptor:4.7.2\"\r\n\r\n    implementation 'com.google.android.material:material:1.5.0'\r\n\r\n    //firebase\r\n    implementation platform('com.google.firebase:firebase-bom:29.1.0')\r\n    implementation 'com.google.firebase:firebase-analytics-ktx'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision be708800510a6390ef79210dc74432f3ba074704)
++++ b/app/build.gradle	(date 1675862521223)
+@@ -101,4 +101,6 @@
+     //firebase
+     implementation platform('com.google.firebase:firebase-bom:29.1.0')
+     implementation 'com.google.firebase:firebase-analytics-ktx'
++    implementation 'com.google.android.gms:play-services-auth:20.4.1'
++
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/devlist/LoginActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.devlist\r\n\r\nimport android.app.ProgressDialog\r\nimport android.content.Intent\r\nimport android.graphics.Color\r\nimport android.os.Bundle\r\nimport android.util.Patterns\r\nimport android.view.View\r\nimport android.widget.Toast\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport com.example.devlist.databinding.ActivityLogin3Binding\r\nimport com.google.firebase.auth.FirebaseAuth\r\n\r\nclass LoginActivity : AppCompatActivity() {\r\n\r\n    private lateinit var binding: ActivityLogin3Binding\r\n    private lateinit var progressDialog: ProgressDialog\r\n    private lateinit var firebaseAuth: FirebaseAuth\r\n\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        binding = ActivityLogin3Binding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n\r\n        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)\r\n        window.statusBarColor = Color.TRANSPARENT\r\n        window.navigationBarColor = Color.TRANSPARENT\r\n\r\n        progressDialog = ProgressDialog(this)\r\n        progressDialog.setTitle(\"Please Wait\")\r\n        progressDialog.setMessage(\"Logging In...\")\r\n        progressDialog.setCanceledOnTouchOutside(false)\r\n\r\n        firebaseAuth = FirebaseAuth.getInstance()\r\n        checkuser()\r\n\r\n        binding.noAccount.setOnClickListener{\r\n            startActivity(Intent(this, SignUpActivity::class.java))\r\n        }\r\n\r\n        binding.loginBtn.setOnClickListener{\r\n            validateData()\r\n        }\r\n    }\r\n\r\n    private fun validateData() {\r\n        val name = binding.emailEdt.text.toString().trim()\r\n        val pass = binding.passEdt.text.toString().trim()\r\n        if (!Patterns.EMAIL_ADDRESS.matcher(name).matches()) {\r\n            binding.emailEdt.error = \"Invalid Email Format\"\r\n            binding.emailEdt.requestFocus()\r\n        }\r\n        else if (name.isEmpty()) {\r\n            binding.emailEdt.error = \"Email Required!!!\"\r\n            binding.emailEdt.requestFocus()\r\n        } else if (pass.isEmpty()) {\r\n            binding.passEdt.error = \"Password Required!!!\"\r\n            binding.passEdt.requestFocus()\r\n        } else {\r\n            firebaselogin()\r\n        }\r\n    }\r\n\r\n    private fun firebaselogin() {\r\n        progressDialog.show()\r\n        firebaseAuth.signInWithEmailAndPassword(\r\n            binding.emailEdt.text.toString(),\r\n            binding.passEdt.text.toString()\r\n        )\r\n            .addOnSuccessListener {\r\n                progressDialog.dismiss()\r\n                val intent = (Intent(this@LoginActivity, MainActivity::class.java))\r\n                startActivity(intent)\r\n            }\r\n            .addOnFailureListener { e ->\r\n                progressDialog.dismiss()\r\n                Toast.makeText(this, \"Log In Failed Due To${e.message}\", Toast.LENGTH_SHORT).show()\r\n            }\r\n    }\r\n\r\n    private fun checkuser() {\r\n        val firebaseUser = firebaseAuth.currentUser\r\n        if (firebaseUser != null) {\r\n            val intent = (Intent(this@LoginActivity, MainActivity::class.java))\r\n            startActivity(intent)\r\n        }\r\n    }\r\n\r\n    override fun onBackPressed() {\r\n        startActivity(Intent(this, SplashScreen::class.java))\r\n        moveTaskToBack(true)\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/devlist/LoginActivity.kt b/app/src/main/java/com/example/devlist/LoginActivity.kt
+--- a/app/src/main/java/com/example/devlist/LoginActivity.kt	(revision be708800510a6390ef79210dc74432f3ba074704)
++++ b/app/src/main/java/com/example/devlist/LoginActivity.kt	(date 1675865183566)
+@@ -4,18 +4,24 @@
+ import android.content.Intent
+ import android.graphics.Color
+ import android.os.Bundle
++import android.util.Log
+ import android.util.Patterns
+ import android.view.View
+ import android.widget.Toast
+ import androidx.appcompat.app.AppCompatActivity
+ import com.example.devlist.databinding.ActivityLogin3Binding
++import com.google.android.gms.auth.api.signin.GoogleSignIn
++import com.google.android.gms.auth.api.signin.GoogleSignInOptions
++import com.google.android.gms.common.api.ApiException
+ import com.google.firebase.auth.FirebaseAuth
++import com.google.firebase.auth.GoogleAuthProvider
+ 
+ class LoginActivity : AppCompatActivity() {
+ 
+     private lateinit var binding: ActivityLogin3Binding
+     private lateinit var progressDialog: ProgressDialog
+     private lateinit var firebaseAuth: FirebaseAuth
++    private val RC_SIGN_IN = 1001
+ 
+ 
+ 
+@@ -32,10 +38,15 @@
+         progressDialog.setTitle("Please Wait")
+         progressDialog.setMessage("Logging In...")
+         progressDialog.setCanceledOnTouchOutside(false)
+-
+         firebaseAuth = FirebaseAuth.getInstance()
+         checkuser()
+ 
++        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
++            .requestIdToken(getString(R.string.default_web_client_id))
++            .requestEmail()
++            .build()
++
++
+         binding.noAccount.setOnClickListener{
+             startActivity(Intent(this, SignUpActivity::class.java))
+         }
+@@ -43,6 +54,51 @@
+         binding.loginBtn.setOnClickListener{
+             validateData()
+         }
++        binding.googleSignIn.setOnClickListener{
++
++            val googleSignInClient = GoogleSignIn.getClient(this, gso)
++            val signInIntent = googleSignInClient.signInIntent
++            startActivityForResult(signInIntent, RC_SIGN_IN)
++        }
++    }
++
++    @Deprecated("Deprecated in Java")
++    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
++        super.onActivityResult(requestCode, resultCode, data)
++
++        if (requestCode == RC_SIGN_IN) {
++            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
++            try {
++                val account = task.getResult(ApiException::class.java)
++                val credential = GoogleAuthProvider.getCredential(account!!.idToken, null)
++                firebaseAuth.signInWithCredential(credential)
++                    .addOnCompleteListener {
++                        if (it.isSuccessful) {
++                                try {
++                                    val accountt = it.getResult(ApiException::class.java)
++                                    if(accountt!=null) {
++                                        Log.d("kalp", "onActivityResult: hii")
++                                        val userName = account.displayName.toString()
++                                        val intent = (Intent(this@LoginActivity, MainActivity::class.java)).putExtra("userName", userName)
++                                        startActivity(intent)
++                                    }
++                                } catch (e: ApiException) {
++                                    Log.w("GoogleSignIn", "signInResult:failed code=" + e.statusCode)
++                                }
++
++                        } else {
++                            Log.d("kalp", "onActivityResult: hii")
++
++                            // If sign in fails, display a message to the user.
++                        }
++                    }
++            } catch (e: ApiException) {
++                Log.d("kalp", "onActivityResult: hi")
++
++                // The ApiException status code indicates the detailed failure reason.
++                // Please refer to the GoogleSignInStatusCodes class reference for more information.
++            }
++        }
+     }
+ 
+     private fun validateData() {
+Index: app/google-services.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"project_info\": {\r\n    \"project_number\": \"401978552176\",\r\n    \"project_id\": \"resourceup-ca6df\",\r\n    \"storage_bucket\": \"resourceup-ca6df.appspot.com\"\r\n  },\r\n  \"client\": [\r\n    {\r\n      \"client_info\": {\r\n        \"mobilesdk_app_id\": \"1:401978552176:android:56d2670766fc57f2e1a9b5\",\r\n        \"android_client_info\": {\r\n          \"package_name\": \"com.example.devlist\"\r\n        }\r\n      },\r\n      \"oauth_client\": [\r\n        {\r\n          \"client_id\": \"401978552176-q0o697bebpj9b5dg5937q50g1p5m017k.apps.googleusercontent.com\",\r\n          \"client_type\": 3\r\n        }\r\n      ],\r\n      \"api_key\": [\r\n        {\r\n          \"current_key\": \"AIzaSyC2yFCfBbKf45TAN_AuJyftEwu_FH3kipQ\"\r\n        }\r\n      ],\r\n      \"services\": {\r\n        \"appinvite_service\": {\r\n          \"other_platform_oauth_client\": [\r\n            {\r\n              \"client_id\": \"401978552176-q0o697bebpj9b5dg5937q50g1p5m017k.apps.googleusercontent.com\",\r\n              \"client_type\": 3\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"configuration_version\": \"1\"\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/google-services.json b/app/google-services.json
+--- a/app/google-services.json	(revision be708800510a6390ef79210dc74432f3ba074704)
++++ b/app/google-services.json	(date 1675865029477)
+@@ -1,6 +1,7 @@
+ {
+   "project_info": {
+     "project_number": "401978552176",
++    "firebase_url": "https://resourceup-ca6df-default-rtdb.firebaseio.com",
+     "project_id": "resourceup-ca6df",
+     "storage_bucket": "resourceup-ca6df.appspot.com"
+   },
+@@ -14,7 +15,15 @@
+       },
+       "oauth_client": [
+         {
+-          "client_id": "401978552176-q0o697bebpj9b5dg5937q50g1p5m017k.apps.googleusercontent.com",
++          "client_id": "401978552176-a0clpsoadsea2j8jahlb7m8bkq13h109.apps.googleusercontent.com",
++          "client_type": 1,
++          "android_info": {
++            "package_name": "com.example.devlist",
++            "certificate_hash": "a2519347caf8e8baa3c3db6ff84599b3df2a210f"
++          }
++        },
++        {
++          "client_id": "401978552176-9ti0itnislvinueu06cd9ogp64btlq1b.apps.googleusercontent.com",
+           "client_type": 3
+         }
+       ],
+@@ -27,7 +36,7 @@
+         "appinvite_service": {
+           "other_platform_oauth_client": [
+             {
+-              "client_id": "401978552176-q0o697bebpj9b5dg5937q50g1p5m017k.apps.googleusercontent.com",
++              "client_id": "401978552176-9ti0itnislvinueu06cd9ogp64btlq1b.apps.googleusercontent.com",
+               "client_type": 3
+             }
+           ]

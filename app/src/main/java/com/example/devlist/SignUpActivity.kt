@@ -2,9 +2,11 @@ package com.example.devlist
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.devlist.databinding.ActivitySignUpBinding
@@ -23,16 +25,16 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySignUpBinding
     private lateinit var progressDialog: ProgressDialog
     private lateinit var auth: FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
 
-    companion object{
-        const val RC_SIGN_IN = 1001
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+        window.statusBarColor = Color.TRANSPARENT
+        window.navigationBarColor = Color.TRANSPARENT
 
         progressDialog= ProgressDialog(this)
         progressDialog.setTitle("Please Wait")
@@ -41,73 +43,15 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+
         binding.signUpBtn.setOnClickListener{
             validateData()
         }
-
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
-
-        googleSignInClient = GoogleSignIn.getClient(this, gso)
-
-        binding.googleSignUpBtn.setOnClickListener{
-            googleSignUp()
-        }
-    }
-
-    private fun googleSignUp(){
-        val signInIntent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                firebaseAuthWithGoogle(account!!)
-            } catch (e: ApiException) {
-                Log.w("TAG", "Google sign in failed", e)
-            }
-        }
-    }
-    private fun firebaseAuthWithGoogle(acct: GoogleSignInAccount) {
-        val credential = GoogleAuthProvider.getCredential(acct.idToken, null)
-        auth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val user = auth.currentUser
-                    val name = user?.displayName.toString()
-                    val email = user?.email.toString()
-                    val uid = user?.uid.toString()
-                    val database = FirebaseDatabase.getInstance().reference
-                    val data = HashMap<String, Any>()
-                    data["Name"] = name
-                    data["email"] = email
-                    data["user_UID"] = uid
-                    database.child("users").child(uid).setValue(data)
-
-                    Toast.makeText(this,"Account created successfully ", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-//                    val uid = FirebaseAuth.getInstance().currentUser?.uid.toString()
-                } else {
-                    Log.w("TAG", "signInWithCredential:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
-                }
-            }
     }
 
     private fun validateData() {
-        var email = binding.emailEdt.text.toString().trim()
-        var password = binding.passwordEdt.text.toString().trim()
-        var confPass = binding.confPass.text.toString().trim()
-        var username = binding.usernameEdt.text.toString().trim()
+        val email = binding.emailEdt.text.toString().trim()
+        val username = binding.usernameEdt.text.toString().trim()
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.emailEdt.setError("Inavlid Email Format")
@@ -161,7 +105,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this, SplashScreen::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
         moveTaskToBack(true)
     }
 }
